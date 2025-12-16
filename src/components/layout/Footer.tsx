@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { siteData } from '@/content/siteData';
 
 export function Footer() {
@@ -8,7 +9,14 @@ export function Footer() {
         <footer className="bg-secondary-950 text-secondary-300 py-12">
             <div className="container grid gap-8 md:grid-cols-4">
                 <div>
-                    <h3 className="text-white text-lg font-bold mb-4">{siteData.general.siteName}</h3>
+                    <div className="mb-4 relative h-14 w-40">
+                        <Image
+                            src={siteData.general.logo}
+                            alt={siteData.general.siteName}
+                            fill
+                            className="object-contain object-left"
+                        />
+                    </div>
                     <p className="text-secondary-400 text-sm">{siteData.general.tagline}</p>
                 </div>
                 <div>
@@ -16,6 +24,7 @@ export function Footer() {
                     <ul className="space-y-2 text-sm">
                         <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
                         <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                        <li><Link href="/clients" className="hover:text-white transition-colors">Clients</Link></li>
                         <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
                         <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
                     </ul>
