@@ -1,5 +1,7 @@
 "use client";
 
+import Link from 'next/link';
+
 import { siteData } from '@/content/siteData';
 import { MainLayout } from '@/components/layout/MainLayout';
 import { Container } from '@/components/ui/Container';
@@ -120,9 +122,11 @@ export default function AboutPage() {
                                     </p>
                                 </div>
                                 <div className="mt-10">
-                                    <button className="group flex items-center gap-2 text-gray-900 dark:text-white font-medium hover:text-amber-600 dark:hover:text-metallic-gold transition-colors">
-                                        View Our Portfolio <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                                    </button>
+                                    <Link href="/gallery">
+                                        <button className="group flex items-center gap-2 text-gray-900 dark:text-white font-medium hover:text-amber-600 dark:hover:text-metallic-gold transition-colors">
+                                            View Our Portfolio <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                        </button>
+                                    </Link>
                                 </div>
                             </motion.div>
 

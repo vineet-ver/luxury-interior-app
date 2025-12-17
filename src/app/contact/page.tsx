@@ -22,19 +22,22 @@ export default function ContactPage() {
         setSuccess(false);
 
         const formData = new FormData(e.currentTarget);
-        const data = {
-            name: formData.get('name') as string,
-            email: formData.get('email') as string,
-            phone: formData.get('phone') as string,
-            message: formData.get('message') as string,
-        };
+        formData.append("access_key", "b3793915-85fb-4808-8f31-14a37ac33aa5");
 
         try {
-            // Simulating API call
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            console.log("Form Data Submitted:", data);
-            setSuccess(true);
-            (e.target as HTMLFormElement).reset();
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setSuccess(true);
+                (e.target as HTMLFormElement).reset();
+            } else {
+                setError(data.message || 'Something went wrong. Please try again.');
+            }
         } catch (err) {
             console.error("Submission Error:", err);
             setError('Failed to send message. Please try again.');
@@ -149,7 +152,7 @@ export default function ContactPage() {
                                         <label htmlFor="email" className="text-sm font-medium text-gray-600 dark:text-gray-400 ml-1">Work Email</label>
                                         <input
                                             id="email" name="email" type="email" required
-                                            placeholder="john@company.com"
+                                            placeholder="Example@company.com"
                                             className="w-full bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 focus:outline-none focus:border-amber-500/50 dark:focus:border-metallic-gold/50 focus:ring-1 focus:ring-amber-500/50 dark:focus:ring-metallic-gold/50 transition-all"
                                         />
                                     </div>

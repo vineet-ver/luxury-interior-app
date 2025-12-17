@@ -60,7 +60,7 @@ export function Navbar() {
 
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex items-center gap-8">
-                        {['Services', 'Clients', 'Careers', 'About', 'Contact'].map((item) => (
+                        {['Services', 'Clients', 'Gallery', 'About', 'Contact'].map((item) => (
                             <Link key={item} href={`/${item.toLowerCase()}`} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors relative group">
                                 {item}
                                 <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-amber-600 dark:bg-metallic-gold transition-all duration-300 group-hover:w-full"></span>
@@ -104,7 +104,7 @@ export function Navbar() {
                         className="fixed inset-0 z-40 bg-white dark:bg-obsidian-950 pt-32 px-6 pb-10 flex flex-col md:hidden"
                     >
                         <nav className="flex flex-col gap-6 text-2xl font-display font-bold">
-                            {['Services', 'Clients', 'Careers', 'About', 'Contact'].map((item, i) => (
+                            {['Services', 'Clients', 'Gallery', 'About', 'Contact'].map((item, i) => (
                                 <motion.div
                                     key={item}
                                     initial={{ opacity: 0, x: -20 }}

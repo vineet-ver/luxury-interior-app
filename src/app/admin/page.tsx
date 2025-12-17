@@ -1,15 +1,21 @@
 "use client";
 import { AdminLayout } from '@/components/layout/AdminLayout';
+import { siteData } from '@/content/siteData';
 import { Card, CardContent } from '@/components/ui/Card';
-import { Users, Server, MessageSquare, Briefcase, TrendingUp, ArrowUpRight, Search, Bell } from 'lucide-react';
+import { Users, Server, Briefcase, TrendingUp, ArrowUpRight, Search, Bell, Building, Image as ImageIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function AdminDashboard() {
+    const totalServices = siteData.services.length;
+    const totalClients = siteData.clients.length;
+    const totalProjects = siteData.gallery ? siteData.gallery.length : 0;
+    const yearsExperience = new Date().getFullYear() - 2012;
+
     const stats = [
-        { title: 'Total Services', value: '12', icon: Server, change: '+2.5%', color: 'from-blue-500/20 to-blue-600/20', text: 'text-blue-500 dark:text-blue-400' },
-        { title: 'Active Jobs', value: '5', icon: Briefcase, change: '+1 New', color: 'from-purple-500/20 to-purple-600/20', text: 'text-purple-500 dark:text-purple-400' },
-        { title: 'New Inquiries', value: '28', icon: MessageSquare, change: '+12% this week', color: 'from-emerald-500/20 to-emerald-600/20', text: 'text-emerald-500 dark:text-emerald-400' },
-        { title: 'Monthly Visitors', value: '12.4k', icon: Users, change: '+8.1%', color: 'from-orange-500/20 to-orange-600/20', text: 'text-orange-500 dark:text-orange-400' },
+        { title: 'Total Services', value: totalServices.toString(), icon: Server, change: 'Active Categories', color: 'from-blue-500/20 to-blue-600/20', text: 'text-blue-500 dark:text-blue-400' },
+        { title: 'Total Clients', value: totalClients.toString(), icon: Users, change: 'Enterprise Partners', color: 'from-purple-500/20 to-purple-600/20', text: 'text-purple-500 dark:text-purple-400' },
+        { title: 'Portfolio Projects', value: totalProjects.toString(), icon: ImageIcon, change: 'Showcased Works', color: 'from-emerald-500/20 to-emerald-600/20', text: 'text-emerald-500 dark:text-emerald-400' },
+        { title: 'Years Experience', value: `+${yearsExperience}`, icon: TrendingUp, change: 'Since 2012', color: 'from-orange-500/20 to-orange-600/20', text: 'text-orange-500 dark:text-orange-400' },
     ];
 
     return (
@@ -64,9 +70,10 @@ export default function AdminDashboard() {
 
             <div className="grid gap-8 lg:grid-cols-3">
                 {/* Recent Inquiries Table */}
+                {/* Client List Table */}
                 <div className="lg:col-span-2 space-y-6">
                     <div className="flex items-center justify-between">
-                        <h2 className="text-xl font-bold text-gray-900 dark:text-white">Recent Inquiries</h2>
+                        <h2 className="text-xl font-bold text-gray-900 dark:text-white">Our Clients</h2>
                         <button className="text-sm text-amber-600 dark:text-metallic-gold hover:text-gray-900 dark:hover:text-white transition-colors">View All</button>
                     </div>
 
@@ -74,28 +81,24 @@ export default function AdminDashboard() {
                         <table className="w-full text-left">
                             <thead className="bg-gray-50 dark:bg-white/5 text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider font-medium">
                                 <tr>
-                                    <th className="px-6 py-4">Client</th>
-                                    <th className="px-6 py-4">Subject</th>
-                                    <th className="px-6 py-4">Status</th>
-                                    <th className="px-6 py-4">Date</th>
+                                    <th className="px-6 py-4">Client Name</th>
+                                    <th className="px-6 py-4">Category</th>
+                                    <th className="px-6 py-4">ID</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-gray-100 dark:divide-white/5 text-sm text-gray-600 dark:text-gray-300">
-                                {[1, 2, 3, 4].map((i) => (
-                                    <tr key={i} className="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group cursor-pointer">
+                                {siteData.clients.slice(0, 5).map((client) => (
+                                    <tr key={client.id} className="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group cursor-pointer">
                                         <td className="px-6 py-4">
                                             <div className="flex items-center gap-3">
                                                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center text-xs font-bold text-gray-700 dark:text-white">
-                                                    JD
+                                                    {client.name.substring(0, 2).toUpperCase()}
                                                 </div>
-                                                <span className="font-medium text-gray-900 dark:text-white">John Doe</span>
+                                                <span className="font-medium text-gray-900 dark:text-white">{client.name}</span>
                                             </div>
                                         </td>
-                                        <td className="px-6 py-4 text-gray-500 dark:text-gray-400">Enterprise Security Upgrade...</td>
-                                        <td className="px-6 py-4">
-                                            <span className="px-2 py-1 rounded text-xs font-medium bg-blue-100 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20">New</span>
-                                        </td>
-                                        <td className="px-6 py-4 text-gray-500">2 hrs ago</td>
+                                        <td className="px-6 py-4 text-gray-500 dark:text-gray-400">{client.category}</td>
+                                        <td className="px-6 py-4 text-gray-400">#{client.id.toString().padStart(3, '0')}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -117,15 +120,7 @@ export default function AdminDashboard() {
                             <ArrowUpRight className="w-4 h-4 text-gray-400 dark:text-gray-500 group-hover:text-amber-600 dark:group-hover:text-metallic-gold" />
                         </button>
 
-                        <button className="flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/5 hover:bg-gray-50 dark:hover:bg-white/10 hover:border-gray-300 dark:hover:border-white/20 group transition-all shadow-sm dark:shadow-none">
-                            <div className="flex items-center gap-3">
-                                <div className="p-2 bg-purple-100 dark:bg-purple-500/10 rounded-lg text-purple-600 dark:text-purple-400">
-                                    <Briefcase className="w-5 h-5" />
-                                </div>
-                                <span className="font-medium text-gray-900 dark:text-white">Post Job Opening</span>
-                            </div>
-                            <ArrowUpRight className="w-4 h-4 text-gray-400 dark:text-gray-500 group-hover:text-gray-900 dark:group-hover:text-white" />
-                        </button>
+
 
                         <button className="flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/5 hover:bg-gray-50 dark:hover:bg-white/10 hover:border-gray-300 dark:hover:border-white/20 group transition-all shadow-sm dark:shadow-none">
                             <div className="flex items-center gap-3">
