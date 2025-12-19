@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-
+import Image from 'next/image';
 import { siteData } from '@/content/siteData';
 import { MainLayout } from '@/components/layout/MainLayout';
 import { Container } from '@/components/ui/Container';
@@ -142,10 +142,38 @@ export default function AboutPage() {
 
                                     {/* Abstract Visual Representation of Growth */}
                                     <div className="grid grid-cols-2 gap-4 w-full h-full">
-                                        <div className="bg-gray-200 dark:bg-white/5 rounded-3xl w-full h-[80%] self-end"></div>
-                                        <div className="bg-blue-200 dark:bg-primary-500/20 rounded-3xl w-full h-full"></div>
-                                        <div className="bg-amber-200 dark:bg-metallic-gold/20 rounded-3xl w-full h-full"></div>
-                                        <div className="bg-gray-200 dark:bg-white/5 rounded-3xl w-full h-[60%]"></div>
+                                        <div className="relative rounded-3xl overflow-hidden w-full h-[80%] self-end group">
+                                            <Image
+                                                src="/about/visionary-1.jpg"
+                                                alt="Leadership Vision"
+                                                fill
+                                                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                            />
+                                        </div>
+                                        <div className="relative rounded-3xl overflow-hidden w-full h-full group">
+                                            <Image
+                                                src="/about/interior-1.jpg"
+                                                alt="Modern Workspace"
+                                                fill
+                                                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                            />
+                                        </div>
+                                        <div className="relative rounded-3xl overflow-hidden w-full h-full group">
+                                            <Image
+                                                src="/about/interior-2.jpg"
+                                                alt="Innovative Design"
+                                                fill
+                                                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                            />
+                                        </div>
+                                        <div className="relative rounded-3xl overflow-hidden w-full h-[60%] group">
+                                            <Image
+                                                src="/about/visionary-2.jpg"
+                                                alt="Executive Excellence"
+                                                fill
+                                                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                            />
+                                        </div>
                                     </div>
 
                                     <div className="absolute bottom-10 left-10 p-4 bg-white/80 dark:bg-black/40 backdrop-blur-md rounded-2xl border border-gray-200 dark:border-white/10 shadow-lg dark:shadow-none">
