@@ -1,193 +1,220 @@
 "use client";
 
+import { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { siteData } from '@/content/siteData';
 import { MainLayout } from '@/components/layout/MainLayout';
 import { Container } from '@/components/ui/Container';
-import { Target, Lightbulb, Trophy, History, ArrowUpRight } from 'lucide-react';
-import { motion } from 'framer-motion';
-
-const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.8 }
-};
-
-const staggerContainer = {
-    animate: {
-        transition: {
-            staggerChildren: 0.2
-        }
-    }
-};
+import { Target, Lightbulb, Trophy, ArrowRight, Star, Quote } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function AboutPage() {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end end"]
+    });
+
+    const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
     return (
         <MainLayout>
-            <div className="bg-gray-50 dark:bg-obsidian-950 min-h-screen text-gray-900 dark:text-white pt-24 transition-colors duration-500">
+            <div ref={containerRef} className="bg-luxury-white min-h-screen text-luxury-onyx relative overflow-hidden">
 
                 {/* Hero Section */}
-                <section className="relative py-20 lg:py-32 overflow-hidden">
-                    {/* Background Glows */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-100/50 dark:bg-primary-900/20 rounded-full blur-[120px] pointer-events-none" />
+                <section className="relative min-h-[90vh] flex items-center justify-center pt-20">
+                    <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-luxury-gold/5 rounded-full blur-[120px] pointer-events-none" />
 
-                    <Container>
+                    <Container className="relative z-10 text-center">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                            className="max-w-4xl mx-auto text-center"
+                            transition={{ duration: 1 }}
                         >
-                            <span className="inline-block py-1 px-3 rounded-full bg-white/70 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-amber-600 dark:text-metallic-gold text-sm font-medium mb-6 backdrop-blur-sm">
-                                SINCE 2012
-                            </span>
-                            <h1 className="font-display text-5xl md:text-7xl font-bold mb-8 leading-tight text-gray-900 dark:text-white">
-                                Redefining <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-500 dark:from-white dark:to-gray-400">Excellence</span> through Innovation.
+                            <span className="text-sm font-medium tracking-[0.5em] text-luxury-gold uppercase mb-8 block">Since 2012</span>
+                            <h1 className="font-display text-7xl md:text-9xl font-bold mb-10 leading-[0.8] tracking-tight">
+                                The <br />
+                                <span className="font-light italic text-luxury-gold-shine">Legacy.</span>
                             </h1>
-                            <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
+                            <p className="text-2xl md:text-3xl text-luxury-onyx/60 font-light max-w-4xl mx-auto leading-relaxed">
                                 {siteData.about.overview}
                             </p>
                         </motion.div>
                     </Container>
+
+                    {/* Scroll Line Start */}
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1px] h-32 bg-gradient-to-b from-transparent to-luxury-platinum"></div>
                 </section>
 
-                {/* Core Values / Mission Grid */}
-                <section className="py-20 relative">
-                    <Container>
+                {/* The Gold Thread Timeline Section */}
+                <div className="relative">
+                    {/* The Thread */}
+                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-luxury-platinum/30 -translate-x-1/2 z-0 hidden md:block">
                         <motion.div
-                            variants={staggerContainer}
-                            initial="initial"
-                            animate="animate"
-                            className="grid md:grid-cols-3 gap-8"
-                        >
-                            {/* Mission */}
-                            <motion.div variants={fadeInUp} className="group p-8 rounded-[32px] bg-white dark:bg-white/5 border border-gray-200 dark:border-white/5 hover:bg-white dark:hover:bg-white/10 hover:border-blue-400/30 dark:hover:border-metallic-gold/30 transition-all duration-500 shadow-xl shadow-gray-200/50 dark:shadow-none">
-                                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-50 dark:from-primary-900/50 dark:to-primary-950/50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                                    <Target className="w-7 h-7 text-blue-600 dark:text-primary-400" />
-                                </div>
-                                <h3 className="font-display text-2xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-metallic-gold transition-colors">Our Mission</h3>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    {siteData.about.mission}
-                                </p>
-                            </motion.div>
+                            style={{ height: lineHeight }}
+                            className="w-full bg-luxury-gold shadow-[0_0_15px_rgba(212,175,55,0.5)] origin-top"
+                        />
+                    </div>
 
-                            {/* Vision */}
-                            <motion.div variants={fadeInUp} className="group p-8 rounded-[32px] bg-white dark:bg-white/5 border border-gray-200 dark:border-white/5 hover:bg-white dark:hover:bg-white/10 hover:border-amber-400/30 dark:hover:border-metallic-gold/30 transition-all duration-500 shadow-xl shadow-gray-200/50 dark:shadow-none">
-                                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-100 to-amber-50 dark:from-metallic-gold/20 dark:to-metallic-bronze/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                                    <Lightbulb className="w-7 h-7 text-amber-600 dark:text-metallic-gold" />
-                                </div>
-                                <h3 className="font-display text-2xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-metallic-gold transition-colors">Our Vision</h3>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    {siteData.about.vision}
-                                </p>
-                            </motion.div>
+                    {/* Section 1: Vision */}
+                    <section className="py-32 relative z-10">
+                        <Container>
+                            <div className="grid md:grid-cols-2 gap-20 items-center">
+                                <motion.div
+                                    initial={{ opacity: 0, x: -50 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true, margin: "-20%" }}
+                                    transition={{ duration: 0.8 }}
+                                    className="md:text-right"
+                                >
+                                    <h2 className="font-display text-5xl font-bold mb-6">The Vision</h2>
+                                    <p className="text-xl text-luxury-onyx/60 leading-relaxed font-light mb-8">
+                                        {siteData.about.vision}
+                                    </p>
+                                    <div className="w-16 h-16 rounded-full border border-luxury-platinum flex items-center justify-center ml-auto bg-white">
+                                        <Lightbulb className="w-6 h-6 text-luxury-gold" />
+                                    </div>
+                                </motion.div>
+                                <div className="hidden md:block"></div> {/* Spacer for timeline center */}
+                            </div>
+                        </Container>
+                    </section>
 
-                            {/* Values */}
-                            <motion.div variants={fadeInUp} className="group p-8 rounded-[32px] bg-white dark:bg-white/5 border border-gray-200 dark:border-white/5 hover:bg-white dark:hover:bg-white/10 hover:border-gray-300 dark:hover:border-metallic-gold/30 transition-all duration-500 shadow-xl shadow-gray-200/50 dark:shadow-none">
-                                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-white/10 dark:to-transparent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                                    <Trophy className="w-7 h-7 text-gray-700 dark:text-white" />
-                                </div>
-                                <h3 className="font-display text-2xl font-bold mb-4 text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-metallic-gold transition-colors">Our Values</h3>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    Commitment to unwavering quality, total customer satisfaction, and continuous technological innovation.
-                                </p>
-                            </motion.div>
-                        </motion.div>
-                    </Container>
-                </section>
+                    {/* Section 2: Mission */}
+                    <section className="py-32 relative z-10">
+                        <Container>
+                            <div className="grid md:grid-cols-2 gap-20 items-center">
+                                <div className="hidden md:block"></div> {/* Spacer for timeline center */}
+                                <motion.div
+                                    initial={{ opacity: 0, x: 50 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true, margin: "-20%" }}
+                                    transition={{ duration: 0.8 }}
+                                >
+                                    <h2 className="font-display text-5xl font-bold mb-6">Our Mission</h2>
+                                    <p className="text-xl text-luxury-onyx/60 leading-relaxed font-light mb-8">
+                                        {siteData.about.mission}
+                                    </p>
+                                    <div className="w-16 h-16 rounded-full border border-luxury-platinum flex items-center justify-center mr-auto bg-white">
+                                        <Target className="w-6 h-6 text-luxury-gold" />
+                                    </div>
+                                </motion.div>
+                            </div>
+                        </Container>
+                    </section>
 
-                {/* Legacy / Journey Section */}
-                <section className="py-24 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-blue-50/50 dark:bg-primary-900/5 -skew-y-3 transform origin-top-left scale-110 pointer-events-none" />
+                    {/* Section 4: Leadership / MD Profile */}
+                    <section className="py-40 relative z-10">
+                        <Container>
+                            <div className="grid md:grid-cols-2 gap-20 items-start">
+                                {/* Image / Visual Side */}
+                                <motion.div
+                                    initial={{ opacity: 0, x: -50 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    className="relative"
+                                >
+                                    <div className="aspect-[3/4] rounded-[2rem] overflow-hidden relative shadow-2xl shadow-luxury-onyx/20">
+                                        {/* Using a placeholder avatar if real image fails, or the actual image */}
+                                        <Image
+                                            src={siteData.leadership?.image || "https://i.pravatar.cc/400?img=11"}
+                                            alt={siteData.leadership?.name || "MD"}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-luxury-onyx/40 to-transparent" />
+                                    </div>
+                                    <div className="absolute -bottom-6 -right-6 bg-white p-8 rounded-full shadow-xl border border-luxury-platinum/50 hidden md:block">
+                                        <div className="text-center">
+                                            <p className="font-display font-bold text-3xl text-luxury-gold">12+</p>
+                                            <p className="text-xs uppercase tracking-widest text-luxury-onyx/50">Years Exp</p>
+                                        </div>
+                                    </div>
+                                </motion.div>
 
-                    <Container className="relative">
-                        <div className="grid lg:grid-cols-2 gap-16 items-center">
+                                {/* Text Side */}
+                                <motion.div
+                                    initial={{ opacity: 0, x: 50 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2 }}
+                                    className="pt-10 pl-10"
+                                >
+                                    <span className="text-luxury-gold font-bold tracking-widest uppercase mb-4 block">Leadership</span>
+                                    <h2 className="font-display text-5xl md:text-6xl font-bold mb-10 text-luxury-onyx leading-tight">
+                                        Setting <span className="italic font-light text-luxury-gold-shine">Benchmarks.</span>
+                                    </h2>
+
+                                    <div className="text-lg text-luxury-onyx/70 font-light mb-12 leading-relaxed space-y-6">
+                                        <p>{siteData.leadership?.bio1}</p>
+                                        <p>{siteData.leadership?.bio2}</p>
+                                        <p>{siteData.leadership?.bio3}</p>
+                                    </div>
+
+                                    <div className="border-l-4 border-luxury-gold pl-8 py-2 mb-10 bg-luxury-gold/5 rounded-r-2xl py-6 pr-6">
+                                        <p className="font-display text-2xl italic text-luxury-onyx mb-4">"{siteData.leadership?.quote}"</p>
+                                        <div className="flex items-center gap-4">
+                                            <div className="h-[1px] w-12 bg-luxury-gold"></div>
+                                            <span className="text-sm font-bold uppercase tracking-widest text-luxury-gold">Motto</span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <p className="font-display text-3xl font-bold text-luxury-onyx">{siteData.leadership?.name}</p>
+                                        <p className="text-luxury-onyx/50 tracking-widest text-sm uppercase mt-1">{siteData.leadership?.role}</p>
+                                    </div>
+                                </motion.div>
+                            </div>
+                        </Container>
+                    </section>
+
+                    {/* Section 3: Values (Centered) */}
+                    <section className="py-40 relative z-10">
+                        <Container>
                             <motion.div
-                                initial={{ opacity: 0, x: -50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.8 }}
+                                className="bg-luxury-onyx text-white rounded-[3rem] p-12 md:p-20 relative overflow-hidden text-center"
                             >
-                                <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 text-gray-900 dark:text-white">
-                                    A Legacy of <br />
-                                    <span className="text-amber-600 dark:text-metallic-gold">Transformation.</span>
+                                <div className="absolute top-0 left-0 w-full h-full bg-[url('/noise.png')] opacity-10 mix-blend-overlay pointer-events-none" />
+                                <div className="absolute top-[-50%] left-[-20%] w-[500px] h-[500px] bg-luxury-gold/20 rounded-full blur-[100px]" />
+
+                                <Quote className="w-12 h-12 text-luxury-gold mx-auto mb-8 opacity-50" />
+                                <h2 className="font-display text-4xl md:text-6xl font-bold mb-12">
+                                    "We believe that true luxury is the absence of friction."
                                 </h2>
-                                <div className="space-y-6 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    <p>
-                                        Established in 2012, ITSS began with a singular focus: to bridge the gap between complex technology and business efficiency. From a niche automation provider, we have evolved into a full-scale digital transformation partner.
-                                    </p>
-                                    <p>
-                                        Today, we serve the elite across Corporate, Retail, Education, and Government sectors. Our reputation is built not just on code, but on the trust that we deliver systems that work flawlessly, every single time.
-                                    </p>
-                                </div>
-                                <div className="mt-10">
-                                    <Link href="/gallery">
-                                        <button className="group flex items-center gap-2 text-gray-900 dark:text-white font-medium hover:text-amber-600 dark:hover:text-metallic-gold transition-colors">
-                                            View Our Portfolio <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                                        </button>
-                                    </Link>
-                                </div>
-                            </motion.div>
 
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.8 }}
-                                className="relative"
-                            >
-                                <div className="aspect-square rounded-[40px] border border-gray-200 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-3xl overflow-hidden p-8 flex items-center justify-center relative group shadow-2xl shadow-gray-200 dark:shadow-none">
-                                    <div className="absolute inset-0 bg-amber-500/5 dark:bg-metallic-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
-                                    {/* Abstract Visual Representation of Growth */}
-                                    <div className="grid grid-cols-2 gap-4 w-full h-full">
-                                        <div className="relative rounded-3xl overflow-hidden w-full h-[80%] self-end group">
-                                            <Image
-                                                src="/about/visionary-1.jpg"
-                                                alt="Leadership Vision"
-                                                fill
-                                                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                            />
-                                        </div>
-                                        <div className="relative rounded-3xl overflow-hidden w-full h-full group">
-                                            <Image
-                                                src="/about/interior-1.jpg"
-                                                alt="Modern Workspace"
-                                                fill
-                                                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                            />
-                                        </div>
-                                        <div className="relative rounded-3xl overflow-hidden w-full h-full group">
-                                            <Image
-                                                src="/about/interior-2.jpg"
-                                                alt="Innovative Design"
-                                                fill
-                                                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                            />
-                                        </div>
-                                        <div className="relative rounded-3xl overflow-hidden w-full h-[60%] group">
-                                            <Image
-                                                src="/about/visionary-2.jpg"
-                                                alt="Executive Excellence"
-                                                fill
-                                                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div className="absolute bottom-10 left-10 p-4 bg-white/80 dark:bg-black/40 backdrop-blur-md rounded-2xl border border-gray-200 dark:border-white/10 shadow-lg dark:shadow-none">
-                                        <div className="flex items-center gap-3">
-                                            <History className="w-6 h-6 text-amber-600 dark:text-metallic-gold" />
-                                            <div>
-                                                <div className="text-xs text-gray-500 dark:text-gray-400">ESTABLISHED</div>
-                                                <div className="font-bold text-gray-900 dark:text-white">2012</div>
+                                <div className="grid md:grid-cols-3 gap-12 mt-20 relative z-10 border-t border-white/10 pt-20">
+                                    {[
+                                        { title: "Precision", icon: Target, desc: "Zero tolerance for error." },
+                                        { title: "Innovation", icon: Lightbulb, desc: "Tomorrow's systems, today." },
+                                        { title: "Excellence", icon: Trophy, desc: "The standard others chase." },
+                                    ].map((item, i) => (
+                                        <div key={i} className="group">
+                                            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-luxury-gold group-hover:text-luxury-onyx transition-all duration-500">
+                                                <item.icon className="w-6 h-6" />
                                             </div>
+                                            <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                                            <p className="text-white/60 font-light">{item.desc}</p>
                                         </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </motion.div>
-                        </div>
+                        </Container>
+                    </section>
+                </div>
+
+                {/* Legacy Footer CTA */}
+                <section className="py-32 text-center">
+                    <Container>
+                        <h2 className="font-display text-4xl mb-8">Ready to build your legacy?</h2>
+                        <Link href="/contact" className="inline-block">
+                            <span className="inline-flex items-center gap-4 px-12 py-5 bg-luxury-gold text-luxury-onyx rounded-full text-lg font-bold tracking-wide hover:scale-105 transition-transform shadow-luxury-gold/20 shadow-xl">
+                                Begin Consultation <ArrowRight className="w-5 h-5" />
+                            </span>
+                        </Link>
                     </Container>
                 </section>
 

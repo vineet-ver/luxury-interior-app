@@ -10,7 +10,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Deep Obsidian Backgrounds
+        // Regal Luxury Palette (User Requested)
+        // Billionaire Light Luxury Palette
+        luxury: {
+          white: '#FAFAFA',    // Alabaster / Porcelain
+          onyx: '#111111',     // Deep Black / Obsidian
+          gold: '#D4AF37',     // Champagne Gold
+          platinum: '#E5E4E2', // Silver / Platinum
+          pearl: '#FDFCF5',    // Warm Pearl
+        },
         obsidian: {
           800: '#1e293b', // Fallback
           900: '#0f172a', // Rich blue-black

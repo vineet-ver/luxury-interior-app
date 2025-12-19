@@ -121,4 +121,21 @@ export const siteData = {
         { id: 13, src: "/gallery/item-13.jpg", title: "Partition & Wall Systems", category: "Construction" },
         { id: 14, src: "/gallery/item-14.jpg", title: "False Ceiling Framework", category: "Infrastructure" },
     ],
+    industries: [
+        { id: "financial", title: "Financial Services", icon: "Landmark" },
+        { id: "retail", title: "Retail & DSR", icon: "ShoppingBag" },
+        { id: "education", title: "Education", icon: "GraduationCap" },
+        { id: "logistics", title: "Logistics", icon: "Truck" },
+        { id: "manufacturing", title: "Manufacturing", icon: "Factory" },
+        { id: "healthcare", title: "Healthcare", icon: "Stethoscope" },
+    ],
+    leadership: {
+        name: "Mr. Shaan Khan",
+        role: "Managing Director",
+        image: "/shaan_khan.jpg", // Placeholder - user needs to provide image or I'll use a placeholder
+        bio1: "Mr. Shaan Khan is the Managing Director of India Technical Solution Services (ITSS) and the son of Mr. Zaki Khan, the founder of the company. From a young age, Shaan grew up around construction sites and project environments, which naturally sparked his interest in the field of execution and turnkey infrastructure.",
+        bio2: "What began as simple observation soon turned into passion and eventually, responsibility. Carrying forward his father's legacy, Shaan brought a modern and organized approach to ITSS by implementing systems like real-time reporting, rapid mobilization, and structured project planning. Under his leadership, ITSS transformed from a local contractor into a pan-India turnkey solution provider.",
+        bio3: "Today, ITSS has delivered major projects for brands like Zomato, Zepto, Blinkit, Battery Smart, Samsung, Paytm, TechMahindra and Godrej Properties etc, known for quality work, timely handovers, and transparent communication. Mr. Shaan Khan leads the company not just with vision but with hands-on execution-maintaining the discipline, culture, and trust that his father once built, while scaling ITSS to newer heights.",
+        quote: "We Don't Deliver Projects. We Set Benchmarks."
+    }
 };

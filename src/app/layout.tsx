@@ -15,11 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`font-sans antialiased min-h-screen flex flex-col bg-white dark:bg-obsidian-950 text-gray-900 dark:text-white selection:bg-metallic-gold selection:text-black`}>
+      <body className={`font-sans antialiased min-h-screen flex flex-col bg-background text-foreground selection:bg-metallic-gold selection:text-black`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          forcedTheme="light"
+          defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
         >

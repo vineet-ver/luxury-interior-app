@@ -5,52 +5,63 @@
 @theme {
   --font-sans: var(--font-inter);
   --font-display: var(--font-space);
+
+  /* Billionaire Light Luxury Palette */
+  --color-luxury-white: #FAFAFA;
+  --color-luxury-onyx: #111111;
+  --color-luxury-gold: #D4AF37;
+  --color-luxury-platinum: #E5E4E2;
+  --color-luxury-pearl: #FDFCF5;
 }
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #0f172a;
-    --card: #ffffff;
-    --card-foreground: #0f172a;
-    --popover: #ffffff;
-    --popover-foreground: #0f172a;
-    --primary: #0f172a;
-    --primary-foreground: #f8fafc;
-    --secondary: #f1f5f9;
-    --secondary-foreground: #0f172a;
-    --muted: #f1f5f9;
-    --muted-foreground: #64748b;
-    --accent: #f1f5f9;
-    --accent-foreground: #0f172a;
-    --destructive: #ef4444;
-    --destructive-foreground: #f8fafc;
-    --border: #e2e8f0;
-    --input: #e2e8f0;
-    --ring: #0f172a;
+    --background: #FAFAFA;
+    /* luxury-white */
+    --foreground: #111111;
+    /* luxury-onyx */
+    --card: #FFFFFF;
+    --card-foreground: #111111;
+    --popover: #FFFFFF;
+    --popover-foreground: #111111;
+    --primary: #D4AF37;
+    /* luxury-gold */
+    --primary-foreground: #FAFAFA;
+    --secondary: #E5E4E2;
+    /* luxury-platinum */
+    --secondary-foreground: #111111;
+    --muted: #E5E4E2;
+    --muted-foreground: #666666;
+    --accent: #D4AF37;
+    --accent-foreground: #111111;
+    --destructive: #7f1d1d;
+    --destructive-foreground: #FAFAFA;
+    --border: #E5E4E2;
+    --input: #FFFFFF;
+    --ring: #D4AF37;
   }
 
+  /* Force Light Mode - Remove Dark Overrides or map them to light */
   .dark {
-    --background: #020617;
-    /* Obsidian 950 */
-    --foreground: #ffffff;
-    --card: #020617;
-    --card-foreground: #ffffff;
-    --popover: #020617;
-    --popover-foreground: #ffffff;
-    --primary: #f8fafc;
-    --primary-foreground: #0f172a;
-    --secondary: #1e293b;
-    --secondary-foreground: #f8fafc;
-    --muted: #1e293b;
-    --muted-foreground: #94a3b8;
-    --accent: #1e293b;
-    --accent-foreground: #f8fafc;
+    --background: #FAFAFA;
+    --foreground: #111111;
+    --card: #FFFFFF;
+    --card-foreground: #111111;
+    --popover: #FFFFFF;
+    --popover-foreground: #111111;
+    --primary: #D4AF37;
+    --primary-foreground: #FAFAFA;
+    --secondary: #E5E4E2;
+    --secondary-foreground: #111111;
+    --muted: #E5E4E2;
+    --muted-foreground: #666666;
+    --accent: #D4AF37;
+    --accent-foreground: #111111;
     --destructive: #7f1d1d;
-    --destructive-foreground: #f8fafc;
-    --border: #1e293b;
-    --input: #1e293b;
-    --ring: #cbd5e1;
+    --destructive-foreground: #FAFAFA;
+    --border: #E5E4E2;
+    --input: #FFFFFF;
+    --ring: #D4AF37;
   }
 }
 
@@ -64,9 +75,13 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Custom Scrollbar */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Luxury Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -74,22 +89,23 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  /* Light mode scrollbar */
-  border-radius: 4px;
+  background: rgba(229, 228, 226, 0.6);
+  /* luxury-platinum with opacity */
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+  /* luxury-gold */
 }
 
 .dark ::-webkit-scrollbar-thumb {
   background: #334155;
-  /* Dark mode scrollbar */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #D4AF37;
 }
 
 /* Selection Color */
@@ -99,29 +115,46 @@ body {
   color: #000;
 }
 
-/* Glassmorphism Utilities */
+/* Glassmorphism Utilities - Light/Pearl */
 .glass {
   background: rgba(255, 255, 255, 0.7);
-  /* Light Glass */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  /* Soft Luxury Shadow */
 }
 
 .dark .glass {
-  background: rgba(255, 255, 255, 0.05);
-  /* Dark Glass */
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .glass-nav {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.85);
+  /* Frosted White */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  /* Subtle Gold Border */
 }
 
 .dark .glass-nav {
-  background: rgba(2, 6, 23, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Regal Luxury Utilities */
+/* Luxury Utilities */
+.bg-victory-gradient {
+  background: linear-gradient(135deg, #FAFAFA 0%, #E5E4E2 100%);
+}
+
+.text-luxury-gold-shine {
+  color: #D4AF37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.shadow-luxury {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
 }

@@ -40,7 +40,7 @@ export function Navbar() {
                     className={`
             relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300
             ${scrolled || mobileMenuOpen
-                            ? "bg-white/80 dark:bg-obsidian-950/70 border border-gray-200 dark:border-white/10 backdrop-blur-xl shadow-2xl w-[90%] md:w-[60%]"
+                            ? "bg-luxury-white/70 border border-luxury-platinum/50 backdrop-blur-xl shadow-luxury w-[90%] md:w-[60%]"
                             : "bg-transparent w-full container"
                         }
         `}
@@ -60,10 +60,10 @@ export function Navbar() {
 
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex items-center gap-8">
-                        {['Services', 'Clients', 'Gallery', 'About', 'Contact'].map((item) => (
-                            <Link key={item} href={`/${item.toLowerCase()}`} className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors relative group">
+                        {['Home', 'Services', 'Clients', 'Gallery', 'About', 'Contact'].map((item) => (
+                            <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-sm font-medium text-luxury-onyx/70 hover:text-luxury-onyx transition-colors relative group">
                                 {item}
-                                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-amber-600 dark:bg-metallic-gold transition-all duration-300 group-hover:w-full"></span>
+                                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-luxury-gold transition-all duration-300 group-hover:w-full"></span>
                             </Link>
                         ))}
                     </nav>
@@ -73,7 +73,7 @@ export function Navbar() {
                         {/* ThemeToggle Removed */}
                         <Link href="/contact">
                             <MagneticButton>
-                                <button className="px-5 py-2 text-sm font-medium text-white dark:text-black bg-gray-900 dark:bg-white rounded-full hover:bg-amber-600 dark:hover:bg-metallic-gold transition-colors duration-300 shadow-lg">
+                                <button className="px-6 py-2.5 text-sm font-medium text-luxury-white bg-luxury-onyx rounded-full hover:bg-luxury-gold transition-colors duration-300 shadow-lg shadow-luxury-onyx/20">
                                     Get Quote
                                 </button>
                             </MagneticButton>
@@ -85,7 +85,7 @@ export function Navbar() {
                         {/* ThemeToggle Removed */}
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="text-gray-900 dark:text-white"
+                            className="text-luxury-onyx"
                         >
                             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                         </button>
@@ -101,10 +101,10 @@ export function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 z-40 bg-white dark:bg-obsidian-950 pt-32 px-6 pb-10 flex flex-col md:hidden"
+                        className="fixed inset-0 z-40 bg-luxury-white/95 backdrop-blur-xl pt-32 px-6 pb-10 flex flex-col md:hidden"
                     >
                         <nav className="flex flex-col gap-6 text-2xl font-display font-bold">
-                            {['Services', 'Clients', 'Gallery', 'About', 'Contact'].map((item, i) => (
+                            {['Home', 'Services', 'Clients', 'Gallery', 'About', 'Contact'].map((item, i) => (
                                 <motion.div
                                     key={item}
                                     initial={{ opacity: 0, x: -20 }}
@@ -112,8 +112,8 @@ export function Navbar() {
                                     transition={{ delay: i * 0.1 }}
                                 >
                                     <Link
-                                        href={`/${item.toLowerCase()}`}
-                                        className="text-gray-900 dark:text-white hover:text-amber-600 dark:hover:text-metallic-gold transition-colors block py-2 border-b border-gray-100 dark:border-white/10"
+                                        href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                                        className="text-luxury-onyx hover:text-luxury-gold transition-colors block py-2 border-b border-luxury-platinum"
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
                                         {item}
@@ -129,7 +129,7 @@ export function Navbar() {
                             className="mt-auto"
                         >
                             <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                                <button className="w-full py-4 text-lg font-medium text-white dark:text-black bg-gray-900 dark:bg-white rounded-xl hover:bg-amber-600 dark:hover:bg-metallic-gold transition-colors duration-300 shadow-lg">
+                                <button className="w-full py-4 text-lg font-medium text-luxury-white bg-luxury-onyx rounded-xl hover:bg-luxury-gold transition-colors duration-300 shadow-xl">
                                     Get Quote
                                 </button>
                             </Link>
