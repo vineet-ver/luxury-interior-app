@@ -20,7 +20,7 @@ export const siteData = {
         },
     },
     about: {
-        overview: "ITSS was established in the year 2012...",
+        overview: "ITSS was established in the year 2017...",
         mission: "To provide robust and quick IT services...",
         vision: "To become the leading IT solution provider...",
     },
