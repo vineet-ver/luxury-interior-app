@@ -40,14 +40,14 @@ export function Navbar() {
                     className={`
             relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300
             ${scrolled || mobileMenuOpen
-                            ? "bg-luxury-white/70 border border-luxury-platinum/50 backdrop-blur-xl shadow-luxury w-[90%] md:w-[60%]"
+                            ? "bg-luxury-white/70 border border-luxury-platinum/50 backdrop-blur-xl shadow-luxury w-[95%] md:w-[85%] lg:w-[75%]"
                             : "bg-transparent w-full container"
                         }
         `}
                 >
                     {/* Logo */}
                     <Link href="/" className="relative z-10 group" onClick={() => setMobileMenuOpen(false)}>
-                        <div className="relative h-16 w-48 transition-transform duration-300 group-hover:scale-105">
+                        <div className={`relative transition-all duration-300 ${scrolled ? 'h-12 w-36' : 'h-16 w-48'} group-hover:scale-105`}>
                             <Image
                                 src={siteData.general.logo}
                                 alt={siteData.general.siteName}
@@ -59,7 +59,7 @@ export function Navbar() {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center gap-8">
+                    <nav className="hidden md:flex items-center gap-6 lg:gap-8">
                         {['Home', 'Services', 'Clients', 'Portfolio', 'Gallery', 'About', 'Contact'].map((item) => (
                             <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-sm font-medium text-luxury-onyx/70 hover:text-luxury-onyx transition-colors relative group">
                                 {item}
