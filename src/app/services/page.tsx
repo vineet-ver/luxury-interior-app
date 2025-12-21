@@ -145,7 +145,7 @@ export default function ServicesPage() {
                             Industries We <span className="text-luxury-gold-shine italic font-light">Serve.</span>
                         </h2>
                         <p className="text-xl text-white/60 max-w-2xl leading-relaxed font-light">
-                            Specialized infrastructure solutions tailored for the unique operational demands of key global sectors.
+                            Specialized Turnkey solutions tailored for the unique operational demands of key global sectors.
                         </p>
                     </motion.div>
 

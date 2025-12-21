@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { siteData } from '@/content/siteData';
 import { MainLayout } from '@/components/layout/MainLayout';
 import { Container } from '@/components/ui/Container';
+import { PanIndiaPresence } from "@/components/sections/PanIndiaPresence";
 import { Target, Lightbulb, Trophy, ArrowRight, Star, Quote } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -150,6 +151,8 @@ export default function AboutPage() {
                                         <p>{siteData.leadership?.bio1}</p>
                                         <p>{siteData.leadership?.bio2}</p>
                                         <p>{siteData.leadership?.bio3}</p>
+                                        {/* @ts-ignore */}
+                                        <p>{siteData.leadership?.bio4}</p>
                                     </div>
 
                                     <div className="border-l-4 border-luxury-gold pl-8 py-2 mb-10 bg-luxury-gold/5 rounded-r-2xl py-6 pr-6">
@@ -168,6 +171,11 @@ export default function AboutPage() {
                             </div>
                         </Container>
                     </section>
+
+
+
+                    {/* Pan India Section */}
+                    <PanIndiaPresence />
 
                     {/* Section 3: Values (Centered) */}
                     <section className="py-40 relative z-10">
@@ -219,6 +227,6 @@ export default function AboutPage() {
                 </section>
 
             </div>
-        </MainLayout>
+        </MainLayout >
     );
 }

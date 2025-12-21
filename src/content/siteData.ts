@@ -4,7 +4,7 @@ export const siteData = {
         tagline: "Total Office Automation Solutions",
         contactEmail: "Itss.facilities@rediffmail.com",
         contactPhone: "+91 97183 71994, +91 99537 90266",
-        address: "F-161, 2nd floor, Dilshad colony, Delhi 110095",
+        address: "F-2/F-16 , 2nd floor, Dilshad colony, Near By Kapoor Medical ,Delhi 110095",
         logo: "/logo_v2.png",
     },
     home: {
@@ -56,23 +56,29 @@ export const siteData = {
         formDescription: "We would love to hear from you. Please fill out the form below.",
     },
     clients: [
+        // Priority Clients (Requested Order)
+        { id: 3, name: "Blinkit", category: "Enterprise", logo: "/clients/blinkit.png" },
+        { id: 101, name: "Zepto", category: "Technology", logo: "/clients/zepto.png" }, // Placeholder
+        { id: 15, name: "Zomato", category: "Technology", logo: "/clients/zomato.png" },
+        { id: 17, name: "Battery Smart", category: "Technology", logo: "/clients/battery_smart.png" },
+        { id: 102, name: "DTDC", category: "Logistics", logo: "/clients/dtdc.png" }, // Placeholder
+        { id: 11, name: "Shoppers Stop", category: "Retail", logo: "/clients/shoppers_stop.png" },
+        { id: 103, name: "Tech Mahindra", category: "Technology", logo: "/clients/tech_mahindra.png" }, // Placeholder
+        { id: 13, name: "TATA 1mg", category: "Healthcare", logo: "/clients/tata_1mg.png" },
+
+        // Remaining Enterprise Clients
         { id: 1, name: "91 Springboard", category: "Enterprise", logo: "/clients/91springboard.png" },
         { id: 2, name: "AECOM", category: "Enterprise", logo: "/clients/aecom.png" },
-        { id: 3, name: "Blinkit", category: "Enterprise", logo: "/clients/blinkit.png" },
-        { id: 4, name: "Gati", category: "Logistics", logo: "/clients/gati.png" },
         { id: 5, name: "Hitachi", category: "Enterprise", logo: "/clients/hitachi.png" },
+        { id: 4, name: "Gati", category: "Logistics", logo: "/clients/gati.png" },
         { id: 6, name: "Hilton", category: "Hospitality", logo: "/clients/hilton.png" },
         { id: 7, name: "Leader", category: "Manufacturing", logo: "/clients/leader.png" },
         { id: 8, name: "Paytm", category: "Fintech", logo: "/clients/paytm.png" },
         { id: 9, name: "Punjab Grill", category: "Hospitality", logo: "/clients/punjab_grill.png" },
         { id: 10, name: "Samsung SDS", category: "Technology", logo: "/clients/samsung_sds.png" },
-        { id: 11, name: "Shoppers Stop", category: "Retail", logo: "/clients/shoppers_stop.png" },
         { id: 12, name: "SRF", category: "Manufacturing", logo: "/clients/srf.png" },
-        { id: 13, name: "TATA 1mg", category: "Healthcare", logo: "/clients/tata_1mg.png" },
         { id: 14, name: "TCI Express", category: "Logistics", logo: "/clients/tci_express.png" },
-        { id: 15, name: "Zomato", category: "Technology", logo: "/clients/zomato.png" },
         { id: 16, name: "Wagh Bakri", category: "Retail", logo: "/clients/wagh_bakri.png" },
-        { id: 17, name: "Battery Smart", category: "Technology", logo: "/clients/battery_smart.png" },
         { id: 18, name: "Itochu", category: "Enterprise", logo: "/clients/itochu.png" },
         { id: 19, name: "Nagarro", category: "Technology", logo: "/clients/nagarro.png" },
         { id: 20, name: "Allianz", category: "Finance", logo: "/clients/allianz.png" },
@@ -130,12 +136,29 @@ export const siteData = {
         { id: "healthcare", title: "Healthcare", icon: "Stethoscope" },
     ],
     leadership: {
-        name: "Mr. Shaan Khan",
-        role: "Managing Director",
-        image: "/shaan_khan.jpg", // Placeholder - user needs to provide image or I'll use a placeholder
-        bio1: "Mr. Shaan Khan is the Managing Director of India Technical Solution Services (ITSS) and the son of Mr. Zaki Khan, the founder of the company. From a young age, Shaan grew up around construction sites and project environments, which naturally sparked his interest in the field of execution and turnkey infrastructure.",
-        bio2: "What began as simple observation soon turned into passion and eventually, responsibility. Carrying forward his father's legacy, Shaan brought a modern and organized approach to ITSS by implementing systems like real-time reporting, rapid mobilization, and structured project planning. Under his leadership, ITSS transformed from a local contractor into a pan-India turnkey solution provider.",
-        bio3: "Today, ITSS has delivered major projects for brands like Zomato, Zepto, Blinkit, Battery Smart, Samsung, Paytm, TechMahindra and Godrej Properties etc, known for quality work, timely handovers, and transparent communication. Mr. Shaan Khan leads the company not just with vision but with hands-on execution-maintaining the discipline, culture, and trust that his father once built, while scaling ITSS to newer heights.",
-        quote: "We Don't Deliver Projects. We Set Benchmarks."
-    }
+        name: "Mr. Zaki Khan",
+        role: "Founder",
+        image: "/zaki_khan.jpg", // Placeholder - user needs to provide image
+        bio1: "Before 2012, life tested Mr. Zaki Khan every single day. He worked in jobs that demanded long hours, low comfort, and endless patience. Resources were limited, pressure was constant, and the future felt uncertain. Lekin himmat kabhi kam nahi hui. Those years were not just about earning a living—they were about learning life the hard way. Every challenge, every late night, and every setback silently shaped his mindset. Instead of breaking him, the struggle taught him discipline, resilience, and the courage to dream bigger.",
+        bio2: "In 2012, with almost nothing except strong self-belief and an honest intention, he took a bold step. He started doing local work—chair and sofa repairing, carpentry, and maintenance services. This was a phase of pure grind. He handled everything himself: execution, client coordination, site work, and problem-solving. Kabhi dhoop mein kaam, kabhi raat tak site par rehna, yet he never complained. The work was small, but the effort was massive. These years demanded sacrifice, consistency, and faith—and this phase became the strongest foundation of his journey.",
+        bio3: "Slowly, his sincerity started speaking louder than any marketing. Clients began trusting him—not just for work, but for honesty and commitment. With time, his vision grew beyond survival. In 2017, after years of sweat and struggle, Mr. Zaki Khan officially established India Technical Solution Services (ITSS). What began as a small service-based setup soon became known for reliability, quality workmanship, and transparent communication. Yeh sirf company nahi thi, yeh saalon ki mehnat ka result thi.",
+        bio4: "By 2022, ITSS reached a turning point. The company started receiving turnkey project opportunities—a dream that once felt distant. Backed by years of on-ground experience, execution discipline, and never-give-up attitude, ITSS successfully entered the turnkey infrastructure space. Projects were no longer just completed—they were delivered with responsibility, structure, and accountability.",
+        quote: "The work was small, but the effort was massive."
+    },
+    portfolio: [
+        {
+            id: "plan-1",
+            title: "Corporate Headquarters Layout",
+            category: "Architectural Planning",
+            description: "A comprehensive floor plan designed for optimal workflow and spatial efficiency in a high-density corporate environment.",
+            image: "/portfolio/architectural_plan_1.jpg"
+        },
+        {
+            id: "plan-2",
+            title: "Executive Office Suite",
+            category: "Turnkey Interiors",
+            description: "Detailed schematics for a luxury executive suite, featuring integrated HVAC systems, custom joinery, and premium spatial organization.",
+            image: "/portfolio/architectural_plan_2.jpg"
+        }
+    ]
 };

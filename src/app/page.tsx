@@ -68,7 +68,7 @@ export default function Home() {
               <motion.div variants={fadeInUp} className="mb-8 flex items-center gap-4">
                 <div className="h-[1px] w-16 bg-luxury-gold shadow-[0_0_10px_rgba(212,175,55,0.5)]"></div>
                 <span className="text-sm font-medium tracking-[0.2em] uppercase text-luxury-gold drop-shadow-sm">
-                  Est. 2012 — Premium Interiors
+                  Est. 2017 — Premium Interiors
                 </span>
               </motion.div>
 
@@ -129,7 +129,7 @@ export default function Home() {
                   <p className="text-xs tracking-widest uppercase text-luxury-gold mb-2">Featured Project</p>
                   <h3 className="text-2xl font-display font-medium">The Sky Penthouse</h3>
                   <div className="flex justify-between items-end mt-4">
-                    <span className="text-white/80 text-sm">New York, NY</span>
+                    <span className="text-white/80 text-sm"></span>
                     <div className="w-10 h-10 rounded-full bg-white text-luxury-onyx flex items-center justify-center">
                       <ArrowUpRight className="w-5 h-5" />
                     </div>
@@ -262,7 +262,7 @@ export default function Home() {
                 {/* Floating Badge */}
                 <div className="absolute bottom-10 left-10 right-10 bg-white/10 backdrop-blur-xl p-8 rounded-3xl border border-white/30 text-white">
                   <p className="font-display text-2xl mb-2">The Executive Suite</p>
-                  <p className="text-sm text-white/70 tracking-wide">Cyber City, Gurugram</p>
+                  <p className="text-sm text-white/70 tracking-wide"></p>
                 </div>
               </div>
             </motion.div>
