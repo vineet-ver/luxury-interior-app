@@ -18,7 +18,7 @@ const ClientLogo = ({ name, logo }: { name: string; logo?: string }) => (
                     src={logo}
                     alt={`${name} Logo`}
                     fill
-                    className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110"
+                    className="object-contain transition-all duration-500 transform group-hover:scale-110"
                 />
             </div>
         ) : (
