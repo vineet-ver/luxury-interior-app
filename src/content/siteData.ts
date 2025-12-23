@@ -159,6 +159,20 @@ export const siteData = {
             category: "Turnkey Interiors",
             description: "Detailed schematics for a luxury executive suite, featuring integrated HVAC systems, custom joinery, and premium spatial organization.",
             image: "/portfolio/architectural_plan_2.jpg"
+        },
+        {
+            id: "battery-smart",
+            title: "Battery Smart Facility",
+            category: "Industrial Layout",
+            description: "1000 Sq. Ft. Optimized operational layout for Battery Smart, Reengas Rajasthan. Focused on workflow efficiency and safety protocols.",
+            image: "/portfolio/battery_smart.jpg"
+        },
+        {
+            id: "dhanbad-project",
+            title: "Commercial Complex Dhanbad",
+            category: "Architectural Planning",
+            description: "4119.894 Sq. Ft. Comprehensive floor plan for a large-scale commercial project in Dhanbad, maximizing usable area and flow.",
+            image: "/portfolio/dhanbad_project.jpg"
         }
     ]
 };
