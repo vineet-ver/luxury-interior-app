@@ -43,8 +43,8 @@ export default function Home() {
             className="relative w-full h-full"
           >
             <Image
-              src="/luxury-hero.png"
-              alt="Luxury Interior Penthouse"
+              src="/luxury-office-hero.png"
+              alt="Luxury Executive Office"
               fill
               className="object-cover object-center"
               priority
@@ -118,8 +118,8 @@ export default function Home() {
             >
               <div className="relative aspect-[3/4] rounded-[40px] overflow-hidden shadow-2xl shadow-luxury-onyx/20 border border-white/50 backdrop-blur-sm group">
                 <Image
-                  src="/luxury-hero.png"
-                  alt="Interior Detail"
+                  src="/luxury-office-hero.png"
+                  alt="Executive Office Interior"
                   fill
                   className="object-cover transition-transform duration-[2s] group-hover:scale-110"
                 />
@@ -127,7 +127,7 @@ export default function Home() {
 
                 <div className="absolute bottom-8 left-8 right-8 text-white backdrop-blur-md bg-white/10 p-6 rounded-3xl border border-white/20">
                   <p className="text-xs tracking-widest uppercase text-luxury-gold mb-2">Featured Project</p>
-                  <h3 className="text-2xl font-display font-medium">The Sky Penthouse</h3>
+                  <h3 className="text-2xl font-display font-medium">Executive Workspace</h3>
                   <div className="flex justify-between items-end mt-4">
                     <span className="text-white/80 text-sm"></span>
                     <div className="w-10 h-10 rounded-full bg-white text-luxury-onyx flex items-center justify-center">
