@@ -154,7 +154,7 @@ export default function HomeClient() {
                 </motion.div>
             </section>
 
-            <section className="relative z-20 -mt-12 pb-40">
+            <section className="relative z-20 pt-20 pb-40">
                 <Container>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
