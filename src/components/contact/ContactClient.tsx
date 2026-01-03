@@ -20,7 +20,7 @@ export default function ContactClient() {
         setSuccess(false);
 
         const formData = new FormData(e.currentTarget);
-        formData.append("access_key", "b3793915-85fb-4808-8f31-14a37ac33aa5");
+        formData.append("access_key", "e3b79144-bb71-46f6-8ed0-448344f8c769");
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
