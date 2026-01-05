@@ -7,7 +7,6 @@ export const metadata: Metadata = {
 };
 
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
-
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 export default function RootLayout({
