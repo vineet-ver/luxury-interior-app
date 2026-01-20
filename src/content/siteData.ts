@@ -112,7 +112,7 @@ export const siteData = {
         { id: 48, name: "Barclays", category: "Finance", logo: "/clients/barclays.png" },
     ],
     gallery: [
-        { id: 1, src: "/gallery/item-1.jpg", title: "Modern Glass Partitioning", category: "Office Interior" },
+        { id: 1, src: "/gallery/item-1.jpg", title: "Restaurant Booth Upholstery Work", category: "Upholstery Work" },
         { id: 2, src: "/gallery/item-2.jpg", title: "Executive Cabin Design", category: "Office Interior" },
         { id: 3, src: "/gallery/item-3.jpg", title: "Open Workspace Layout", category: "Workstations" },
         { id: 4, src: "/gallery/item-4.jpg", title: "Underfloor Cable Management", category: "Infrastructure" },
