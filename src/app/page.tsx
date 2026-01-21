@@ -13,7 +13,10 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  }, 
+  },
+  
+  authors: [{ name: "ITSS – India Technical Solution Services" }],
+  publisher: "ITSS – India Technical Solution Services",
 };
 
 export default function Home() {
