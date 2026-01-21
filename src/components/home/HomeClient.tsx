@@ -162,7 +162,7 @@ export default function HomeClient() {
                         viewport={{ once: true }}
                         className="mb-16 text-center"
                     >
-                        <h2 className="font-display text-4xl md:text-5xl font-bold text-luxury-onyx">Turnkey Commercial Interior Solutions</h2>
+                        <h2 className="font-display text-4xl md:text-5xl font-bold text-luxury-onyx">Turnkey Commercial Interior Solutions Across India</h2>
                         <p className="mt-4 text-luxury-onyx/60 max-w-2xl mx-auto">Providing comprehensive solutions for modern workspaces.</p>
                     </motion.div>
                     <motion.div
@@ -221,7 +221,7 @@ export default function HomeClient() {
                             </div>
 
                             <h2 className="font-display text-6xl md:text-7xl font-bold text-luxury-onyx mb-10 leading-[0.9]">
-                                Corporate Office Interior <br />
+                                Corporate Office Interior Design Expertise Across India <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-luxury-onyx to-gray-500">Expertise.</span>
                             </h2>
 
@@ -235,7 +235,7 @@ export default function HomeClient() {
                             </div>
 
                             <div className="mt-12 space-y-6">
-                                <h3 className="text-2xl font-display font-bold text-luxury-onyx">Why Choose ITSS?</h3>
+                                <h3 className="text-2xl font-display font-bold text-luxury-onyx">Why Choose ITSS for Commercial Interior Design?</h3>
                                 <p className="text-lg text-luxury-onyx/60 font-light">
                                     We are the best commercial interior design firm because we deliver more than just design; we deliver performance, security, and a legacy of excellence for corporate office interiors.
                                 </p>
