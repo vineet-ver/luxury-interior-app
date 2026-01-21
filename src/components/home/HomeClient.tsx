@@ -267,7 +267,7 @@ export default function HomeClient() {
                             <div className="relative z-10 aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-luxury-onyx/10 group">
                                 <Image
                                     src="/office_architecture.jpg"
-                                    alt="Office Architecture"
+                                    alt="Corporate office interior architecture project by ITSS in India"
                                     fill
                                     className="object-cover transition-transform duration-[2s] group-hover:scale-105"
                                 />
