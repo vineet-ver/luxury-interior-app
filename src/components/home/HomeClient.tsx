@@ -78,7 +78,7 @@ export default function HomeClient() {
                             </motion.h1>
 
                             <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-luxury-onyx/70 max-w-xl leading-relaxed mb-12 border-l-2 border-luxury-gold/30 pl-8 font-light">
-                                Crafting ultra-luxury environments for the world's most discerning enterprises. Where art meets architecture in turnkey commercial interior solutions.
+                                ITSS is a leading <strong>commercial interior design company in India</strong>delivering <strong>turnkey office, corporate, and retail interior solutions</strong>for premium enterprises across India.
                             </motion.p>
 
                             <motion.div variants={fadeInUp} className="flex flex-wrap gap-8 items-center">
