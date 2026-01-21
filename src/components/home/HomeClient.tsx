@@ -173,9 +173,9 @@ export default function HomeClient() {
                         className="grid grid-cols-1 md:grid-cols-3 gap-8"
                     >
                         {[
-                            { title: "Surveillance", icon: Shield, desc: "Military-grade security protocols for ultra-high-net-worth assets." },
-                            { title: "Networking", icon: Server, desc: "Enterprise infrastructure with 99.999% uptime guarantee." },
-                            { title: "Consultancy", icon: Users, desc: "Bespoke digital transformation for legacy institutions." }
+                            { title: "Office Interior Design", icon: Shield, desc: "Premium office interior design solutions tailored for modern corporate workplaces." },
+                            { title: "Turnkey Commercial Interior", icon: Server, desc: "End-to-end turnkey commercial interior design services from concept to execution." },
+                            { title: "Corporate Interior Consultancy", icon: Users, desc: "Strategic corporate interior design consultancy focused on performance-driven spaces." }
                         ].map((item, i) => (
                             <div key={i} className="group relative p-10 rounded-[2.5rem] bg-luxury-white/80 backdrop-blur-xl border border-white/40 hover:border-luxury-gold/50 transition-all duration-700 hover:-translate-y-4 shadow-luxury hover:shadow-[0_20px_40px_-15px_rgba(212,175,55,0.2)] overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
