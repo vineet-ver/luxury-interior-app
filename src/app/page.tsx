@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Commercial Interior Design Company in India | ITSS",
   description: "Leading commercial interior designers delivering turnkey office & corporate interior solutions across India.",
   keywords: "commercial interior design company, commercial interior designers, commercial interior solutions, turnkey commercial interior company, corporate office interiors, best commercial interior design firm, commercial interior design company in india, office interior design company, turnkey interior contractors, commercial interior designers india, turnkey office interior solutions, interior design company india",
+ alternates: {
+    canonical: "https://itss.co.in/"
+  } 
 };
 
 export default function Home() {
