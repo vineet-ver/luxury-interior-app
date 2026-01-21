@@ -230,7 +230,7 @@ export default function HomeClient() {
                                     We don't just install systems; we orchestrate environments. At <strong className="text-luxury-gold font-normal">ITSS</strong>, we believe that true luxury lies in the seamless integration of intelligence and aesthetics.
                                 </p>
                                 <p>
-                                    As a leading turnkey commercial interior company, our signature approach combines military-grade precision with the elegance of Italian design.
+                                    As a leading <strong>turnkey commercial interior design company in India</strong>,our signature approach combines precision engineering with luxury design for corporate office interiors.
                                 </p>
                             </div>
 
