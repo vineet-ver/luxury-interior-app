@@ -5,7 +5,7 @@ import ServicesClient from "@/components/services/ServicesClient";
 export const metadata: Metadata = {
   title: "Office Interior Design & Turnkey Fit-Out Services | ITSS",
   description:
-    "Office interior design company offering corporate interiors, renovation & turnkey office fit-out services across India.",
+    "Office interior design company offering corporate interiors, renovation & turnkey office fit-out services across India for modern and functional workspaces.",
   keywords: [
     "office interior design company",
     "office interior designers",
