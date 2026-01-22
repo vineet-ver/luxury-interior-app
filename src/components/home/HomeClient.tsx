@@ -160,7 +160,7 @@ export default function HomeClient() {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="mb-10 text-center"
+                        className="mb-8 text-center"
                     >
                         <h2 className="font-display text-4xl md:text-5xl font-bold text-luxury-onyx">Turnkey Commercial Interior Solutions Across India</h2>
                         <p className="mt-4 text-luxury-onyx/60 max-w-2xl mx-auto">Providing comprehensive solutions for modern workspaces.</p>
