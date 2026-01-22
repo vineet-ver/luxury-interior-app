@@ -58,11 +58,11 @@ export default function ServicesClient() {
                     >
                         <span className="text-sm font-medium tracking-[0.4em] text-luxury-gold uppercase mb-6 block">Turnkey Office Interior Solutions</span>
                         <h1 className="font-display text-5xl md:text-7xl font-bold text-luxury-onyx mb-8 leading-tight">
-                            Office Interior Design <br />
-                            <span className="font-light italic text-luxury-gold-shine">& Fit-Out Services</span>
+                            Commercial Interior Design Services <br />
+                            <span className="font-light italic text-luxury-gold-shine">Across India</span>
                         </h1>
                         <p className="text-xl text-luxury-onyx/60 max-w-2xl mx-auto leading-relaxed font-light">
-                            Comprehensive renovation & execution services for the world's most demanding enterprises.
+                            ITSS is a leading commercial interior design company in India providing office interior design, turnkey commercial interiors, and corporate fit-out services for businesses across India.
                         </p>
                     </motion.div>
 
@@ -99,9 +99,9 @@ export default function ServicesClient() {
 
                                             {/* Content */}
                                             <div className="flex-1 max-w-2xl">
-                                                <h3 className={`font-display text-3xl font-bold mb-4 transition-colors duration-500 ${isHovered ? 'text-white' : 'text-luxury-onyx'}`}>
+                                                <h2 className={`font-display text-3xl font-bold mb-4 transition-colors duration-500 ${isHovered ? 'text-white' : 'text-luxury-onyx'}`}>
                                                     {service.title}
-                                                </h3>
+                                                </h2>
                                                 <p className={`text-lg leading-relaxed transition-colors duration-500 ${isHovered ? 'text-white/70' : 'text-luxury-onyx/60'}`}>
                                                     {service.description}
                                                 </p>
@@ -145,7 +145,7 @@ export default function ServicesClient() {
                             Corporate Office <span className="text-luxury-gold-shine italic font-light">Interior Design.</span>
                         </h2>
                         <p className="text-xl text-white/60 max-w-2xl leading-relaxed font-light">
-                            Specialized Turnkey solutions tailored for the unique operational demands of key global sectors.
+                            Pan-India turnkey commercial interior design solutions for corporate offices, retail, healthcare, education, and industrial sectors.
                         </p>
                     </motion.div>
 
