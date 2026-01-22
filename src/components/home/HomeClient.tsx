@@ -154,13 +154,13 @@ export default function HomeClient() {
                 </motion.div>
             </section>
 
-            <section className="relative z-20 pt-20 pb-40">
+            <section className="relative z-20 pt-20 pb-16">
                 <Container>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="mb-16 text-center"
+                        className="mb-10 text-center"
                     >
                         <h2 className="font-display text-4xl md:text-5xl font-bold text-luxury-onyx">Turnkey Commercial Interior Solutions Across India</h2>
                         <p className="mt-4 text-luxury-onyx/60 max-w-2xl mx-auto">Providing comprehensive solutions for modern workspaces.</p>
@@ -170,7 +170,7 @@ export default function HomeClient() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                        className="grid grid-cols-1 md:grid-cols-3 gap-6"
                     >
                         {[
                             { title: "Office Interior Design", icon: Shield, desc: "Premium office interior design solutions tailored for modern corporate workplaces." },
