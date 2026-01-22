@@ -173,6 +173,13 @@ export const siteData = {
             category: "Architectural Planning",
             description: "4119.894 Sq. Ft. Comprehensive floor plan for a large-scale commercial project in Dhanbad, maximizing usable area and flow.",
             image: "/portfolio/dhanbad_project.jpg"
+        },  
+        {
+            id: "godrej-sector-150-upholstery",
+            title: "Office Upholstery Work – Godrej Sector 150",
+            category: "Office Interior",
+            description: "Successfully completed premium office upholstery work at Godrej Sector 150, including sofa re-upholstery and seating enhancement, delivering comfort, durability, and refined aesthetics for corporate interiors.",
+            image: "/portfolio/office-upholstery-work-godrej.jpg"
         }
     ]
 };
