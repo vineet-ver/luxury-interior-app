@@ -3,11 +3,20 @@ import type { Metadata } from "next";
 import AboutClient from "@/components/about/AboutClient";
 
 export const metadata: Metadata = {
-    title: "About ITSS - Commercial Interior Experts",
-    description: "Learn about our legacy in commercial interior design across Delhi and Mumbai.",
-    keywords: "commercial interior designers in Delhi, office interior designers in Delhi, commercial interior designers in Mumbai, office interior designers in Mumbai",
+  title: "About ITSS | Commercial Interior Design Experts in India",
+  description:
+    "Learn about ITSS, a leading commercial interior design company delivering innovative office interiors, fit-out and renovation solutions across India.",
+  alternates: {
+    canonical: "https://www.itss.co.in/about",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  authors: [{ name: "ITSS Interior Experts" }],
+  publisher: "India Technical Solution Services",
 };
 
 export default function AboutPage() {
-    return <AboutClient />;
+  return <AboutClient />;
 }
