@@ -64,7 +64,7 @@ export default function PortfolioClient() {
                                             src={item.image}
                                             alt={`${item.title} interior design project in India by ITSS`}
                                             width={1920}
-                                            height={1080}
+                                            height={800}
                                             className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                                         />
                                     </div>
