@@ -62,7 +62,7 @@ export default function PortfolioClient() {
                                         </div>
                                         <Image
                                             src={item.image}
-                                            alt={item.title}
+                                            alt={`${item.title} interior design project in India by ITSS`}
                                             width={1920}
                                             height={1080}
                                             className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -114,7 +114,7 @@ export default function PortfolioClient() {
                         >
                             <Image
                                 src={selectedImage}
-                                alt="Blueprint Detail"
+                                alt="Commercial interior design project blueprint by ITSS"
                                 fill
                                 className="object-contain"
                             />
