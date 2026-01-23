@@ -53,7 +53,7 @@ export default function GalleryClient() {
                                     <div className="relative aspect-[3/4] md:aspect-auto">
                                         <Image
                                             src={item.src}
-                                            alt={item.title}
+                                            alt={`${item.title} commercial interior design by ITSS`}
                                             width={800}
                                             height={1000}
                                             className="w-full object-cover transition-transform duration-1000 group-hover:scale-110"
@@ -109,7 +109,7 @@ export default function GalleryClient() {
                                         <div className="relative aspect-[3/4] md:aspect-square lg:aspect-[4/3]">
                                             <Image
                                                 src={item.src}
-                                                alt={item.title}
+                                                alt={`${item.title} commercial interior design project by ITSS`}
                                                 fill
                                                 className="object-cover"
                                             />
