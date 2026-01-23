@@ -61,9 +61,21 @@ export default function ServicesClient() {
                             Commercial Interior Design Services <br />
                             <span className="font-light italic text-luxury-gold-shine">Across India</span>
                         </h1>
+                        <h2 className="text-2xl md:text-3xl font-semibold text-luxury-onyx mb-6">
+                            Turnkey Commercial Interior Design Services in India
+                        </h2>
                         <p className="text-xl text-luxury-onyx/60 max-w-2xl mx-auto leading-relaxed font-light">
-                            ITSS is a leading commercial interior design company in India providing office interior design, turnkey commercial interiors, and corporate fit-out services for businesses across India.
-                        </p>
+                           ITSS is a leading commercial interior design company in India providing office interior design,
+                           turnkey commercial interiors, and corporate fit-out services.
+                           Explore our{" "}
+                           <a
+                             href="/portfolio"
+                             className="text-luxury-gold underline hover:text-luxury-gold-shine transition-colors"
+                           >
+                            commercial interior design projects
+                           </a>{" "}
+                           delivered across India.
+                           </p>
                     </motion.div>
 
                     <div className="grid grid-cols-1 gap-6">
