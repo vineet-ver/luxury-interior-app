@@ -4,7 +4,7 @@ export const siteData = {
         tagline: "Total Office Automation Solutions",
         contactEmail: "Itss.facilities@rediffmail.com",
         contactPhone: "+91 97183 71994, +91 99537 90266",
-        address: "first floor, F - 16/F-2, Dilshad colony, New delhi, shahdara, Delhi 110095",
+        address: "First Floor, F-16/F-2, Dilshad Colony, New Delhi, Shahdara, Delhi 110095",
         logo: "/logo_v2.png",
     },
     home: {
