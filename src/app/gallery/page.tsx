@@ -1,13 +1,29 @@
 
 import type { Metadata } from "next";
-import GalleryClient from "@/components/gallery/GalleryClient";
+import GalleryClient from "./GalleryClient";
 
 export const metadata: Metadata = {
-    title: "Interior Support Work Gallery | ITSS",
-    description: "Showcasing our commercial interior design excellence.",
-    keywords: "commercial false ceiling contractor, office partition work contractor, modular office furniture installation, commercial electrical fit out services, commercial HVAC fit out contractor, MEP fit out contractor",
+  title: "Commercial Interior Work Gallery | Office Projects by ITSS",
+  description:
+    "Explore ITSS commercial interior work gallery featuring office interiors, workspace design, furniture installation, and turnkey fit-out projects completed across India.",
+  keywords: [
+    "commercial interior work gallery",
+    "office interior projects",
+    "turnkey fit out gallery",
+    "workspace interior design",
+    "ITSS interior projects"
+  ],
+  alternates: {
+    canonical: "https://www.itss.co.in/gallery",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  authors: [{ name: "ITSS Interior Experts" }],
+  publisher: "India Technical Solution Services",
 };
 
-export default function GalleryPage() {
-    return <GalleryClient />;
+export default function Page() {
+  return <GalleryClient />;
 }
