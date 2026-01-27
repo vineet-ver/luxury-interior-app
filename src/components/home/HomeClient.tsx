@@ -71,14 +71,14 @@ export default function HomeClient() {
                             </motion.div>
 
                             <motion.h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-luxury-onyx leading-[0.95] mb-10 relative">
-                                <motion.span variants={fadeInUp} className="block">Commercial Interior</motion.span>
+                                <motion.span variants={fadeInUp} className="block">Turnkey Interior Contractor</motion.span>
                                 <motion.span variants={fadeInUp} className="block text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold to-yellow-600 italic font-light pr-4">
-                                    Design Company in India
+                                    in India
                                 </motion.span>
                             </motion.h1>
 
                             <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-luxury-onyx/70 max-w-xl leading-relaxed mb-12 border-l-2 border-luxury-gold/30 pl-8 font-light">
-                                ITSS is a leading <Link href="/services" className="text-luxury-gold font-semibold underline underline-offset-4">commercial interior design company in India</Link> delivering <strong>turnkey office, corporate, and retail interior solutions</strong> across India.
+                                ITSS is a trusted <strong>turnkey interior contractor in India</strong> delivering commercial and <strong>office interior contractor</strong> services, including turnkey office, corporate, and retail interior solutions across India.
                             </motion.p>
 
                             <motion.div variants={fadeInUp} className="flex flex-wrap gap-8 items-center">
