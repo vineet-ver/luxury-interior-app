@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import HomeClient from "@/components/home/HomeClient";
 
 export const metadata: Metadata = {
-  title: "Commercial Interior Design Company in India | ITSS",
-  description: "Leading commercial interior designers delivering turnkey office and corporate interior solutions across India. Trusted pan-India interior design company for modern businesses.",
-  keywords: "commercial interior design company, commercial interior designers, commercial interior solutions, turnkey commercial interior company, corporate office interiors, best commercial interior design firm, commercial interior design company in india, office interior design company, turnkey interior contractors, commercial interior designers india, turnkey office interior solutions, interior design company india",
+  title: "Turnkey Interior Contractor in India | ITSS",
+  description: "ITSS is a leading commercial interior contractor in India offering turnkey office interiors, corporate fit-out and execution services pan-India.",
+  keywords: "commercial interior contractor, office interior contractor, turnkey office interiors, corporate interior fit out, commercial interior services, turnkey interior solutions, office fit out services, corporate workspace interiors, end-to-end interior solutions, commercial interior services in India, office interior contractor India, turnkey interior services across India",
  alternates: {
     canonical: "https://www.itss.co.in/"
     },
