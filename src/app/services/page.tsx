@@ -3,21 +3,11 @@ import type { Metadata } from "next";
 import ServicesClient from "@/components/services/ServicesClient";
 
 export const metadata: Metadata = {
-  title: "Office Interior Design & Turnkey Fit-Out Services | ITSS",
+  title: "Commercial Interior Contractor in India | Turnkey Office Interiors – ITSS",
   description:
-    "Office interior design company offering corporate interiors, renovation & turnkey office fit-out services across India for modern and functional workspaces.",
-  keywords: [
-    "office interior design company",
-    "office interior designers",
-    "office fit out services",
-    "turnkey office interior solutions",
-    "corporate office interior design",
-    "workspace interior design services",
-    "office renovation contractor",
-    "commercial interior design services",
-    "turnkey commercial interiors",
-    "corporate fit out services",
-  ],
+    "ITSS is a trusted commercial interior contractor in India providing turnkey office interiors, corporate fit-out services, and end-to-end commercial interior execution across India.",
+  keywords:
+    "commercial interior contractor in India, office interior contractor in India, turnkey interior contractor India, commercial interior services India, turnkey office interiors, corporate interior fit out services",
   alternates: {
     canonical: "https://www.itss.co.in/services",
   },
@@ -25,10 +15,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  authors: [{ name: "ITSS Interior Experts" }],
-  publisher: "India Technical Solution Services",
+  authors: [{ name: "ITSS – India Technical Solution Services" }],
+  publisher: "ITSS – India Technical Solution Services",
 };
 
 export default function ServicesPage() {
   return <ServicesClient />;
 }
+
