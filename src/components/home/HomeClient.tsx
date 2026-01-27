@@ -42,7 +42,7 @@ export default function HomeClient() {
                     >
                         <Image
                             src="/luxury-office-hero.png"
-                            alt="Turnkey office interior project by ITSS in India"
+                            alt="Commercial office interior project by turnkey interior contractor ITSS in India"
                             fill
                             className="object-cover object-center"
                             priority
@@ -78,7 +78,7 @@ export default function HomeClient() {
                             </motion.h1>
 
                             <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-luxury-onyx/70 max-w-xl leading-relaxed mb-12 border-l-2 border-luxury-gold/30 pl-8 font-light">
-                                ITSS is a trusted <strong>turnkey interior contractor in India</strong> delivering commercial and <strong>office interior contractor</strong> services, including turnkey office, corporate, and retail interior solutions across India.
+                                ITSS is a trusted <strong>commercial interior contractor in India</strong> delivering <strong> turnkey interior solutions<strong> <strong>office interior fit-out services</strong> and <strong>corporate interior execution</strong> for premium workspaces across India..
                             </motion.p>
 
                             <motion.div variants={fadeInUp} className="flex flex-wrap gap-8 items-center">
@@ -230,7 +230,7 @@ export default function HomeClient() {
                                     We don't just install systems; we orchestrate environments. At <strong className="text-luxury-gold font-normal">ITSS</strong>, we believe that true luxury lies in the seamless integration of intelligence and aesthetics.
                                 </p>
                                 <p>
-                                     As a leading <strong>turnkey commercial interior contractor in India</strong>, our signature approach combines precision engineering with luxury execution for corporate office interiors     .
+                                     As a leading <strong>turnkey commercial interior contractor in India</strong>, our signature approach combines precision engineering, premium materials, and flawless execution for corporate office interiors across India.
                                 </p>
                             </div>
 
