@@ -58,21 +58,21 @@ export default function ServicesClient() {
                     >
                         <span className="text-sm font-medium tracking-[0.4em] text-luxury-gold uppercase mb-6 block">Turnkey Office Interior Solutions</span>
                         <h1 className="font-display text-5xl md:text-7xl font-bold text-luxury-onyx mb-8 leading-tight">
-                            Commercial Interior Design Services <br />
+                            Commercial Interior Contractor <br />
                             <span className="font-light italic text-luxury-gold-shine">Across India</span>
                         </h1>
                         <h2 className="text-2xl md:text-3xl font-semibold text-luxury-onyx mb-6">
-                            Turnkey Commercial Interior Design Services in India
+                            Turnkey Office Interior & Corporate Fit-Out Services
                         </h2>
                         <p className="text-xl text-luxury-onyx/60 max-w-2xl mx-auto leading-relaxed font-light">
-                           ITSS is a leading commercial interior design company in India providing office interior design,
-                           turnkey commercial interiors, and corporate fit-out services.
+                           ITSS is a trusted <strong>commercial interior contractor in India</strong> delivering end-to-end <strong>turnkey interior contractor</strong> solutions including office interior execution,
+                           corporate fit-out services, and commercial interior projects across India.
                            Explore our{" "}
                            <a
                              href="/portfolio"
                              className="text-luxury-gold underline hover:text-luxury-gold-shine transition-colors"
                            >
-                            commercial interior design projects
+                            completed commercial interior projects
                            </a>{" "}
                            delivered across India.
                            </p>
@@ -154,7 +154,7 @@ export default function ServicesClient() {
                     >
                         <span className="text-sm font-medium tracking-[0.4em] text-luxury-gold uppercase mb-6 block">Sectors & Domains</span>
                         <h2 className="font-display text-5xl md:text-6xl font-bold text-white mb-8">
-                            Corporate Office <span className="text-luxury-gold-shine italic font-light">Interior Design.</span>
+                            Commercial & Corporate Office <span className="text-luxury-gold-shine italic font-light">Interior Solutions.</span>
                         </h2>
                         <p className="text-xl text-white/60 max-w-2xl leading-relaxed font-light">
                             Pan-India turnkey commercial interior design solutions for corporate offices, retail, healthcare, education, and industrial sectors.
