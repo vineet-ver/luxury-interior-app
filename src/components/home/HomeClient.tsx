@@ -42,7 +42,7 @@ export default function HomeClient() {
                     >
                         <Image
                             src="/luxury-office-hero.png"
-                            alt="Luxury Executive Office"
+                            alt="Turnkey office interior project by ITSS in India"
                             fill
                             className="object-cover object-center"
                             priority
@@ -173,9 +173,9 @@ export default function HomeClient() {
                         className="grid grid-cols-1 md:grid-cols-3 gap-6"
                     >
                         {[
-                            { title: "Office Interior Design", icon: Shield, desc: "Premium office interior design solutions tailored for modern corporate workplaces." },
-                            { title: "Turnkey Commercial Interior", icon: Server, desc: "End-to-end turnkey commercial interior design services from concept to execution." },
-                            { title: "Corporate Interior Consultancy", icon: Users, desc: "Strategic corporate interior design consultancy focused on performance-driven spaces." }
+                            { title: "Office Interior Contractor Services", icon: Shield, desc: "Premium office interior contractor services tailored for modern corporate workplaces." },
+                            { title: "Turnkey Interior Contractor Solutions", icon: Server, desc: "End-to-end turnkey commercial interior design services from concept to execution." },
+                            { title: "Corporate Interior Fit-Out Consultancy", icon: Users, desc: "Strategic corporate interior design consultancy focused on performance-driven spaces." }
                         ].map((item, i) => (
                             <div key={i} className="group relative p-10 rounded-[2.5rem] bg-luxury-white/80 backdrop-blur-xl border border-white/40 hover:border-luxury-gold/50 transition-all duration-700 hover:-translate-y-4 shadow-luxury hover:shadow-[0_20px_40px_-15px_rgba(212,175,55,0.2)] overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -230,7 +230,7 @@ export default function HomeClient() {
                                     We don't just install systems; we orchestrate environments. At <strong className="text-luxury-gold font-normal">ITSS</strong>, we believe that true luxury lies in the seamless integration of intelligence and aesthetics.
                                 </p>
                                 <p>
-                                    As a leading <strong>turnkey commercial interior design company in India</strong>,our signature approach combines precision engineering with luxury design for corporate office interiors.
+                                     As a leading <strong>turnkey commercial interior contractor in India</strong>, our signature approach combines precision engineering with luxury execution for corporate office interiors     .
                                 </p>
                             </div>
 
