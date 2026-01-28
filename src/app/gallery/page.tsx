@@ -1,11 +1,10 @@
 
 import type { Metadata } from "next";
-import GalleryClient from "./GalleryClient";
+import GalleryClient from "@/GalleryClient";
 
 export const metadata: Metadata = {
   title: "Commercial Interior Work Gallery | Office Projects by ITSS",
-  description:
-    "Explore ITSS commercial interior work gallery featuring office interiors, workspace design, furniture installation, and turnkey fit-out projects completed across India.",
+  description: "Explore ITSS commercial interior work gallery featuring office interiors, workspace design, furniture installation, and turnkey fit-out projects completed across India.",
   keywords: [
     "commercial interior work gallery",
     "office interior projects",
@@ -24,6 +23,6 @@ export const metadata: Metadata = {
   publisher: "India Technical Solution Services",
 };
 
-export default function Page() {
+export default function GalleryPage() {
   return <GalleryClient />;
 }
