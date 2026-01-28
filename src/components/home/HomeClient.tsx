@@ -78,7 +78,7 @@ export default function HomeClient() {
                             </motion.h1>
 
                             <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-luxury-onyx/70 max-w-xl leading-relaxed mb-12 border-l-2 border-luxury-gold/30 pl-8 font-light">
-                                ITSS is a trusted <strong>commercial interior contractor in India</strong> delivering <strong> turnkey interior solutions<strong> <strong>office interior fit-out services</strong> and <strong>corporate interior execution</strong> for premium workspaces across India..
+                                ITSS is a trusted <strong>turnkey interior contractor in India</strong> delivering commercial and <strong> office interior contractor</strong> services, including turnkey office, corporate and retail interior solutions across India.
                             </motion.p>
 
                             <motion.div variants={fadeInUp} className="flex flex-wrap gap-8 items-center">
