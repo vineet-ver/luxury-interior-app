@@ -1,6 +1,6 @@
 
 import type { Metadata } from "next";
-import GalleryClient from "@/GalleryClient";
+import GalleryClient from "@/components/gallery/GalleryClient";
 
 export const metadata: Metadata = {
   title: "Commercial Interior Work Gallery | Office Projects by ITSS",
