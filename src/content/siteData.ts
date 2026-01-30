@@ -21,7 +21,7 @@ export const siteData = {
     },
     about: {
         overview: "ITSS was established in the year 2017...",
-        mission: "To provide robust and quick INTERIOR services...",
+        mission: "To deliver high-quality, cost-effective, and on-time turnkey project solutions through professional planning, transparent processes, and accountable execution—ensuring exceptional value and long-term trust for our clients...",
         vision: "To become the leading IT solution provider...",
     },
     services: [
