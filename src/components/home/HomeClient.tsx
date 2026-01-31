@@ -71,14 +71,14 @@ export default function HomeClient() {
                             </motion.div>
 
                             <motion.h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-luxury-onyx leading-[0.95] mb-10 relative">
-                                <motion.span variants={fadeInUp} className="block">Turnkey Interior Contractor</motion.span>
+                                <motion.span variants={fadeInUp} className="block">Commercial Interior Designers</motion.span>
                                 <motion.span variants={fadeInUp} className="block text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold to-yellow-600 italic font-light pr-4">
                                     in India
                                 </motion.span>
                             </motion.h1>
 
                             <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-luxury-onyx/70 max-w-xl leading-relaxed mb-12 border-l-2 border-luxury-gold/30 pl-8 font-light">
-                                ITSS is a trusted <strong>turnkey interior contractor in India</strong> delivering commercial and <strong> office interior contractor</strong> services, including turnkey office, corporate and retail interior solutions across India.
+                                ITSS is one of the leading <strong>commercial interior designers in India</strong>,delivering <strong>end-to-end turnkey interior projects</strong> for offices, corporate spaces, and commercial environments. As a trusted</strong>   turnkey interior contractor in India</strong>, we manage everything from design and planning to execution and final handover across India.
                             </motion.p>
 
                             <motion.div variants={fadeInUp} className="flex flex-wrap gap-8 items-center">
@@ -162,7 +162,7 @@ export default function HomeClient() {
                         viewport={{ once: true }}
                         className="mb-8 text-center"
                     >
-                        <h2 className="font-display text-4xl md:text-5xl font-bold text-luxury-onyx">Turnkey Commercial Interior Solutions Across India</h2>
+                        <h2 className="font-display text-4xl md:text-5xl font-bold text-luxury-onyx">Commercial Interior Design Company in India</h2>
                         <p className="mt-4 text-luxury-onyx/60 max-w-2xl mx-auto">Providing comprehensive solutions for modern workspaces.</p>
                     </motion.div>
                     <motion.div
@@ -221,7 +221,7 @@ export default function HomeClient() {
                             </div>
 
                             <h2 className="font-display text-6xl md:text-7xl font-bold text-luxury-onyx mb-10 leading-[0.9]">
-                                Corporate Office Interior Design Expertise Across India <br />
+                                Turnkey Commercial Interior Projects Across India <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-luxury-onyx to-gray-500">Expertise.</span>
                             </h2>
 
@@ -230,7 +230,7 @@ export default function HomeClient() {
                                     We don't just install systems; we orchestrate environments. At <strong className="text-luxury-gold font-normal">ITSS</strong>, we believe that true luxury lies in the seamless integration of intelligence and aesthetics.
                                 </p>
                                 <p>
-                                     As a leading <strong>turnkey commercial interior contractor in India</strong>, our signature approach combines precision engineering, premium materials, and flawless execution for corporate office interiors across India.
+                                     As a leading <strong>turnkey commercial interior contractor in India</strong>, our signature approach combines precision engineering, premium materials, and flawless execution for corporate office interiors across India, Our reputation as trusted <strong>commercial interior designers in India</strong> is built on quality execution, innovative design, and pan-India project delivery.
                                 </p>
                             </div>
 
