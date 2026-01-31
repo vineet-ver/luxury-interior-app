@@ -1,4 +1,5 @@
 
+
 import type { Metadata } from "next";
 import HomeClient from "@/components/home/HomeClient";
 
@@ -38,4 +39,5 @@ export const metadata: Metadata = {
 export default function Home() {
   return <HomeClient />;
 }
+
 
