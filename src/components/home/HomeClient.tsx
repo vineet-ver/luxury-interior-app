@@ -73,7 +73,7 @@ export default function HomeClient() {
                             <motion.h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-luxury-onyx leading-[0.95] mb-10 relative">
                                 <motion.span variants={fadeInUp} className="block">Commercial Interior Designers</motion.span>
                                 <motion.span variants={fadeInUp} className="block text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold to-yellow-600 italic font-light pr-4">
-                                    in India
+                                    In Pan India 
                                 </motion.span>
                             </motion.h1>
 
