@@ -8,9 +8,8 @@ export const metadata: Metadata = {
   description:
     "Pioneering the future of total office automation and enterprise intelligence.",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/logo_v2.png",
+    apple: "/logo_v2.png",
   },
   other: {
     "application/ld+json": JSON.stringify({
