@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: "ITSS | Enterprise Solutions",
   description:
     "Pioneering the future of total office automation and enterprise intelligence.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   other: {
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
