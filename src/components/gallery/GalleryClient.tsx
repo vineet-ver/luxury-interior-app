@@ -128,7 +128,7 @@ export default function GalleryClient() {
                                                 </div>
                                                 <div>
                                                     <span className="block text-xs uppercase text-luxury-onyx/40 mb-1">Year</span>
-                                                    <span className="block text-lg font-medium text-luxury-onyx">2024</span>
+                                                    <span className="block text-lg font-medium text-luxury-onyx">2026</span>
                                                 </div>
                                                 <div>
                                                     <span className="block text-xs uppercase text-luxury-onyx/40 mb-1">Client</span>
