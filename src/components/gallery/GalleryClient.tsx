@@ -118,7 +118,7 @@ export default function GalleryClient() {
                                             <span className="text-luxury-gold text-sm font-bold tracking-[0.2em] uppercase mb-4 block">Project Detail</span>
                                             <h2 className="text-4xl md:text-5xl font-display font-bold text-luxury-onyx mb-6">{item.title}</h2>
                                             <p className="text-luxury-onyx/60 text-lg leading-relaxed mb-10 font-light">
-                                                A masterpiece of design and execution, reflecting our commitment to creating environments that inspire. The {item.category} space utilizes premium materials and optimizing workflow.
+                                                {item.description}
                                             </p>
 
                                             <div className="grid grid-cols-2 gap-8 py-8 border-t border-luxury-platinum/50 mb-8">
@@ -128,7 +128,7 @@ export default function GalleryClient() {
                                                 </div>
                                                 <div>
                                                     <span className="block text-xs uppercase text-luxury-onyx/40 mb-1">Year</span>
-                                                    <span className="block text-lg font-medium text-luxury-onyx">2026</span>
+                                                    <span className="block text-lg font-medium text-luxury-onyx">{item.year}</span>
                                                 </div>
                                                 <div>
                                                     <span className="block text-xs uppercase text-luxury-onyx/40 mb-1">Client</span>
@@ -136,7 +136,7 @@ export default function GalleryClient() {
                                                 </div>
                                                 <div>
                                                     <span className="block text-xs uppercase text-luxury-onyx/40 mb-1">Location</span>
-                                                    <span className="block text-lg font-medium text-luxury-onyx">New Delhi</span>
+                                                    <span className="block text-lg font-medium text-luxury-onyx">{item.Location}</span>
                                                 </div>
                                             </div>
 
