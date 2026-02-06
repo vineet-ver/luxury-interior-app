@@ -126,6 +126,7 @@ export const siteData = {
         { id: 12, src: "/gallery/item-12.jpg", title: "Open Office Layout", category: "Office Interior" },
         { id: 13, src: "/gallery/item-13.jpg", title: "Partition & Wall Systems", category: "Construction" },
         { id: 14, src: "/gallery/item-14.jpg", title: "False Ceiling Framework", category: "Infrastructure" },
+        { id: 15, src: "/gallery/item-15.jpg", title: "Warehouse Turnkey Project", category: "ceiling work" },
     ],
     industries: [
         { id: "financial", title: "Financial Services", icon: "Landmark" },
