@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import ServicesClient from "@/components/services/ServicesClient";
 
 export const metadata: Metadata = {
-  title: "Commercial Interior Contractor in India | Turnkey Office Interiors – ITSS",
+  title: "Commercial Office Interior & Fit-Out Contractor | ITSS India",
   description:
     "ITSS is a trusted commercial interior contractor in India providing turnkey office interiors, corporate fit-out services, and end-to-end commercial interior execution across India.",
   keywords:
