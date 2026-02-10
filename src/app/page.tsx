@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import HomeClient from "@/components/home/HomeClient";
 
 export const metadata: Metadata = {
-  title: "Turnkey Interior Contractor in India | ITSS",
+  title: "Commercial Interior & Turnkey Office Interiors | ITSS India",
   description:
     "ITSS is a leading commercial interior contractor in India offering turnkey office interiors, corporate fit-out and execution services pan-India.",
 
