@@ -56,7 +56,7 @@ export default function ServicesClient() {
                         transition={{ duration: 1 }}
                         className="text-center mb-24"
                     >
-                        <span className="text-sm font-medium tracking-[0.4em] text-luxury-gold uppercase mb-6 block">Turnkey Office Interior Solutions</span>
+                        <span className="text-sm font-medium tracking-[0.4em] text-luxury-gold uppercase mb-6 block">Our Commercial Interior Services</span>
                         <h1 className="font-display text-5xl md:text-7xl font-bold text-luxury-onyx mb-8 leading-tight">
                             Commercial Interior Contractor <br />
                             <span className="font-light italic text-luxury-gold-shine">Across India</span>
@@ -65,8 +65,8 @@ export default function ServicesClient() {
                             Turnkey Office Interior & Corporate Fit-Out Services
                         </h2>
                         <p className="text-xl text-luxury-onyx/60 max-w-2xl mx-auto leading-relaxed font-light">
-                           ITSS is a trusted <strong>commercial interior contractor in India</strong> delivering end-to-end <strong>turnkey interior contractor</strong> solutions including office interior execution,
-                           corporate fit-out services, and commercial interior projects across India.
+                           ITSS is a leading <strong>commercial interior contractor in India</strong> delivering end-to-end <strong>turnkey office interior solutions</strong> solutions including office interior execution,
+                           and corporate fit-out services, across India.
                            Explore our{" "}
                            <a
                              href="/portfolio"
@@ -75,6 +75,13 @@ export default function ServicesClient() {
                             completed commercial interior projects
                            </a>{" "}
                            delivered across India.
+                           <a
+                             href="/contact"
+                             className="text-luxury-gold underline hover:text-luxury-gold-shine transition-colors"
+                           >
+                            contact our office interior experts
+                           </a>{" "}
+                           for a consultation.
                            </p>
                     </motion.div>
 
