@@ -27,27 +27,27 @@ export const siteData = {
     services: [
         {
             id: "interior-decorators",
-            title: "Interior Decorators",
+            title: "Commercial Interior Design & Decoration Services",
             description: "Interior decorators bring their creative flair to rooms, creating homes that are harmonious and customized by striking a balance between usefulness and aesthetics.",
         },
         {
             id: "turnkey-project",
-            title: "Turnkey Project",
+            title: "Turnkey Office Interior Project Execution",
             description: "A \"turnkey project\" delivers a fully functional result to the client, covering design, construction, and implementation without needing additional client involvement.",
         },
         {
             id: "space-planner",
-            title: "Space Planner",
+            title: "Office Space Planning & Layout Design Services",
             description: "We specialize in thoughtful interior planning for optimal aesthetics, flow, and functionality, tailored to meet our clients' needs and preferences.",
         },
         {
             id: "civil-contractor",
-            title: "Civil Contractor",
-            description: "We utilize civil engineering construction projects like buildings, bridges, roads, and infrastructure.",
+            title: "Commercial Civil & Interior Contractor",
+            description: "Commercial civil works for office interiors including false ceiling, partitions, flooring, electrical and MEP execution.", 
         },
         {
             id: "chair-sofa-repair",
-            title: "Chair & Sofa Repair",
+            title: "Office Furniture Repair & Maintenance",
             description: "Our specialty is chair and couch repair services, giving your furniture its original comfort and style again.",
         },
     ],
