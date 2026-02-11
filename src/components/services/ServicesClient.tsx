@@ -6,6 +6,7 @@ import { Container } from '@/components/ui/Container';
 import { Palette, Key, Layout, HardHat, Armchair, Globe, ArrowRight, Landmark, ShoppingBag, GraduationCap, Truck, Factory, Stethoscope } from 'lucide-react';
 import { siteData } from '@/content/siteData';
 import { motion } from 'framer-motion';
+import Link from "next/link";
 
 // Define the type for a service
 type Service = {
@@ -119,7 +120,12 @@ export default function ServicesClient() {
                                             {/* Content */}
                                             <div className="flex-1 max-w-2xl">
                                                 <h2 className={`font-display text-3xl font-bold mb-4 transition-colors duration-500 ${isHovered ? 'text-white' : 'text-luxury-onyx'}`}>
+                                                    <Link
+                                                    href="/contact"
+                                                    className="hover:text-luxury-gold transition-colors"
+                                                    >
                                                     {service.title}
+                                                  </Link> 
                                                 </h2>
                                                 <p className={`text-lg leading-relaxed transition-colors duration-500 ${isHovered ? 'text-white/70' : 'text-luxury-onyx/60'}`}>
                                                     {service.description}
@@ -144,6 +150,37 @@ export default function ServicesClient() {
                             );
                         })}
                     </div>
+                    {/* SEO Content Section */}
+                      <section className="mt-32 max-w-4xl mx-auto text-lg text-luxury-onyx/70">
+                       <h2 className="text-3xl font-bold mb-6">
+                           Best Commercial Interior Contractor in India
+                       </h2>
+
+                      <p className="mb-4">
+                         ITSS is a leading commercial interior contractor in India providing
+                         turnkey office interior design, corporate fit-out services, and
+                         complete commercial interior execution solutions across India.
+                     </p>
+
+                     <p className="mb-4">
+                        Our services include space planning, civil contracting, furniture
+                        installation, and end-to-end turnkey interior project management
+                        for corporate offices, retail spaces, healthcare, and industrial sectors.
+                     </p>
+
+                    <p className="mb-4">
+                       As a trusted office interior contractor in India, we deliver
+                       high-quality commercial interior projects on time and within budget.
+                    </p>
+
+                <a
+                   href="/contact"
+                   className="text-luxury-gold underline hover:text-luxury-gold-shine"
+                >
+                 Contact our commercial interior experts today
+                </a>
+            </section>
+
                 </Container>
             </section>
 
