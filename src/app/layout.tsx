@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
 },
 manifest: "/site.webmanifest",
-  },
+  
   other: {
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
