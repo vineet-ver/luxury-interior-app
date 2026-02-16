@@ -1,288 +1,236 @@
 "use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { Button } from '@/components/ui/Button';
-import { Container } from '@/components/ui/Container';
-import { MainLayout } from '@/components/layout/MainLayout';
-import { ArrowRight, Shield, Server, Users, ArrowUpRight } from 'lucide-react';
-import AuroraBackground from '@/components/ui/AuroraBackground';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import MagneticButton from '@/components/ui/MagneticButton';
-import { useRef } from 'react';
-
-// Animation Variants
-const fadeInUp: import('framer-motion').Variants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-};
-
-const staggerContainer: import('framer-motion').Variants = {
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.1 } }
-};
+import Link from "next/link";
+import Image from "next/image";
+import { Container } from "@/components/ui/Container";
+import { MainLayout } from "@/components/layout/MainLayout";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export default function HomeClient() {
-    const targetRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: targetRef,
-        offset: ["start start", "end start"]
-    });
+  const targetRef = useRef(null);
 
-    const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end start"],
+  });
 
-    return (
-        <MainLayout>
-            {/* Hero Section */}
-            <section ref={targetRef} className="relative min-h-screen flex items-center overflow-hidden bg-luxury-white">
-                <div className="absolute inset-0 z-0">
-                    <motion.div
-                        style={{ y: heroY, scale: 1.1 }}
-                        className="relative w-full h-full"
-                    >
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+
+  return (
+    <MainLayout>
+      {/* ================= HERO SECTION ================= */}
+      <section
+        ref={targetRef}
+        className="relative min-h-[95vh] flex items-center overflow-hidden bg-[#f5f3ef]"
+      >
+        {/* Background */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <motion.div style={{ y: heroY }} className="relative w-full h-full">
+            <Image
+              src="/luxury-office-hero.png"
+              alt="Commercial interior designers in India – ITSS luxury office project"
+              fill
+              priority
+              className="object-cover scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#f5f3ef] via-[#f5f3ef]/85 to-transparent" />
+            <div className="absolute inset-0 bg-[#e9e4dc]/40 mix-blend-multiply" />
+          </motion.div>
+        </div>
+
+        <Container className="relative z-10 pt-24">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            {/* LEFT */}
+            <div className="lg:col-span-7">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-[1px] w-16 bg-[#c8a951]" />
+                <span className="text-xs tracking-[0.3em] uppercase text-[#c8a951]">
+                  Est. 2017 — Premium Interiors
+                </span>
+              </div>
+
+              <h1 className="font-display font-bold leading-[0.95] text-black
+              text-[2.8rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.2rem]">
+                Commercial Interior Designers
+                <span className="block mt-4 font-light italic text-[#c8a951]
+                text-[2rem] md:text-[3rem]">
+                  In Pan India
+                </span>
+              </h1>
+
+              <p className="mt-8 max-w-xl text-lg text-black/70 leading-[1.9] border-l-2 border-[#c8a951]/40 pl-6">
+                ITSS is one of the leading <strong>commercial interior designers in India</strong> 
+                delivering end-to-end turnkey interior projects for offices, corporate spaces, 
+                and commercial environments. As a trusted <strong>turnkey interior contractor in India</strong>, 
+                we manage everything from design and planning to execution and final handover across India.
+              </p>
+
+              <div className="mt-10 flex items-center gap-10 flex-wrap">
+                <Link href="/contact">
+                  <button className="px-8 py-4 bg-black text-white rounded-full hover:bg-[#c8a951] transition duration-500">
+                    Start Your Project →
+                  </button>
+                </Link>
+
+                <div className="flex items-center gap-4">
+                  <div className="flex -space-x-4">
+                    {[1,2,3].map((_,i)=>(
+                      <div key={i} className="w-12 h-12 rounded-full border-2 border-white overflow-hidden">
                         <Image
-                            src="/luxury-office-hero.png"
-                            alt="Commercial office interior project by turnkey interior contractor ITSS in India"
-                            fill
-                            className="object-cover object-center"
-                            priority
+                          src={`https://i.pravatar.cc/100?img=${i+10}`}
+                          alt="Premium corporate client"
+                          width={48}
+                          height={48}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-luxury-white via-luxury-white/80 to-transparent" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-luxury-white via-transparent to-transparent opacity-80" />
-                        <div className="absolute inset-0 bg-luxury-white/20 backdrop-blur-[2px]" />
-                    </motion.div>
+                      </div>
+                    ))}
+                  </div>
+                  <div>
+                    <p className="font-bold text-black">500+ Premium</p>
+                    <p className="text-sm text-black/50">Clients Served</p>
+                  </div>
                 </div>
+              </div>
+            </div>
 
-                <AuroraBackground />
+            {/* RIGHT IMAGE */}
+            <div className="lg:col-span-5 hidden lg:block">
+              <div className="relative aspect-[4/5] rounded-[32px] overflow-hidden shadow-2xl group">
+                <Image
+                  src="/luxury-office-hero.png"
+                  alt="Executive luxury office interior by ITSS India"
+                  fill
+                  className="object-cover group-hover:scale-110 transition duration-700"
+                />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
 
-                <Container className="relative z-10 pt-20">
-                    <div className="grid lg:grid-cols-12 gap-12 items-center">
-                        <motion.div
-                            initial="hidden"
-                            animate="visible"
-                            variants={staggerContainer}
-                            className="lg:col-span-7"
-                        >
-                            <motion.div variants={fadeInUp} className="mb-8 flex items-center gap-4">
-                                <div className="h-[1px] w-16 bg-luxury-gold shadow-[0_0_10px_rgba(212,175,55,0.5)]"></div>
-                                <span className="text-sm font-medium tracking-[0.2em] uppercase text-luxury-gold drop-shadow-sm">
-                                    Est. 2017 — Premium Interiors
-                                </span>
-                            </motion.div>
+      {/* ================= SERVICES SECTION ================= */}
+      <section className="pt-20 pb-20 bg-white">
+        <Container>
+          <div className="text-center mb-14">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-black">
+              Commercial Interior Design Company in India
+            </h2>
+            <p className="mt-4 text-black/60 max-w-2xl mx-auto">
+              Providing comprehensive turnkey commercial interior solutions across India.
+            </p>
+          </div>
 
-                            <motion.h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-luxury-onyx leading-[0.95] mb-10 relative">
-                                <motion.span variants={fadeInUp} className="block">Commercial Interior Designers</motion.span>
-                                <motion.span variants={fadeInUp} className="block text-transparent bg-clip-text bg-gradient-to-r from-luxury-gold to-yellow-600 italic font-light pr-4">
-                                    In Pan India 
-                                </motion.span>
-                            </motion.h1>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Office Interior Contractor Services",
+                desc: "Premium office interior contractor services tailored for corporate workplaces."
+              },
+              {
+                title: "Turnkey Interior Contractor Solutions",
+                desc: "End-to-end turnkey commercial interior design services from concept to execution."
+              },
+              {
+                title: "Corporate Interior Fit-Out Consultancy",
+                desc: "Strategic corporate interior consultancy for performance-driven office environments."
+              }
+            ].map((item,i)=>(
+              <div key={i} className="p-8 rounded-3xl bg-[#f9f9f9] shadow-sm hover:shadow-lg transition">
+                <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
+                <p className="text-black/60 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
 
-                            <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-luxury-onyx/70 max-w-xl leading-relaxed mb-12 border-l-2 border-luxury-gold/30 pl-8 font-light">
-                                ITSS is one of the leading <strong>commercial interior designers in India</strong> delivering <strong>end-to-end turnkey interior projects</strong> for offices corporate spaces, and commercial environments. As a trusted<strong> turnkey interior contractor in India</strong>, we manage everything from design and planning to execution and final handover across India.
-                            </motion.p>
+      {/* ================= EXPERTISE SECTION ================= */}
+      <section className="relative pt-24 pb-28 overflow-hidden bg-[#f5f3ef]">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/luxury-office-hero.png"
+            alt="Turnkey commercial interior background"
+            fill
+            className="object-cover scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#f5f3ef] via-[#f5f3ef]/90 to-[#f5f3ef]" />
+          <div className="absolute inset-0 bg-[#e9e4dc]/50 mix-blend-multiply" />
+        </div>
 
-                            <motion.div variants={fadeInUp} className="flex flex-wrap gap-8 items-center">
-                                <Link href="/contact">
-                                    <MagneticButton className="group relative px-10 py-5 bg-luxury-onyx text-luxury-white rounded-full overflow-hidden shadow-2xl hover:shadow-luxury-gold/50 transition-shadow">
-                                        <span className="relative z-10 text-lg font-medium tracking-wider flex items-center gap-3">
-                                            Start Your Project <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                        </span>
-                                        <div className="absolute inset-0 bg-gradient-to-r from-luxury-gold to-yellow-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                    </MagneticButton>
-                                </Link>
+        <Container className="relative z-10">
+          <div className="grid lg:grid-cols-12 gap-14 items-center">
+            <div className="lg:col-span-6">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-[1px] w-16 bg-[#c8a951]" />
+                <span className="text-xs tracking-[0.3em] uppercase text-[#c8a951]">
+                  Our Expertise
+                </span>
+              </div>
 
-                                <div className="flex items-center gap-4">
-                                    <div className="flex -space-x-4">
-                                        {[1, 2, 3].map((_, i) => (
-                                            <div key={i} className="w-12 h-12 rounded-full border-2 border-white bg-gray-200 relative overflow-hidden">
-                                                <Image src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="Client" fill className="object-cover" />
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <div className="text-sm">
-                                        <p className="font-bold text-luxury-onyx">500+ Premium</p>
-                                        <p className="text-luxury-onyx/50">Clients Served</p>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        </motion.div>
+              <h2 className="font-display font-bold text-black text-4xl md:text-5xl leading-tight">
+                Turnkey Commercial Interior Projects Across India
+                <span className="block text-black/60 mt-2">Expertise.</span>
+              </h2>
 
-                        {/* Floating Glass Card / Image Showcase */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-                            className="lg:col-span-5 hidden lg:block relative"
-                        >
-                            <div className="relative aspect-[3/4] rounded-[40px] overflow-hidden shadow-2xl shadow-luxury-onyx/20 border border-white/50 backdrop-blur-sm group">
-                                <Image
-                                    src="/luxury-office-hero.png"
-                                    alt="Executive Office Interior"
-                                    fill
-                                    className="object-cover transition-transform duration-[2s] group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60" />
+              <div className="mt-8 space-y-6 text-black/75 leading-relaxed">
+                <p>
+                  We don't just install systems; we orchestrate environments. At ITSS, we believe that true luxury lies in the seamless integration of intelligence and aesthetics.
+                </p>
 
-                                <div className="absolute bottom-8 left-8 right-8 text-white backdrop-blur-md bg-white/10 p-6 rounded-3xl border border-white/20">
-                                    <p className="text-xs tracking-widest uppercase text-luxury-gold mb-2">Featured Project</p>
-                                    <h3 className="text-2xl font-display font-medium">Executive Workspace</h3>
-                                    <div className="flex justify-between items-end mt-4">
-                                        <span className="text-white/80 text-sm"></span>
-                                        <div className="w-10 h-10 rounded-full bg-white text-luxury-onyx flex items-center justify-center">
-                                            <ArrowUpRight className="w-5 h-5" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <p>
+                  As a leading turnkey commercial interior contractor in India, our signature approach combines precision engineering, premium materials, and flawless execution for corporate office interiors across India.
+                </p>
 
-                            {/* Decorative Elements */}
-                            <div className="absolute -top-12 -right-12 w-24 h-24 border border-luxury-gold/30 rounded-full animate-[spin_10s_linear_infinite]" />
-                            <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-luxury-gold/20 rounded-full blur-[80px]" />
-                        </motion.div>
-                    </div>
-                </Container>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">
+                    Why Choose ITSS for Commercial Interior Design?
+                  </h3>
+                  <p>
+                    We deliver more than just design; we deliver performance, security, and a legacy of excellence.
+                  </p>
+                </div>
+              </div>
 
-                {/* Scroll Indicator */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.5, duration: 1 }}
-                    className="absolute bottom-12 left-12 flex flex-col items-center gap-4 z-20"
-                >
-                    <div className="w-[1px] h-24 bg-gradient-to-b from-luxury-onyx/0 via-luxury-onyx/50 to-luxury-onyx/0"></div>
-                    <span className="text-xs uppercase tracking-[0.3em] text-luxury-onyx/50 rotate-180" style={{ writingMode: 'vertical-lr' }}>Scroll to Explore</span>
-                </motion.div>
-            </section>
+              <div className="mt-10 flex items-center gap-12">
+                <Link href="/about">
+                  <button className="px-8 py-4 border border-black/20 rounded-full hover:bg-black hover:text-white transition duration-500">
+                    READ THE LEGACY →
+                  </button>
+                </Link>
 
-            <section className="relative z-20 pt-20 pb-16">
-                <Container>
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="mb-8 text-center"
-                    >
-                        <h2 className="font-display text-4xl md:text-5xl font-bold text-luxury-onyx">Commercial Interior Design Company in India</h2>
-                        <p className="mt-4 text-luxury-onyx/60 max-w-2xl mx-auto">Providing comprehensive solutions for modern workspaces.</p>
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0, y: 100 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
-                        className="grid grid-cols-1 md:grid-cols-3 gap-6"
-                    >
-                        {[
-                            { title: "Office Interior Contractor Services", icon: Shield, desc: "Premium office interior contractor services tailored for modern corporate workplaces." },
-                            { title: "Turnkey Interior Contractor Solutions", icon: Server, desc: "End-to-end turnkey commercial interior design services from concept to execution." },
-                            { title: "Corporate Interior Fit-Out Consultancy", icon: Users, desc: "Strategic corporate interior design consultancy focused on performance-driven spaces." }
-                        ].map((item, i) => (
-                            <div key={i} className="group relative p-10 rounded-[2.5rem] bg-luxury-white/80 backdrop-blur-xl border border-white/40 hover:border-luxury-gold/50 transition-all duration-700 hover:-translate-y-4 shadow-luxury hover:shadow-[0_20px_40px_-15px_rgba(212,175,55,0.2)] overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-br from-luxury-gold/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div>
+                  <p className="text-5xl font-bold text-[#c8a951]">98%</p>
+                  <p className="text-sm tracking-[0.3em] uppercase text-black/50">
+                    Retention Rate
+                  </p>
+                </div>
+              </div>
+            </div>
 
-                                <div className="relative z-10 flex flex-col h-full">
-                                    <div className="mb-8 p-4 w-fit rounded-2xl bg-white border border-luxury-platinum/50 shadow-sm group-hover:scale-110 transition-transform duration-500">
-                                        <item.icon className="w-8 h-8 text-luxury-onyx group-hover:text-luxury-gold transition-colors duration-500" />
-                                    </div>
+            <div className="lg:col-span-6 grid grid-cols-2 gap-6">
+              <div className="relative aspect-[3/4] rounded-[28px] overflow-hidden shadow-2xl group">
+                <Image
+                  src="/office_architecture.jpg"
+                  alt="Corporate office interior execution project"
+                  fill
+                  className="object-cover group-hover:scale-110 transition duration-700"
+                />
+              </div>
 
-                                    <h3 className="font-display text-3xl font-bold text-luxury-onyx mb-4 group-hover:tracking-wide transition-all duration-500">{item.title}</h3>
-                                    <p className="text-luxury-onyx/60 mb-8 leading-relaxed font-light">{item.desc}</p>
+              <div className="relative aspect-[3/4] rounded-[28px] overflow-hidden shadow-2xl mt-10 group">
+                <Image
+                  src="/luxury-office-hero.png"
+                  alt="Luxury commercial office fit-out project India"
+                  fill
+                  className="object-cover group-hover:scale-110 transition duration-700"
+                />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
 
-                                    <Link href="/services" className="mt-auto flex items-center justify-between border-t border-luxury-platinum/50 pt-6 group-hover:border-luxury-gold/30 transition-colors">
-                                        <span className="text-sm font-medium uppercase tracking-widest text-luxury-onyx/40 group-hover:text-luxury-gold transition-colors">Explore</span>
-                                        <div className="w-10 h-10 rounded-full border border-luxury-platinum/50 flex items-center justify-center group-hover:bg-luxury-gold group-hover:border-luxury-gold transition-all duration-500">
-                                            <ArrowUpRight className="w-4 h-4 text-luxury-onyx/40 group-hover:text-white" />
-                                        </div>
-                                    </Link>
-                                </div>
-                            </div>
-                        ))}
-                    </motion.div>
-                </Container>
-            </section>
-
-            {/* About Section (The Legacy) */}
-            <section className="py-40 relative overflow-hidden bg-luxury-pearl">
-                {/* Background Texture */}
-                <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-multiply pointer-events-none" />
-                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-luxury-gold/5 rounded-full blur-[150px] mix-blend-multiply pointer-events-none" />
-
-                <Container className="relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-24 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1 }}
-                        >
-                            <div className="flex items-center gap-4 mb-10">
-                                <div className="h-[1px] w-24 bg-luxury-onyx/20"></div>
-                                <span className="text-xs font-bold tracking-[0.3em] uppercase text-luxury-onyx/40">Since 2012</span>
-                            </div>
-
-                            <h2 className="font-display text-6xl md:text-7xl font-bold text-luxury-onyx mb-10 leading-[0.9]">
-                                Turnkey Commercial Interior Projects Across India <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-luxury-onyx to-gray-500">Expertise.</span>
-                            </h2>
-
-                            <div className="space-y-8 text-xl text-luxury-onyx/70 leading-relaxed font-light font-display">
-                                <p>
-                                    We don't just install systems; we orchestrate environments. At <strong className="text-luxury-gold font-normal">ITSS</strong>, we believe that true luxury lies in the seamless integration of intelligence and aesthetics.
-                                </p>
-                                <p>
-                                     As a leading <strong>turnkey commercial interior contractor in India</strong>, our signature approach combines precision engineering, premium materials, and flawless execution for corporate office interiors across India, Our reputation as trusted <strong>commercial interior designers in India</strong> is built on quality execution, innovative design, and pan-India project delivery.
-                                </p>
-                            </div>
-
-                            <div className="mt-12 space-y-6">
-                                <h3 className="text-2xl font-display font-bold text-luxury-onyx">Why Choose ITSS for Commercial Interior Design?</h3>
-                                <p className="text-lg text-luxury-onyx/60 font-light">
-                                    We are the best commercial interior design firm because we deliver more than just design; we deliver performance, security, and a legacy of excellence for corporate office interiors.
-                                </p>
-                            </div>
-
-                            <div className="mt-16 flex items-center gap-12">
-                                <Link href="/about">
-                                    <MagneticButton className="px-10 py-4 border border-luxury-onyx/10 rounded-full hover:bg-luxury-onyx hover:text-white transition-all duration-500 flex items-center gap-4 group">
-                                        <span className="uppercase tracking-widest text-sm font-medium">Read The Legacy</span>
-                                        <ArrowRight className="w-4 h-4" />
-                                    </MagneticButton>
-                                </Link>
-
-                                <div className="flex flex-col">
-                                    <span className="text-4xl font-display font-bold text-luxury-gold">98%</span>
-                                    <span className="text-xs uppercase tracking-widest text-luxury-onyx/50">Retention Rate</span>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1.2 }}
-                            className="relative"
-                        >
-                            <div className="absolute -inset-4 border border-luxury-gold/20 rounded-[3rem] z-0 rotate-3"></div>
-                            <div className="relative z-10 aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-luxury-onyx/10 group">
-                                <Image
-                                    src="/office_architecture.jpg"
-                                    alt="Corporate office interior architecture project by ITSS in India"
-                                    fill
-                                    className="object-cover transition-transform duration-[2s] group-hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-luxury-onyx/10 group-hover:bg-transparent transition-colors duration-700" />
-
-                                {/* Floating Badge */}
-                                <div className="absolute bottom-10 left-10 right-10 bg-white/10 backdrop-blur-xl p-8 rounded-3xl border border-white/30 text-white">
-                                    <p className="font-display text-2xl mb-2">The Executive Suite</p>
-                                    <p className="text-sm text-white/70 tracking-wide"></p>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </div>
-                </Container>
-            </section>
-        </MainLayout>
-    );
+    </MainLayout>
+  );
 }
