@@ -4,10 +4,10 @@ import ClientsPage from "./ClientsPage";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.itss.co.in"),
 
-  title: "Enterprise Clients of ITSS | Interior Experts India",
+  title: "Enterprise Clients of ITSS | Commercial Interior India",
 
   description:
-    "Discover leading enterprise clients and corporate partners who trust ITSS for commercial interior design, turnkey projects, and premium office fit-outs across India.",
+    "ITSS is a trusted commercial interior contractor in India serving enterprise clients, government organizations, and corporate offices with turnkey interior and fit-out solutions.",
 
   keywords: [
     "ITSS clients",
