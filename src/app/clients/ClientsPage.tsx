@@ -215,7 +215,12 @@ export default function ClientsPage() {
     infrastructure environments with precision and quality assurance.
   </p>
 </section>
-
+<Link href="/services" className="text-yellow-600 font-semibold hover:underline">
+  Explore our commercial interior services
+</Link>
+<Link href="/portfolio" className="text-yellow-600 font-semibold hover:underline">
+  View completed turnkey projects
+</Link>
           {/* ================= CTA ================= */}
 
           <div className="relative z-10 rounded-[50px] p-16 text-center bg-white shadow-lg border border-gray-200">
