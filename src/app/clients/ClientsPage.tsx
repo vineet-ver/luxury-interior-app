@@ -1,248 +1,219 @@
 "use client";
 
+import { MainLayout } from "@/components/layout/MainLayout";
+import { Container } from "@/components/ui/Container";
+import { siteData } from "@/content/siteData";
+import { motion } from "framer-motion";
+import { Building2, Award, Handshake, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { Container } from "@/components/ui/Container";
-import { MainLayout } from "@/components/layout/MainLayout";
-import { motion } from "framer-motion";
-import { Paintbrush, KeyRound, LayoutGrid, HardHat, Sofa } from "lucide-react";
 
-export default function ServicesPage() {
+/* ================= CLIENT LOGO COMPONENT ================= */
+
+const ClientLogo = ({ name, logo }: { name: string; logo?: string }) => (
+  <div className="w-full h-40 flex items-center justify-center p-6 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+
+    {logo ? (
+      <div className="relative w-full h-full">
+        <Image
+          src={logo}
+          alt={`${name} Logo`}
+          fill
+          sizes="(max-width:768px) 50vw, 25vw"
+          className="object-contain transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+    ) : (
+      <h3 className="text-lg font-semibold text-gray-600 text-center">
+        {name}
+      </h3>
+    )}
+
+  </div>
+);
+
+/* ================= MAIN PAGE ================= */
+
+export default function ClientsPage() {
   return (
     <MainLayout>
+      <div className="relative min-h-screen pt-28 pb-24 bg-[#f9f7f3] overflow-hidden">
 
-      {/* ================= SERVICES HERO ================= */}
-      <section className="relative py-36 overflow-hidden">
+        {/* TOP SOFT GLOW */}
+        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-yellow-200/30 rounded-full blur-[120px] pointer-events-none"></div>
 
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/luxury-office-hero.png"
-            alt="Commercial interior design services by ITSS India"
-            fill
-            priority
-            className="object-cover scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#f5f3ef]/95 via-[#f5f3ef]/90 to-[#f5f3ef]/95" />
-        </div>
+        {/* BOTTOM SOFT GLOW */}
+        <div className="absolute bottom-[-250px] right-[-200px] w-[800px] h-[800px] bg-yellow-100/40 rounded-full blur-[150px] pointer-events-none"></div>
 
-        <Container className="relative z-10 text-center">
-
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-[1px] w-16 bg-[#c8a951]" />
-            <span className="text-xs tracking-[0.3em] uppercase text-[#c8a951]">
-              Our Commercial Interior Services
-            </span>
-            <div className="h-[1px] w-16 bg-[#c8a951]" />
-          </div>
-
-          <h1 className="font-display text-4xl md:text-6xl font-bold text-black leading-tight max-w-4xl mx-auto">
-            Commercial Interior Design & Turnkey Office Interior Solutions
-            <span className="block text-[#c8a951] mt-3">
-              Across India
-            </span>
-          </h1>
-
-          <p className="mt-6 max-w-3xl mx-auto text-black/70 text-lg leading-relaxed">
-            ITSS is a leading <strong>commercial interior contractor in India</strong>
-            delivering complete <strong>turnkey office interior projects</strong>,
-            workspace planning, corporate fit-outs, and civil execution services.
-            We create functional, aesthetic, and performance-driven commercial environments.
-          </p>
-
-          <div className="mt-10">
-            <Link
-              href="/contact"
-              className="px-8 py-4 bg-black text-white rounded-full hover:bg-[#c8a951] transition duration-300 inline-block"
-            >
-              Get Free Consultation →
-            </Link>
-          </div>
-
-        </Container>
-      </section>
-
-
-      {/* ================= SERVICES LIST ================= */}
-      <section className="py-24 bg-white">
         <Container>
 
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-black mt-4">
-              Complete Commercial Interior Services in India
-            </h2>
-            <p className="mt-6 text-black/60 max-w-3xl mx-auto leading-relaxed">
-              End-to-end solutions for corporate workspaces including
-              interior design, turnkey project execution, civil works,
-              space planning, and office furniture maintenance.
-            </p>
+          {/* ================= HERO ================= */}
+
+          <div className="text-center max-w-5xl mx-auto mb-24 relative z-10">
+
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="inline-block px-5 py-2 mb-6 text-sm font-semibold tracking-wide text-yellow-700 bg-yellow-100 rounded-full shadow-sm"
+            >
+              Trusted by 50+ Enterprise Brands Across India
+            </motion.span>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight"
+            >
+              Enterprise Clients Who Trust ITSS for
+              <span className="block bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-400 bg-clip-text text-transparent mt-3">
+                Commercial Interior & Infrastructure Excellence
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mt-6"
+            >
+              From Fortune 500 enterprises to government infrastructure projects,
+              ITSS delivers turnkey commercial interiors, corporate fit-outs
+              and enterprise execution solutions across India.
+            </motion.p>
+
+            <div className="mt-10 flex flex-col sm:flex-row gap-5 justify-center items-center">
+
+              <Link
+                href="/portfolio"
+                className="px-8 py-4 bg-black text-white rounded-full font-semibold hover:bg-yellow-500 hover:text-black transition-all duration-300"
+              >
+                View Case Studies
+              </Link>
+
+              <Link
+                href="/contact"
+                className="px-8 py-4 border border-black rounded-full font-semibold hover:bg-black hover:text-white transition-all duration-300"
+              >
+                Get Enterprise Consultation
+              </Link>
+
+            </div>
+
           </div>
 
-          <div className="space-y-12">
+
+          {/* ================= STATS ================= */}
+
+          <div className="grid md:grid-cols-3 gap-10 mb-28 relative z-10">
 
             {[
-              {
-                number: "01",
-                title: "Commercial Interior Design & Decoration Services",
-                desc: "Professional commercial interior design balancing aesthetics, productivity, and modern workspace functionality.",
-                icon: Paintbrush
-              },
-              {
-                number: "02",
-                title: "Turnkey Office Interior Project Execution",
-                desc: "Complete turnkey project execution including design, civil works, MEP services, and final project handover.",
-                icon: KeyRound
-              },
-              {
-                number: "03",
-                title: "Office Space Planning & Layout Design",
-                desc: "Strategic office layout planning focused on optimized space utilization and improved workflow efficiency.",
-                icon: LayoutGrid
-              },
-              {
-                number: "04",
-                title: "Commercial Civil & Interior Contracting",
-                desc: "Full-scale commercial civil works including partitions, ceilings, flooring, electrical, HVAC, and MEP execution.",
-                icon: HardHat
-              },
-              {
-                number: "05",
-                title: "Office Furniture Repair & Maintenance",
-                desc: "Professional furniture refurbishment including chair repair, sofa restoration, and maintenance solutions.",
-                icon: Sofa
-              }
-            ].map((service, index) => (
-              <motion.article
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="group rounded-[40px] p-10 md:p-14 flex flex-col md:flex-row items-center gap-10 bg-[#f9f9f9] hover:bg-black hover:text-white transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
+              { icon: Building2, value: "50+", label: "Enterprise Clients" },
+              { icon: Handshake, value: "12+", label: "Years of Trust" },
+              { icon: Award, value: "100%", label: "Project Success Rate" },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="bg-white p-12 rounded-3xl border border-gray-200 shadow-sm text-center hover:shadow-lg transition-all duration-300"
               >
-
-                <div className="flex items-center gap-6 min-w-[160px]">
-                  <span className="text-4xl font-bold text-black/20 group-hover:text-[#c8a951]">
-                    {service.number}
-                  </span>
-
-                  <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-[#f1eee8] group-hover:bg-white/10 transition">
-                    <service.icon className="w-8 h-8 text-black group-hover:text-[#c8a951]" />
-                  </div>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-2xl mb-6 text-yellow-600">
+                  <stat.icon className="w-8 h-8" />
                 </div>
 
-                <div className="flex-1">
-                  <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-black/60 group-hover:text-white/70 leading-relaxed">
-                    {service.desc}
-                  </p>
-                </div>
+                <h3 className="text-5xl font-bold text-gray-900 mb-2">
+                  {stat.value}
+                </h3>
 
-              </motion.article>
+                <p className="text-gray-500 text-lg">
+                  {stat.label}
+                </p>
+              </div>
             ))}
 
           </div>
 
-        </Container>
-      </section>
 
+          {/* ================= CLIENTS GRID ================= */}
 
-      {/* ================= FAQ SECTION (SEO BOOST) ================= */}
-      <section className="py-24 bg-[#f5f3ef]">
-        <Container className="max-w-4xl text-center">
+          <div className="mb-28 relative z-10">
 
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-12">
-            Frequently Asked Questions
-          </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-14">
+              Our Esteemed Clients
+            </h2>
 
-          <div className="space-y-8 text-left">
-
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <h3 className="font-semibold mb-2">
-                What is a turnkey office interior project?
-              </h3>
-              <p className="text-black/60">
-                A turnkey office interior project covers complete design,
-                civil works, MEP execution, interior finishing, and final handover.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <h3 className="font-semibold mb-2">
-                Do you provide commercial interior services across India?
-              </h3>
-              <p className="text-black/60">
-                Yes, ITSS provides pan-India commercial interior contracting services
-                for corporate offices and commercial workspaces.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow">
-              <h3 className="font-semibold mb-2">
-                Why choose ITSS as your commercial interior contractor?
-              </h3>
-              <p className="text-black/60">
-                We combine design expertise, civil engineering precision,
-                premium materials, and seamless project execution.
-              </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+              {siteData.clients.map((client) => (
+                <ClientLogo
+                  key={client.id}
+                  name={client.name}
+                  logo={client.logo}
+                />
+              ))}
             </div>
 
           </div>
 
+
+          {/* ================= INDUSTRIES ================= */}
+
+          <div className="mb-28 relative z-10">
+
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-14">
+              Industries We Serve
+            </h2>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+              {[
+                "Corporate Offices",
+                "Retail & E-Commerce",
+                "Manufacturing Units",
+                "Logistics & Warehousing",
+                "Healthcare Facilities",
+                "Technology Companies",
+                "Financial Institutions",
+                "Government Projects",
+              ].map((industry, i) => (
+                <div
+                  key={i}
+                  className="p-6 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  <p className="font-medium text-gray-800">
+                    {industry}
+                  </p>
+                </div>
+              ))}
+
+            </div>
+
+          </div>
+
+
+          {/* ================= CTA ================= */}
+
+          <div className="relative z-10 rounded-[50px] p-16 text-center bg-white shadow-lg border border-gray-200">
+
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">
+              Ready to Join the Elite?
+            </h2>
+
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
+              Experience the difference of working with a partner who values
+              your infrastructure and commercial spaces as much as you do.
+            </p>
+
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-yellow-600 text-white rounded-full font-bold hover:bg-yellow-700 transition-all duration-300 shadow-md"
+            >
+              Partner With Us
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+
+          </div>
+
         </Container>
-      </section>
-     {/* ================= SEO CONTENT ================= */}
-
-<section className="max-w-5xl mx-auto mb-28 text-gray-700 leading-relaxed text-lg relative z-10">
-  <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-    Commercial Interior Contractor in India
-  </h2>
-
-  <p className="mb-6">
-    ITSS is a trusted commercial interior contractor in India,
-    delivering comprehensive turnkey interior solutions for
-    corporate offices, enterprise campuses, retail environments,
-    and industrial facilities. Our integrated approach ensures
-    seamless execution from design planning to final handover.
-  </p>
-
-  <p className="mb-6">
-    We specialize in corporate office fit-outs, workspace
-    transformation, electrical infrastructure, HVAC integration,
-    and smart building systems. Our team combines architectural
-    design precision with technical excellence to create
-    performance-driven environments.
-  </p>
-
-  <p>
-    With proven expertise in industrial interior projects,
-    warehousing spaces, and large-scale commercial developments,
-    ITSS ensures quality compliance, safety standards, and
-    timely project delivery across India.
-  </p>
-</section>
-
-      {/* ================= FINAL CTA ================= */}
-      <section className="py-24 bg-white text-center">
-        <Container>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
-            Start Your Commercial Interior Project Today
-          </h2>
-
-          <p className="text-black/60 mb-8">
-            Contact ITSS — Leading Commercial Interior Designers in India
-          </p>
-
-          <Link href="/contact">
-            <button className="px-10 py-5 bg-black text-white rounded-full hover:bg-[#c8a951] transition duration-500">
-              Get a Free Consultation →
-            </button>
-          </Link>
-        </Container>
-      </section>
-
+      </div>
     </MainLayout>
   );
 }
