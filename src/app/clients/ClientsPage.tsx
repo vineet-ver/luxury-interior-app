@@ -187,7 +187,33 @@ export default function ClientsPage() {
             </div>
 
           </div>
+          {/* ================= SEO CONTENT ================= */}
 
+<section className="max-w-5xl mx-auto mb-28 text-gray-700 leading-relaxed text-lg relative z-10">
+  <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+    Commercial Interior Contractor in India
+  </h2>
+
+  <p className="mb-6">
+    ITSS is a trusted commercial interior contractor in India delivering
+    turnkey interior solutions for corporate offices, enterprise spaces,
+    and government organizations. Our expertise includes complete office
+    fit-outs, infrastructure execution, civil works, and industrial interior projects.
+  </p>
+
+  <p className="mb-6">
+    With over a decade of experience, we specialize in corporate office
+    fit-outs, large-scale commercial developments, and turnkey interior
+    execution across India. Our structured approach ensures design precision,
+    compliance standards, and on-time project delivery.
+  </p>
+
+  <p>
+    From enterprise headquarters to industrial facilities and retail
+    environments, ITSS provides scalable and performance-driven interior
+    solutions tailored to business growth and operational efficiency.
+  </p>
+</section>
 
           {/* ================= CTA ================= */}
 
