@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import ClientsPage from "./ClientsPage";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.itss.co.in"),
+
   title: "Enterprise Clients of ITSS | Commercial Interior Experts India",
+
   description:
     "Explore leading enterprise clients and corporate partners who trust ITSS for commercial interior design, turnkey fit-outs, and office infrastructure projects across India.",
 
@@ -18,7 +21,7 @@ export const metadata: Metadata = {
   publisher: "India Technical Solution Services",
 
   alternates: {
-    canonical: "https://www.itss.co.in/clients",
+    canonical: "/clients",
   },
 
   robots: {
@@ -34,29 +37,31 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Enterprise Clients of ITSS | Commercial Interior Experts India",
+    title:
+      "Enterprise Clients of ITSS | Commercial Interior Experts India",
     description:
       "Trusted by enterprise brands and government organizations across India for commercial interior excellence.",
-    url: "https://www.itss.co.in/clients",
+    url: "/clients",
     siteName: "ITSS Interior Solutions",
+    locale: "en_IN",
+    type: "website",
     images: [
       {
-        url: "https://www.itss.co.in/og-clients.jpg",
+        url: "/og-clients.jpg",
         width: 1200,
         height: 630,
         alt: "ITSS Enterprise Clients and Corporate Interior Projects",
       },
     ],
-    locale: "en_IN",
-    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Enterprise Clients of ITSS | Commercial Interior Experts India",
+    title:
+      "Enterprise Clients of ITSS | Commercial Interior Experts India",
     description:
       "Discover corporate clients and enterprise brands partnering with ITSS for turnkey commercial interiors.",
-    images: ["https://www.itss.co.in/og-clients.jpg"],
+    images: ["/og-clients.jpg"],
   },
 };
 
