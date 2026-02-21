@@ -3,9 +3,9 @@ import ServicesClient from "@/components/services/ServicesClient";
 
 export const metadata: Metadata = {
   title:
-    "Commercial Interior Contractor in India | Turnkey Office Interiors – ITSS",
+    "Commercial Interior Contractor in India | ITSS",
   description:
-    "ITSS is a trusted commercial interior contractor in India providing turnkey office interiors, corporate fit-out services, and end-to-end commercial interior execution across India.",
+    "ITSS is a leading commercial interior contractor in India delivering turnkey office interiors, corporate fit-outs, civil works, and industrial interior projects across major Indian cities.",
   keywords:
     "commercial interior contractor in India, office interior contractor in India, turnkey interior contractor India, commercial interior services India, turnkey office interiors, corporate interior fit out services",
   alternates: {
