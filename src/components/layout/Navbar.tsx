@@ -60,7 +60,7 @@ export function Navbar() {
 
                     {/* Desktop Nav */}
                     <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-                        {['Home', 'Services', 'Clients', 'Portfolio', 'Gallery', 'About', 'Contact'].map((item) => (
+                        {['Home', 'Services', 'Clients', 'Portfolio', 'Gallery', 'About', 'Blog', 'Contact'].map((item) => (
                             <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-sm font-medium text-luxury-onyx/70 hover:text-luxury-onyx transition-colors relative group">
                                 {item}
                                 <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-luxury-gold transition-all duration-300 group-hover:w-full"></span>
