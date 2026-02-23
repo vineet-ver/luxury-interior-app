@@ -1,13 +1,13 @@
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/data/blogs";
 
-export default async function BlogPost({
+export default function BlogPost({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
 
-  const { slug } = await params;
+  const { slug } = params;
 
   const post = blogPosts.find(
     (item) => item.slug === slug
