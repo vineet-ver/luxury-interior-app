@@ -7,17 +7,30 @@ export const blogPosts = [
     image: "/blog/cost.jpg",
     category: "Cost",
     content: `
-Office interior cost in India varies based on quality, location and scope.
+# Office Interior Cost in India (2025 Guide)
 
-Average Cost Per Sq Ft (2025):
+Understanding office interior cost is essential before starting a commercial project.
 
-Basic Fit-Out: ₹800 – ₹1,200  
-Mid-Level Interior: ₹1,200 – ₹1,800  
-Premium Interior: ₹1,800 – ₹3,000+  
+## Average Cost Per Sq Ft (2025)
 
-Major cost components include civil work, HVAC, electrical, furniture and project management.
+- Basic Fit-Out: ₹800 – ₹1,200 per sq ft  
+- Mid-Level Interior: ₹1,200 – ₹1,800 per sq ft  
+- Premium Interior: ₹1,800 – ₹3,000+ per sq ft  
 
-Strategic budgeting ensures better ROI and long-term value.
+## Cost Breakdown
+
+- Civil & Partitions – 25%
+- Electrical & Networking – 20%
+- HVAC – 15%
+- Furniture – 20%
+- Lighting & Ceiling – 10%
+- Project Management – 10%
+
+## Factors Affecting Cost
+
+Location, material quality, workspace size and design complexity directly impact pricing.
+
+Investing wisely ensures long-term ROI and brand value.
 `
   },
 
@@ -28,16 +41,26 @@ Strategic budgeting ensures better ROI and long-term value.
     image: "/blog/turnkey.jpg",
     category: "Turnkey",
     content: `
-Turnkey interior solutions offer end-to-end execution under one contract.
+# Turnkey Interior Solutions Explained
 
-The contractor manages:
+Turnkey interior solutions provide end-to-end execution under one contract.
 
-Design  
-Procurement  
-Execution  
-Project Management  
+## What is Turnkey?
 
-Benefits include better accountability, budget control and faster delivery.
+A single contractor handles:
+- Design
+- Procurement
+- Execution
+- Project Management
+
+## Benefits
+
+- Single point of contact
+- Better budget control
+- Faster execution
+- Quality assurance
+
+Turnkey solutions reduce coordination issues and ensure smooth delivery.
 `
   },
 
@@ -48,71 +71,99 @@ Benefits include better accountability, budget control and faster delivery.
     image: "/blog/corporate.jpg",
     category: "Corporate",
     content: `
-Corporate office fit-outs require strategic space planning and structured execution.
+# Corporate Office Fit-Out Guide
 
-Key stages:
+Corporate fit-outs require strategic planning and structured execution.
 
-1. Space planning  
-2. Layout design  
-3. MEP coordination  
-4. Final execution  
+## Key Stages
 
-A structured fit-out improves productivity and brand image.
+1. Space Planning
+2. Layout Design
+3. MEP Coordination
+4. Execution & Handover
+
+## Best Practices
+
+- Optimize workflow movement
+- Prioritize employee comfort
+- Use modern lighting solutions
+
+A well-executed fit-out boosts productivity and employee satisfaction.
 `
   },
 
   {
-    slug: "workspace-optimization-strategy",
+    slug: "workspace-optimization",
     title: "Workspace Optimization Strategy",
     description: "Boost productivity with better office layouts.",
     image: "/blog/workspace.jpg",
     category: "Corporate",
     content: `
-Modern offices must maximize productivity through smart layouts.
+# Workspace Optimization Strategy
 
-Strategies include activity-based zones, natural lighting and flexible seating.
+Modern offices must maximize productivity through smart layout planning.
 
-Optimized spaces improve team performance.
+## Optimization Strategies
+
+- Activity-based working zones
+- Natural lighting utilization
+- Flexible seating arrangements
+
+## Why It Matters
+
+Optimized workspaces improve employee efficiency and reduce wasted space.
+
+Strategic layout design directly impacts company growth.
 `
   },
 
   {
-    slug: "modern-office-design-trends-2025",
+    slug: "modern-office-design-trends",
     title: "Modern Office Design Trends 2025",
     description: "Latest commercial office interior trends.",
     image: "/blog/design.jpg",
     category: "Design",
     content: `
+# Modern Office Design Trends 2025
+
 Office interiors are evolving rapidly in 2025.
 
-Top trends:
+## Trending Concepts
 
-Biophilic design  
-Sustainable materials  
-Smart lighting  
-Collaborative spaces  
+- Biophilic design
+- Sustainable materials
+- Smart lighting systems
+- Collaborative spaces
 
-Design today focuses on branding + experience.
+Modern workplaces now focus on comfort + branding + sustainability.
+
+Design is no longer decoration — it's strategy.
 `
   },
 
   {
-    slug: "commercial-interior-planning-guide",
+    slug: "commercial-interior-planning",
     title: "Commercial Interior Planning Guide",
     description: "Step-by-step execution planning for commercial projects.",
     image: "/blog/planning.jpg",
     category: "Planning",
     content: `
-Proper commercial planning ensures cost control and timely delivery.
+# Commercial Interior Planning Guide
 
-Checklist:
+Proper planning ensures cost control and timely delivery.
 
-Budget planning  
-Timeline scheduling  
-Vendor coordination  
-Material finalization  
+## Planning Checklist
 
-Planning is the backbone of project success.
+- Budget allocation
+- Timeline scheduling
+- Vendor coordination
+- Material finalization
+
+## Execution Strategy
+
+Strong project management reduces delays and ensures quality output.
+
+Planning is the foundation of every successful interior project.
 `
   }
 
