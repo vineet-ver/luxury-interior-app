@@ -2,21 +2,22 @@ export const blogPosts = [
 
   {
     slug: "office-interior-cost-in-india",
-    title: "Office Interior Cost in India (2025 Guide)",
+    title: "Office Interior Cost in India (2025 Complete Guide)",
     description: "Complete commercial office interior cost breakdown with pricing insights.",
     image: "/blog/cost.jpg",
     category: "Cost",
     content: `
 Office interior cost in India varies based on quality, location and scope.
 
-Average Cost Per Sq Ft:
-Basic Fit-Out: ₹800 – ₹1,200
-Mid-Level: ₹1,200 – ₹1,800
-Premium: ₹1,800 – ₹3,000+
+Average Cost Per Sq Ft (2025):
+
+Basic Fit-Out: ₹800 – ₹1,200  
+Mid-Level Interior: ₹1,200 – ₹1,800  
+Premium Interior: ₹1,800 – ₹3,000+  
 
 Major cost components include civil work, HVAC, electrical, furniture and project management.
 
-Smart budgeting ensures better ROI and long-term value.
+Strategic budgeting ensures better ROI and long-term value.
 `
   },
 
@@ -30,17 +31,13 @@ Smart budgeting ensures better ROI and long-term value.
 Turnkey interior solutions offer end-to-end execution under one contract.
 
 The contractor manages:
-Design
-Procurement
-Execution
-Project Management
 
-Benefits:
-Single point accountability
-Better budget control
-Faster execution
+Design  
+Procurement  
+Execution  
+Project Management  
 
-Turnkey reduces delays and coordination risks.
+Benefits include better accountability, budget control and faster delivery.
 `
   },
 
@@ -54,10 +51,11 @@ Turnkey reduces delays and coordination risks.
 Corporate office fit-outs require strategic space planning and structured execution.
 
 Key stages:
-1. Space planning
-2. Layout design
-3. MEP coordination
-4. Final execution
+
+1. Space planning  
+2. Layout design  
+3. MEP coordination  
+4. Final execution  
 
 A structured fit-out improves productivity and brand image.
 `
@@ -72,11 +70,7 @@ A structured fit-out improves productivity and brand image.
     content: `
 Modern offices must maximize productivity through smart layouts.
 
-Strategies include:
-Activity-based zones
-Natural lighting
-Flexible seating
-Acoustic planning
+Strategies include activity-based zones, natural lighting and flexible seating.
 
 Optimized spaces improve team performance.
 `
@@ -92,10 +86,11 @@ Optimized spaces improve team performance.
 Office interiors are evolving rapidly in 2025.
 
 Top trends:
-Biophilic design
-Sustainable materials
-Smart lighting
-Collaborative spaces
+
+Biophilic design  
+Sustainable materials  
+Smart lighting  
+Collaborative spaces  
 
 Design today focuses on branding + experience.
 `
@@ -111,10 +106,11 @@ Design today focuses on branding + experience.
 Proper commercial planning ensures cost control and timely delivery.
 
 Checklist:
-Budget planning
-Timeline scheduling
-Vendor coordination
-Material finalization
+
+Budget planning  
+Timeline scheduling  
+Vendor coordination  
+Material finalization  
 
 Planning is the backbone of project success.
 `
