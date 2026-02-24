@@ -1,21 +1,16 @@
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/data/blogs";
-import Link from "next/link";
-import Image from "next/image";
 
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
-}
-
-export default function BlogPost({
+export default async function BlogPost({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
+
+  const { slug } = await params;
+
   const post = blogPosts.find(
-    (item) => item.slug === params.slug
+    (item) => item.slug === slug
   );
 
   if (!post) {
@@ -23,26 +18,19 @@ export default function BlogPost({
   }
 
   return (
-    <div className="bg-white min-h-screen">
-      <div className="relative w-full h-[400px]">
-        <Image
-          src={post.image}
-          alt={post.title}
-          fill
-          className="object-cover"
-        />
-      </div>
+    <div className="max-w-4xl mx-auto px-6 py-20">
+      <h1 className="text-4xl font-bold mb-6">
+        {post.title}
+      </h1>
 
-      <div className="max-w-3xl mx-auto px-6 py-16">
-        <div className="whitespace-pre-line leading-relaxed text-gray-700">
-          {post.content}
-        </div>
+      <img
+        src={post.image}
+        alt={post.title}
+        className="w-full rounded-xl mb-8"
+      />
 
-        <div className="mt-12">
-          <Link href="/blog">
-            ← Back to All Blogs
-          </Link>
-        </div>
+      <div className="prose max-w-none whitespace-pre-line">
+        {post.content}
       </div>
     </div>
   );
