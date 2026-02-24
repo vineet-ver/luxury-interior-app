@@ -3,6 +3,8 @@ import { blogPosts } from "@/data/blogs";
 import Link from "next/link";
 import Image from "next/image";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,
