@@ -3,7 +3,11 @@ import { blogPosts } from "@/data/blogs";
 import Link from "next/link";
 import Image from "next/image";
 
-export const dynamic = "force-dynamic";
+export function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 export default function BlogPost({
   params,
@@ -14,7 +18,9 @@ export default function BlogPost({
     (item) => item.slug === params.slug
   );
 
-  if (!post) notFound();
+  if (!post) {
+    notFound();
+  }
 
   return (
     <div className="bg-white min-h-screen">
