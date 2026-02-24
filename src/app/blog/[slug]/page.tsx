@@ -3,13 +3,7 @@ import { blogPosts } from "@/data/blogs";
 import Link from "next/link";
 import Image from "next/image";
 
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
-}
+export const dynamic = "force-dynamic";
 
 export default function BlogPost({
   params,
@@ -20,9 +14,7 @@ export default function BlogPost({
     (item) => item.slug === params.slug
   );
 
-  if (!post) {
-    notFound();
-  }
+  if (!post) notFound();
 
   return (
     <div className="bg-white min-h-screen">
@@ -33,11 +25,6 @@ export default function BlogPost({
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-center px-6">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">
-            {post.title}
-          </h1>
-        </div>
       </div>
 
       <div className="max-w-3xl mx-auto px-6 py-16">
@@ -46,10 +33,7 @@ export default function BlogPost({
         </div>
 
         <div className="mt-12">
-          <Link
-            href="/blog"
-            className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition"
-          >
+          <Link href="/blog">
             ← Back to All Blogs
           </Link>
         </div>
