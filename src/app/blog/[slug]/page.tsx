@@ -1,5 +1,37 @@
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/data/blogs";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+
+  const post = blogPosts.find(
+    (item) => item.slug === params.slug
+  );
+
+  if (!post) {
+    return {
+      title: "Blog Not Found",
+    };
+  }
+
+  return {
+    title: post.title + " | ITSS Interiors",
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      images: [
+        {
+          url: post.image,
+        },
+      ],
+    },
+  };
+}
 
 export default function BlogPost({
   params,
@@ -27,7 +59,7 @@ export default function BlogPost({
         className="w-full rounded-xl mb-8"
       />
 
-      <div className="whitespace-pre-line">
+      <div className="whitespace-pre-line leading-relaxed text-gray-700">
         {post.content}
       </div>
     </div>
