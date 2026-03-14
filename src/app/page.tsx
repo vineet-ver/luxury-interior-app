@@ -1,26 +1,25 @@
-
-
 import type { Metadata } from "next";
 import HomeClient from "@/components/home/HomeClient";
 
 export const metadata: Metadata = {
-  title: "Commercial Interior & Turnkey Office Interiors | ITSS India",
+  title: "Office Interior Contractor Delhi NCR | Commercial Interior Company India | ITSS",
+
   description:
-    "ITSS is a leading commercial interior contractor in India offering turnkey office interiors, corporate fit-out and execution services pan-India.",
+    "ITSS is a leading office interior contractor in Delhi NCR offering commercial interior design, corporate workspace planning and turnkey office interior fit-out services across India.",
 
   keywords: [
-    "commercial interior contractor",
-    "office interior contractor",
-    "turnkey office interiors",
-    "corporate interior fit out",
-    "commercial interior services",
-    "turnkey interior solutions",
-    "office fit out services",
-    "corporate workspace interiors",
-    "end-to-end interior solutions",
-    "commercial interior services in India",
-    "office interior contractor India",
-    "turnkey interior services across India"
+    "office interior contractor delhi",
+    "commercial interior contractor delhi ncr",
+    "turnkey office interior contractor india",
+    "corporate office interior design delhi",
+    "commercial interior design company india",
+    "office interior design company gurgaon",
+    "office interior contractor noida",
+    "workspace interior contractor india",
+    "office renovation contractor delhi ncr",
+    "corporate office fitout contractor india",
+    "commercial interior services india",
+    "turnkey office interior services"
   ],
 
   alternates: {
@@ -32,6 +31,16 @@ export const metadata: Metadata = {
     follow: true,
   },
 
+  openGraph: {
+    title: "Office Interior Contractor Delhi NCR | ITSS Interior Solutions",
+    description:
+      "Leading commercial interior contractor providing corporate office interiors and turnkey workspace solutions across India.",
+    url: "https://www.itss.co.in/",
+    siteName: "ITSS Interior Solutions",
+    locale: "en_IN",
+    type: "website",
+  },
+
   authors: [{ name: "ITSS – India Technical Solution Services" }],
   publisher: "ITSS – India Technical Solution Services",
 };
@@ -39,5 +48,3 @@ export const metadata: Metadata = {
 export default function Home() {
   return <HomeClient />;
 }
-
-
