@@ -1,134 +1,226 @@
-"use client";
+    "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import { Container } from "@/components/ui/Container";
-import { MainLayout } from "@/components/layout/MainLayout";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+    import Image from "next/image";
+    import Link from "next/link";
+    import { Container } from "@/components/ui/Container";
+    import { MainLayout } from "@/components/layout/MainLayout";
+    import { motion } from "framer-motion";
 
-export default function HomeClient() {
+    export default function HomeClient() {
 
-const targetRef = useRef(null);
+    const services = [
+    { title: "EPC Projects", img: "/images/epc.png" },
+    { title: "MEP Projects", img: "/images/mep.png" },
+    { title: "Electrical Services", img: "/images/electrical.png" },
+    { title: "HVAC Services", img: "/images/hvac.png" },
+    { title: "IT & Networking", img: "/images/networking.png" },
+    { title: "Fire Fighting", img: "/images/fire.png" },
+    { title: "Carpentry Services", img: "/images/carpentry.png" },
+    ];
 
-const { scrollYProgress } = useScroll({
-target: targetRef,
-offset: ["start start", "end start"],
-});
+    return (
+    <MainLayout>
 
-const heroY = useTransform(scrollYProgress, [0,1], ["0%","20%"]);
+    {/* ================= HERO ================= */}
+    <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
 
-return (
-<MainLayout>
+    {/* BACKGROUND */}
+    <div className="absolute inset-0 -z-10">
+        <Image
+        src="/hero_images/interior-bg.png"
+        alt="Interior"
+        fill
+        priority
+        className="object-cover opacity-70"
+        />
+    </div>
 
-{/* ================= HERO ================= */}
+    {/* MAIN CARD */}
+    <div className="relative z-10 w-[90%] max-w-5xl bg-[#e9f0ef]/95 backdrop-blur-xl rounded-[40px] p-8 md:p-12 pb-20 shadow-[0_25px_80px_rgba(0,0,0,0.2)]">
 
-<section
-ref={targetRef}
-className="relative min-h-[95vh] flex items-center overflow-hidden bg-[#f5f3ef]"
->
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
 
-<div className="absolute inset-0 z-0 overflow-hidden">
+        {/* LEFT */}
+        <div>
+            <p className="text-sm text-black/50 mb-3">
+            Premium Interior Solutions
+            </p>
 
-<motion.div style={{y:heroY}} className="relative w-full h-full">
+            <h1 className="text-[2.3rem] md:text-[3rem] font-bold leading-[1.1] text-black">
+            Commercial Interior Design
+            <span className="block italic text-black/70">
+                for Modern Workspaces
+            </span>
+            </h1>
 
-<Image
-src="/luxury-office-hero.png"
-alt="Office interior contractor project in Delhi NCR by ITSS"
-fill
-priority
-sizes="100vw"
-className="object-cover scale-110"
-/>
+            <Link href="/contact">
+            <button className="mt-6 px-6 py-3 bg-[#c8a951] text-white rounded-full text-sm hover:scale-105 transition">
+                Explore More →
+            </button>
+            </Link>
+        </div>
 
-<div className="absolute inset-0 bg-gradient-to-r from-[#f5f3ef] via-[#f5f3ef]/85 to-transparent" />
+        {/* RIGHT IMAGE */}
+        <div className="relative h-[300px] flex justify-center">
 
-</motion.div>
+            <div className="w-[80%] h-full overflow-hidden rounded-t-[180px] rounded-b-3xl">
+            <Image
+                src="/hero_images/hero-card.png"
+                alt="Office interior"
+                fill
+                sizes="(max-width:768px) 100vw, 50vw"
+                className="object-cover"
+            />
+            </div>
+
+            {/* FLOAT CARD */}
+            <div className="absolute bottom-4 left-0 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl text-xs shadow-xl">
+            ⭐⭐⭐⭐⭐  
+            <p className="text-black/60 text-[10px]">
+                Trusted by clients
+            </p>
+            </div>
+
+        </div>
+
+        </div>
+
+        {/* FLOATING FEATURES */}
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-[-35px] bg-white rounded-2xl shadow-xl px-8 py-4 flex gap-10">
+
+        {["Eco","Pro","Quality","Custom"].map((item, i) => (
+            <div key={i} className="text-center">
+            <p className="text-[#c8a951] font-bold text-sm">
+                0{i + 1}
+            </p>
+            <p className="text-xs text-black/60">
+                {item}
+            </p>
+            </div>
+        ))}
+
+        </div>
+
+    </div>
+
+    </section>
+
+    {/* ================= PREMIUM ABOUT SECTION ================= */}
+<section className="py-28 bg-[#f5f3ef]">
+<Container>
+
+{/* TOP */}
+<div className="grid md:grid-cols-2 gap-12 items-center">
+
+{/* LEFT */}
+<div>
+<h2 className="text-[3rem] md:text-[3.5rem] font-bold leading-[1.1] text-black">
+ABOUT <br /> US
+</h2>
+
+<p className="mt-6 text-black/70 max-w-md">
+We deliver modern commercial interiors with engineering precision 
+and premium design across India.
+</p>
+</div>
+
+{/* RIGHT IMAGES */}
+<div className="grid grid-cols-2 gap-4">
+
+<div className="relative h-[180px] rounded-2xl overflow-hidden">
+<Image src="/images/about1.png" alt="Interior" fill className="object-cover"/>
+</div>
+
+<div className="relative h-[180px] rounded-2xl overflow-hidden">
+<Image src="/images/about2.png" alt="Interior" fill className="object-cover"/>
+</div>
 
 </div>
 
-<Container className="relative z-10 pt-24">
+</div>
 
-<div className="grid lg:grid-cols-12 gap-12 items-center">
+{/* PHILOSOPHY */}
+<div className="mt-16 grid md:grid-cols-2 gap-10 items-center">
 
-{/* LEFT */}
+<div className="relative h-[220px] rounded-2xl overflow-hidden">
+<Image src="/images/about3.png" alt="Philosophy" fill className="object-cover"/>
+</div>
 
-<div className="lg:col-span-7">
+<div>
+<h3 className="text-xl font-semibold mb-3">
+Our Philosophy
+</h3>
 
-<h1 className="font-display font-bold leading-[0.95] text-black
-text-[2.8rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.2rem]">
-Commercial Interior Decorator
-<span className="block mt-4 font-light italic text-[#c8a951] text-[2rem] md:text-[3rem]">
-for Modern Workspaces
-</span>
-
-</h1>
-
-<p className="mt-8 max-w-xl text-lg text-black/70 leading-[1.9] border-l-2 border-[#c8a951]/40 pl-6">
-
-<strong>Commercial Interior Decorator</strong> creating modern, functional workspaces with smart design and <strong>turnkey solutions</strong> for offices, retail spaces, and commercial projects.
-
+<p className="text-black/70">
+We create functional, aesthetic and high-performance workspaces 
+that elevate business environments.
 </p>
+</div>
 
-<div className="mt-10 flex items-center gap-10 flex-wrap">
+</div>
 
-<Link href="/contact">
 
-<button className="px-8 py-4 bg-black text-white rounded-full hover:bg-[#c8a951] transition duration-500">
-Start Your Project →
-</button>
 
-</Link>
+</Container>
+</section>
 
-{/* CLIENT AVATARS */}
+    {/* ================= PREMIUM SERVICES ================= */}
+<section className="py-28 bg-[#f8f6f2]">
+<Container>
 
-<div className="flex items-center gap-4">
+<h2 className="text-4xl text-center mb-16 font-bold tracking-tight">
+Our Services
+</h2>
 
-<div className="flex -space-x-4">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-{[1,2,3].map((_,i)=>(
+{services.map((s,i)=>(
 
-<div key={i} className="w-12 h-12 rounded-full border-2 border-white overflow-hidden">
+<div key={i} className="group relative">
 
-<Image
-src={`https://i.pravatar.cc/100?img=${i+10}`}
-alt="Premium corporate client"
-width={48}
-height={48}
+{/* IMAGE */}
+<div className="relative h-[200px] rounded-2xl overflow-hidden">
+
+<Image 
+src={s.img} 
+alt={s.title} 
+fill
+className="object-cover group-hover:scale-110 transition duration-700"
 />
+
+{/* DARK OVERLAY */}
+<div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition duration-500" />
+
+</div>
+
+{/* FLOAT CARD */}
+<div className="absolute left-1/2 -translate-x-1/2 -bottom-6 w-[85%] bg-white/90 backdrop-blur-lg shadow-xl rounded-xl px-4 py-3 text-center group-hover:-translate-y-2 transition duration-500">
+
+<h3 className="text-sm font-semibold tracking-wide">
+{s.title}
+</h3>
+
+</div>
 
 </div>
 
 ))}
 
-</div>
+{/* ================= PREMIUM CTA CARD ================= */}
+<div className="group relative h-[200px] rounded-2xl bg-gradient-to-br from-[#c8a951] to-[#a8893d] flex items-center justify-center cursor-pointer overflow-hidden">
 
-<div>
+{/* GLOW EFFECT */}
+<div className="absolute w-[200%] h-[200%] bg-white/10 rotate-45 group-hover:translate-x-full transition duration-700"></div>
 
-<p className="font-bold text-black">500+ Premium</p>
+<div className="relative text-center text-white">
 
-<p className="text-sm text-black/50">Clients Served</p>
+<p className="text-lg font-semibold tracking-wide">
+Explore More
+</p>
 
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-{/* RIGHT IMAGE */}
-
-<div className="lg:col-span-5 hidden lg:block">
-
-<div className="relative aspect-[4/5] rounded-[32px] overflow-hidden shadow-2xl">
-
-<Image
-src="/luxury-office-hero.png"
-alt="Corporate office interior design project by ITSS Delhi NCR"
-fill
-className="object-cover"
-/>
+<p className="text-sm mt-1 opacity-80">
+All Services →
+</p>
 
 </div>
 
@@ -137,233 +229,79 @@ className="object-cover"
 </div>
 
 </Container>
-
 </section>
 
-{/* ================= SERVICES ================= */}
+    {/* ================= PROJECTS ================= */}
+    <section className="py-28 bg-[#f6f1ea]">
+    <Container>
 
-<section className="pt-20 pb-20 bg-white">
+    <h2 className="text-4xl text-center mb-16 font-bold">
+    Our Projects
+    </h2>
 
-<Container>
+    <div className="grid md:grid-cols-3 gap-8">
 
-<h2 className="text-4xl font-bold text-center mb-12">
-Commercial Interior Contractor Services in India
-</h2>
+    {["project1.png","project2.png","project3.png"].map((img,i)=>(
 
-<div className="grid md:grid-cols-3 gap-8">
+    <div key={i} className="relative h-[260px] rounded-2xl overflow-hidden group">
 
-{/* CARD 1 */}
+    <Image 
+    src={`/images/${img}`} 
+    alt="project"
+    fill
+    sizes="(max-width:768px) 100vw, 33vw"
+    className="object-cover group-hover:scale-110 transition duration-700"
+    />
 
-<div className="p-8 rounded-3xl bg-[#f9f9f9] shadow-sm">
+    </div>
 
-<Link href="/services/office-interior-contractor">
+    ))}
 
-<h3 className="text-2xl font-semibold mb-4 hover:underline">
-Office Interior Contractor in Delhi NCR
-</h3>
+    </div>
 
-</Link>
+    </Container>
+    </section>
 
-<p className="text-black/60">
-Premium office interior contractor services for corporate workplaces
-in Delhi, Gurgaon and Noida.
-</p>
+    {/* ================= CTA ================= */}
+    <section className="py-20 text-center bg-black text-white">
 
-</div>
+    <h2 className="text-3xl font-bold">
+    Let’s Build Your Next Project
+    </h2>
 
-{/* CARD 2 */}
+    <p className="mt-4 text-white/70">
+    Get in touch with our team today
+    </p>
 
-<div className="p-8 rounded-3xl bg-[#f9f9f9] shadow-sm">
+    <button className="mt-6 px-6 py-3 bg-[#c8a951] text-black rounded-full">
+    Contact Us →
+    </button>
 
-<Link href="/services/turnkey-interior-contractor">
+    </section>
 
-<h3 className="text-2xl font-semibold mb-4 hover:underline">
-Turnkey Interior Contractor Services
-</h3>
+    {/* ================= LOCATIONS ================= */}
+    <section className="py-24 bg-white">
+    <Container>
 
-</Link>
+    <h2 className="text-3xl text-center mb-10 font-bold">
+    Our Presence
+    </h2>
 
-<p className="text-black/60">
-End-to-end turnkey office interior solutions from planning to execution.
-</p>
+    <div className="grid md:grid-cols-4 gap-6 text-center">
 
-</div>
+    {["Delhi","Gurgaon","Noida","Mumbai"].map((c,i)=>(
 
-{/* CARD 3 */}
+    <p key={i} className="font-medium hover:text-[#c8a951] transition">
+    {c}
+    </p>
 
-<div className="p-8 rounded-3xl bg-[#f9f9f9] shadow-sm">
+    ))}
 
-<Link href="/services/commercial-interior-contractor">
+    </div>
 
-<h3 className="text-2xl font-semibold mb-4 hover:underline">
-Corporate Interior Fit-Out Company
-</h3>
+    </Container>
+    </section>
 
-</Link>
-
-<p className="text-black/60">
-Commercial interior design and workspace solutions for businesses
-across India.
-</p>
-
-</div>
-
-</div>
-
-</Container>
-
-</section>
-{/* ================= EXPERTISE SECTION ================= */}
-      <section className="relative pt-24 pb-28 overflow-hidden bg-[#f5f3ef]">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/luxury-office-hero.png"
-            alt="Turnkey commercial interior background"
-            fill
-            className="object-cover scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#f5f3ef] via-[#f5f3ef]/90 to-[#f5f3ef]" />
-          <div className="absolute inset-0 bg-[#e9e4dc]/50 mix-blend-multiply" />
-        </div>
-
-        <Container className="relative z-10">
-          <div className="grid lg:grid-cols-12 gap-14 items-center">
-            <div className="lg:col-span-6">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="h-[1px] w-16 bg-[#c8a951]" />
-                <span className="text-xs tracking-[0.3em] uppercase text-[#c8a951]">
-                  Our Expertise
-                </span>
-              </div>
-
-              <h2 className="font-display font-bold text-black text-4xl md:text-5xl leading-tight">
-                Expertise in Turnkey Projects for Commercial Interiors
-              </h2>
-
-              <div className="mt-8 space-y-6 text-black/75 leading-relaxed">
-                <p>
-                  Expert turnkey projects for commercial interiors by a trusted Commercial Interior Decorator delivering smart design, planning, and seamless execution..
-                </p>
-
-                <p>
-                  As a premier turnkey interior contractor in India, ITSS provides complete commercial interior solutions for corporate offices, commercial spaces, warehouses, and workspace environments..
-                </p>
-
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">
-                    Why Choose ITSS for Commercial Interior Design?
-                  </h3>
-                  <p>
-                    We combine premium design, engineering precision and flawless execution to deliver high-performance corporate interiors.
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-10 flex items-center gap-12">
-                <Link href="/about">
-                  <button className="px-8 py-4 border border-black/20 rounded-full hover:bg-black hover:text-white transition duration-500">
-                    READ THE LEGACY →
-                  </button>
-                </Link>
-
-                <div>
-                  <p className="text-5xl font-bold text-[#c8a951]">98%</p>
-                  <p className="text-sm tracking-[0.3em] uppercase text-black/50">
-                    Retention Rate
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 grid grid-cols-2 gap-6">
-              <div className="relative aspect-[3/4] rounded-[28px] overflow-hidden shadow-2xl group">
-                <Image
-                  src="/office_architecture.jpg"
-                  alt="Corporate office interior execution project"
-                  fill
-                  className="object-cover group-hover:scale-110 transition duration-700"
-                />
-              </div>
-
-              <div className="relative aspect-[3/4] rounded-[28px] overflow-hidden shadow-2xl mt-10 group">
-                <Image
-                  src="/luxury-office-hero.png"
-                  alt="Luxury commercial office fit-out project India"
-                  fill
-                  className="object-cover group-hover:scale-110 transition duration-700"
-                />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-      {/* ================= SEO SECTION ================= */}
-
-<section className="py-20 bg-white">
-
-<Container>
-
-<h2 className="text-4xl font-bold mb-6">
-
-Leading Commercial Interior Decorator in Delhi NCR
-
-</h2>
-
-<p className="text-black/70 leading-relaxed max-w-3xl">
-
-ITSS is a trusted Commercial Interior Decorator in Delhi NCR delivering
-commercial interior design and turnkey office interior services across
-India including Delhi, Gurgaon, Noida, Mumbai and other major cities.
-
-</p>
-
-</Container>
-
-</section>
-{/* ================= LOCATIONS ================= */}
-
-<section className="py-20 bg-[#f5f3ef]">
-
-<Container>
-
-<h2 className="text-4xl font-bold text-center mb-12">
-
-Commercial Interior Decorator in Major Cities
-
-</h2>
-
-<div className="grid md:grid-cols-4 gap-8 text-center">
-
-<Link href="/office-interior-contractor-delhi">
-<p className="font-semibold hover:text-[#c8a951]">
-Commercial Interior Decorator in Delhi
-</p>
-</Link>
-
-<Link href="/office-interior-contractor-gurgaon">
-<p className="font-semibold hover:text-[#c8a951]">
-Commercial Interior Decorator in Gurgaon
-</p>
-</Link>
-
-<Link href="/office-interior-contractor-noida">
-<p className="font-semibold hover:text-[#c8a951]">
-Commercial Interior Decorator in Noida
-</p>
-</Link>
-
-<Link href="/office-interior-contractor-mumbai">
-<p className="font-semibold hover:text-[#c8a951]">
-Commercial Interior Decorator in Mumbai
-</p>
-</Link>
-
-</div>
-
-</Container>
-
-</section>
-
-</MainLayout>
-);
-}
+    </MainLayout>
+    );
+    }
