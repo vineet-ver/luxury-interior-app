@@ -251,28 +251,127 @@ All Services →
 </section>
 
 {/* ================= PROJECTS ================= */}
-<section className="py-28 bg-[#f6f1ea]">
+<section className="relative pt-16 pb-16 md:pt-20 md:pb-28 overflow-hidden">
+
+{/* 🎨 ULTRA PREMIUM BACKGROUND */}
+<div className="absolute inset-0 -z-10 overflow-hidden">
+
+  {/* Animated gradient */}
+  <div className="absolute inset-0 bg-[linear-gradient(120deg,#f8f6f2,#efe9dc,#f8f6f2)] bg-[length:200%_200%] animate-[gradientMove_12s_ease_infinite]" />
+
+  {/* Moving glow */}
+  <div className="absolute w-[500px] h-[500px] bg-[#c8a951]/20 blur-[140px] rounded-full animate-[floatGlow_12s_ease-in-out_infinite]" />
+
+  {/* Top wave */}
+  <svg className="absolute top-0 left-0 w-full" viewBox="0 0 1440 320">
+    <path fill="#ffffff" d="M0,160L80,170C160,180,320,200,480,192C640,184,800,148,960,138.7C1120,128,1280,144,1360,152L1440,160L1440,0L0,0Z"/>
+  </svg>
+
+  {/* Bottom wave */}
+  <svg className="absolute bottom-0 left-0 w-full rotate-180" viewBox="0 0 1440 320">
+    <path fill="#f3efe7" d="M0,160L80,170C160,180,320,200,480,192C640,184,800,148,960,138.7C1120,128,1280,144,1360,152L1440,160L1440,0L0,0Z"/>
+  </svg>
+
+</div>
+
 <Container>
 
-<h2 className="text-4xl text-center mb-16 font-bold">
+<h2 className="text-3xl md:text-4xl text-center mb-10 font-bold">
 Our Projects
 </h2>
 
-<div className="grid md:grid-cols-3 gap-8">
+{/* 🔥 PREMIUM COMPACT GRID */}
+<div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-{["project1.png","project2.png","project3.png"].map((img,i)=>(
+{[
+  { img: "project1.png", title: "Corporate Office" },
+  { img: "project2.png", title: "Modern Workspace" },
+  { img: "project3.png", title: "Luxury Interior" },
+  { img: "project1.png", title: "Commercial Space" },
+].map((p, i) => (
 
-<Link key={i} href="/projects">
+<div key={i} className="group relative">
 
-<div className="relative h-[260px] rounded-2xl overflow-hidden group">
+<div className="relative h-[180px] rounded-2xl overflow-hidden shadow-lg bg-white">
 
 <Image 
-src={`/images/${img}`} 
-alt="project"
-fill
-sizes="(max-width:768px) 100vw, 33vw"
-className="object-cover group-hover:scale-110 transition duration-700"
+  src={`/images/${p.img}`} 
+  alt={p.title}
+  fill
+  sizes="(max-width:768px) 100vw, 25vw"
+  loading="lazy"
+  className="object-cover group-hover:scale-110 transition duration-700"
 />
+
+{/* Overlay */}
+<div className="absolute inset-0 bg-black/10 group-hover:bg-black/40 transition duration-500" />
+
+{/* Content */}
+<div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition duration-500">
+
+<p className="text-white text-sm font-semibold">
+{p.title}
+</p>
+
+<button className="mt-2 w-fit text-xs bg-white/80 backdrop-blur px-3 py-1 rounded-full hover:bg-[#c8a951] hover:text-white transition">
+View Project →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+))}
+
+</div>
+
+</Container>
+</section>
+
+{/* ================= LOCATIONS ================= */}
+<section className="relative py-20 → pt-10 pb-20  bg-gradient-to-br from-[#f8f6f2] via-[#f3efe7] to-[#ebe6dc] overflow-hidden">
+
+{/* Glow */}
+<div className="absolute right-0 top-0 w-[300px] h-[300px] bg-[#c8a951]/20 blur-[120px] rounded-full -z-10" />
+
+<Container>
+
+<h2 className="text-3xl md:text-4xl text-center mb-12 font-bold">
+Our Presence Across India
+</h2>
+
+{/* 🔥 Grid */}
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+{[
+  { name: "Delhi", link: "/office-interior-contractor-delhi" },
+  { name: "Gurgaon", link: "/office-interior-contractor-gurgaon" },
+  { name: "Noida", link: "/office-interior-contractor-noida" },
+  { name: "Mumbai", link: "/office-interior-contractor-mumbai" },
+].map((city, i) => (
+
+<Link key={i} href={city.link}>
+
+<div className="group bg-white/80 backdrop-blur-lg border border-white/40 
+rounded-2xl p-6 text-center shadow-md 
+hover:shadow-xl hover:-translate-y-2 transition duration-300 cursor-pointer">
+
+{/* Icon circle */}
+<div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-[#c8a951]/20 text-[#c8a951] font-bold">
+📍
+</div>
+
+{/* City */}
+<p className="font-semibold text-black group-hover:text-[#c8a951] transition">
+{city.name}
+</p>
+
+{/* Small text */}
+<p className="text-xs text-black/50 mt-1">
+Interior Solutions
+</p>
 
 </div>
 
@@ -286,54 +385,37 @@ className="object-cover group-hover:scale-110 transition duration-700"
 </section>
 
 {/* ================= CTA ================= */}
-<section className="py-20 text-center bg-black text-white">
+<section className="relative py-20 overflow-hidden">
 
-<h2 className="text-3xl font-bold">
+{/* Background Gradient */}
+<div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#f8f6f2] via-[#f3efe7] to-[#ebe6dc]" />
+
+{/* Glow */}
+<div className="absolute left-1/2 -translate-x-1/2 top-0 w-[400px] h-[400px] bg-[#c8a951]/20 blur-[120px] rounded-full -z-10" />
+
+<Container>
+
+<div className="max-w-3xl mx-auto text-center bg-gradient-to-br from-[#eef4ff] via-[#e6efff] to-[#dce7ff] backdrop-blur-xl border bg-gradient-to-br from-[#eef4ff] via-[#e6efff] to-[#dce7ff] shadow-[0_20px_60px_rgba(0,0,0,0.1)] rounded-[30px] p-10">
+
+<h2 className="text-2xl md:text-3xl font-bold text-black">
 Let’s Build Your Next Project
 </h2>
 
-<p className="mt-4 text-white/70">
+<p className="mt-3 text-black/60">
 Get in touch with our team today
 </p>
 
 <Link href="/contact">
-<button className="mt-6 px-6 py-3 bg-[#c8a951] text-black rounded-full">
-Contact Us →
+<button className="mt-6 px-6 py-3 bg-[#c8a951] text-white rounded-full hover:scale-105 transition">
+Get Free Consultation →
 </button>
-</Link>
-
-</section>
-
-{/* ================= LOCATIONS ================= */}
-<section className="py-24 bg-white">
-<Container>
-
-<h2 className="text-3xl text-center mb-10 font-bold">
-Our Presence
-</h2>
-
-<div className="grid md:grid-cols-4 gap-6 text-center">
-
-<Link href="/office-interior-contractor-delhi">
-<p className="font-medium hover:text-[#c8a951] transition">Delhi</p>
-</Link>
-
-<Link href="/office-interior-contractor-gurgaon">
-<p className="font-medium hover:text-[#c8a951] transition">Gurgaon</p>
-</Link>
-
-<Link href="/office-interior-contractor-noida">
-<p className="font-medium hover:text-[#c8a951] transition">Noida</p>
-</Link>
-
-<Link href="/office-interior-contractor-mumbai">
-<p className="font-medium hover:text-[#c8a951] transition">Mumbai</p>
 </Link>
 
 </div>
 
 </Container>
 </section>
+
 
 </MainLayout>
 );
