@@ -22,7 +22,7 @@ return (
 <MainLayout>
 
 {/* ================= HERO ================= */}
-<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+<section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-15">
 
 {/* Background Image */}
 <div className="absolute inset-0 -z-20">
