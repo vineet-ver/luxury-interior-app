@@ -22,21 +22,38 @@ return (
 <MainLayout>
 
 {/* ================= HERO ================= */}
-<section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
+<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
 
-<div className="absolute inset-0 -z-10">
+{/* Background Image */}
+<div className="absolute inset-0 -z-20">
 <Image
-src="/hero_images/interior-bg.png"
-alt="Interior"
-fill
-priority
-className="object-cover opacity-70"
+  src="/hero_images/interior-bg.png"
+  alt="Modern office interior design"
+  fill
+  priority
+  sizes="100vw"
+  className="object-cover opacity-60"
 />
 </div>
 
-<div className="relative z-10 w-[90%] max-w-5xl bg-[#def7f9]/95 backdrop-blur-xl rounded-[40px] p-8 md:p-12 pb-20 shadow-[0_25px_80px_rgba(0,0,0,0.2)]">
+{/* Glow Effect */}
+<div className="absolute -z-10 w-[500px] h-[500px] bg-[#c8a951]/20 blur-[120px] rounded-full top-[-100px] left-[-100px]" />
 
-<div className="grid lg:grid-cols-2 gap-10 items-center">
+<motion.div
+initial={{ opacity: 0, y: 40 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.6 }}
+className="relative z-10 w-[90%] max-w-5xl 
+bg-gradient-to-br from-[#dff4f6] via-[#eafafa] to-[#ffffff] 
+rounded-[50px] p-6 md:p-12 pb-20 
+shadow-[0_20px_80px_rgba(0,0,0,0.12)] 
+border border-white/40 backdrop-blur-xl"
+>
+
+{/* Glass Overlay */}
+<div className="absolute inset-0 rounded-[50px] bg-white/30 backdrop-blur-xl pointer-events-none" />
+
+<div className="grid lg:grid-cols-2 gap-10 items-center relative z-10">
 
 {/* LEFT */}
 <div>
@@ -44,7 +61,7 @@ className="object-cover opacity-70"
 Premium Interior Solutions
 </p>
 
-<h1 className="text-[2.3rem] md:text-[3rem] font-bold leading-[1.1] text-black">
+<h1 className="text-2xl md:text-5xl font-bold leading-tight text-black">
 Commercial Interior Design
 <span className="block italic text-black/70">
 for Modern Workspaces
@@ -53,26 +70,33 @@ for Modern Workspaces
 
 <Link href="/contact">
 <button className="mt-6 px-6 py-3 bg-[#c8a951] text-white rounded-full text-sm hover:scale-105 transition">
-Explore More →
+Get Free Consultation →
 </button>
 </Link>
 </div>
 
 {/* RIGHT IMAGE */}
-<div className="relative h-[300px] flex justify-center">
+<div className="relative h-[260px] md:h-[300px] flex justify-center">
 
-<div className="w-[80%] h-full overflow-hidden rounded-t-[180px] rounded-b-3xl">
+<div className="w-[85%] h-full p-[6px] rounded-[30px] 
+bg-gradient-to-tr from-[#ffffff] via-[#e6f7f9] to-[#d0ecef] 
+shadow-[0_10px_40px_rgba(0,0,0,0.15)]">
+
+<div className="relative w-full h-full overflow-hidden rounded-[25px]">
 <Image
-src="/hero_images/hero-card.png"
-alt="Office interior"
-fill
-sizes="(max-width:768px) 100vw, 50vw"
-className="object-cover"
+  src="/hero_images/hero-card.png"
+  alt="Office interior workspace"
+  fill
+  sizes="(max-width:768px) 100vw, 50vw"
+  className="object-cover hover:scale-105 transition duration-700"
 />
 </div>
 
-<div className="absolute bottom-4 left-0 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl text-xs shadow-xl">
-⭐⭐⭐⭐⭐  
+</div>
+
+{/* Rating */}
+<div className="absolute bottom-4 left-4 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl text-xs shadow-lg border border-white/50">
+⭐⭐⭐⭐⭐
 <p className="text-black/60 text-[10px]">
 Trusted by clients
 </p>
@@ -83,14 +107,17 @@ Trusted by clients
 </div>
 
 {/* FLOATING FEATURES */}
-<div className="absolute left-1/2 -translate-x-1/2 bottom-[-35px] bg-white rounded-2xl shadow-xl px-8 py-4 flex gap-10">
+<div className="absolute left-1/2 -translate-x-1/2 bottom-[-30px] 
+bg-white/80 backdrop-blur-xl 
+rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] 
+px-6 py-4 flex flex-wrap gap-6 justify-center border border-white/50">
 
 {["Eco","Pro","Quality","Custom"].map((item, i) => (
-<div key={i} className="text-center">
-<p className="text-[#c8a951] font-bold text-sm">
+<div key={item} className="text-center">
+<p className="text-[#c8a951] font-bold text-xs">
 0{i + 1}
 </p>
-<p className="text-xs text-black/60">
+<p className="text-[10px] text-black/60">
 {item}
 </p>
 </div>
@@ -98,8 +125,7 @@ Trusted by clients
 
 </div>
 
-</div>
-
+</motion.div>
 </section>
 
 {/* ================= ABOUT ================= */}
