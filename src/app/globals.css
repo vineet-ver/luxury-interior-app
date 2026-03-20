@@ -159,3 +159,15 @@ html {
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
   
 }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatGlow {
+  0% { transform: translate(0px, 0px); }
+  50% { transform: translate(200px, 100px); }
+  100% { transform: translate(0px, 0px); }
+}
