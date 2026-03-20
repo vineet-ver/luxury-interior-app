@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import WhatsAppButton from "@/components/WhatsAppButton"; // ✅ ADDED
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -106,6 +107,9 @@ export default function RootLayout({
         />
 
         {children}
+
+        {/* ✅ WHATSAPP BUTTON (ADDED HERE) */}
+        <WhatsAppButton />
 
         {/* ✅ Google Analytics */}
         <GoogleAnalytics gaId="G-AB12CD34EF" />
