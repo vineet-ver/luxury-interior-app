@@ -57,19 +57,19 @@ border border-white/40 backdrop-blur-xl"
 
 {/* LEFT */}
 <div>
-<p className="text-sm text-black/50 mb-3">
+<p className="text-sm text-gray-500 mb-3">
 Premium Interior Solutions
 </p>
 
-<h1 className="text-2xl md:text-5xl font-bold leading-tight text-black">
+<h1 className="text-5xl font-bold text-[#0b1f3a] leading-tight">
 Commercial Interior Design
-<span className="block italic text-black/70">
+<span className="block text-[#c8a951]">
 for Modern Workspaces
 </span>
 </h1>
 
 <Link href="/contact">
-<button className="mt-6 px-6 py-3 bg-[#c8a951] text-white rounded-full text-sm hover:scale-105 transition">
+<button className="mt-8 px-6 py-3 bg-[#0b1f3a] text-white rounded-md hover:bg-[#c8a951] transition">
 Get Free Consultation →
 </button>
 </Link>
@@ -129,59 +129,117 @@ px-6 py-4 flex flex-wrap gap-6 justify-center border border-white/50">
 </section>
 
 {/* ================= ABOUT ================= */}
-<section className="py-24 px-6 bg-gradient-to-br from-[#f5f3ef] via-[#f2efe9] to-[#ebe7df]">
+<section className="relative py-28 overflow-hidden bg-white">
+
+{/* Background */}
+<div className="absolute inset-0 bg-gradient-to-br from-[#f9fafb] via-[#f3f4f6] to-[#ffffff] -z-10" />
+<div className="absolute inset-0 opacity-[0.04] -z-10 
+bg-[radial-gradient(#000_1px,transparent_1px)] 
+[background-size:20px_20px]" />
+
+{/* Glow */}
+<div className="absolute top-0 left-0 w-[300px] h-[300px] bg-[#c8a951]/10 blur-[120px] rounded-full -z-10" />
+
 <Container>
 
-<div className="grid md:grid-cols-2 gap-12 items-center">
+{/* MAIN GRID */}
+<div className="grid md:grid-cols-2 gap-16 items-center">
 
-<div>
-<h2 className="text-[3rem] md:text-[3.5rem] font-bold leading-[1.1] text-black">
-ABOUT <br /> US
-</h2>
+  {/* IMAGE */}
+  <div className="relative h-[400px]">
+    <img 
+      src="/images/about1.png" 
+      className="w-full h-full object-cover rounded-xl shadow-lg" 
+      alt="About"
+    />
 
-<p className="mt-6 text-black/70 max-w-md">
-We deliver modern commercial interiors with engineering precision 
-and premium design across India.
-</p>
+    {/* Floating card */}
+    <div className="absolute -bottom-6 -left-6 bg-white shadow-xl rounded-xl p-4 w-[180px]">
+      <p className="text-2xl font-bold text-[#0b1f3a]">10+</p>
+      <p className="text-xs text-gray-500">Years Experience</p>
+    </div>
+  </div>
 
-<Link href="/about">
-<button className="mt-6 px-6 py-3 border border-black rounded-full hover:bg-black hover:text-white transition">
-Read More →
-</button>
-</Link>
+  {/* CONTENT */}
+  <div>
+    <h2 className="text-4xl font-bold text-[#0b1f3a] leading-tight">
+      ABOUT US <br />
+      <span className="text-[#c8a951]">India Technical Solution Services</span>
+    </h2>
+
+    <p className="mt-6 text-gray-600">
+      We deliver high-performance EPC, MEP and interior solutions 
+      designed for modern businesses. Our focus is on quality, 
+      precision, and long-term value.
+    </p>
+
+    {/* FEATURES */}
+    <div className="mt-8 grid grid-cols-2 gap-4">
+
+      {[
+        "End-to-End Solutions",
+        "Expert Team",
+        "On-Time Delivery",
+        "Quality Assurance"
+      ].map((item, i) => (
+
+        <div key={i} className="flex items-center gap-2 text-sm">
+          <span className="w-2 h-2 bg-[#c8a951] rounded-full"></span>
+          {item}
+        </div>
+
+      ))}
+
+    </div>
+
+    <a href="/about">
+      <button className="mt-8 px-6 py-3 bg-[#0b1f3a] text-white rounded-md hover:bg-[#c8a951] transition">
+        Learn More →
+      </button>
+    </a>
+  </div>
 
 </div>
 
-<div className="grid grid-cols-2 gap-4">
+{/* ===== PRO STATS SECTION ===== */}
+<div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
 
-<div className="relative h-[180px] rounded-2xl overflow-hidden">
-<Image src="/images/about1.png" alt="Interior" fill className="object-cover"/>
-</div>
+  {[
+    { number: "250+", label: "Projects Completed" },
+    { number: "120+", label: "Happy Clients" },
+    { number: "15+", label: "Cities Covered" },
+    { number: "10+", label: "Years Experience" },
+  ].map((stat, i) => (
 
-<div className="relative h-[180px] rounded-2xl overflow-hidden">
-<Image src="/images/about2.png" alt="Interior" fill className="object-cover"/>
-</div>
+    <div
+      key={i}
+      className="relative group p-6 rounded-xl text-center 
+      bg-gradient-to-br from-[#0b1f3a] to-[#1e3a5f] 
+      text-white shadow-lg overflow-hidden"
+    >
 
-</div>
+      {/* Glow hover effect */}
+      <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition duration-500" />
 
-</div>
+      {/* Number */}
+      <p className="text-3xl font-bold tracking-wide relative z-10">
+        {stat.number}
+      </p>
 
-<div className="mt-16 grid md:grid-cols-2 gap-10 items-center">
+      {/* Label */}
+      <p className="text-sm mt-2 text-white/80 relative z-10">
+        {stat.label}
+      </p>
 
-<div className="relative h-[220px] rounded-2xl overflow-hidden">
-<Image src="/images/about3.png" alt="Philosophy" fill className="object-cover"/>
-</div>
+      {/* Bottom gold line */}
+      <div className="mt-4 h-[2px] w-10 mx-auto bg-[#c8a951] relative z-10" />
 
-<div>
-<h3 className="text-xl font-semibold mb-3">
-Our Philosophy
-</h3>
+      {/* Corner accent */}
+      <div className="absolute top-0 right-0 w-16 h-16 bg-white/5 rounded-bl-full" />
 
-<p className="text-black/70">
-We create functional, aesthetic and high-performance workspaces 
-that elevate business environments.
-</p>
-</div>
+    </div>
+
+  ))}
 
 </div>
 
@@ -189,10 +247,15 @@ that elevate business environments.
 </section>
 
 {/* ================= SERVICES ================= */}
-<section className="py-28 bg-[#f8f6f2]">
+<section className="py-28 relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#ffffff]">
+
+{/* Subtle background glow */}
+<div className="absolute top-0 left-0 w-[300px] h-[300px] bg-[#0b1f3a]/10 blur-[120px] rounded-full -z-10" />
+<div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[#c8a951]/10 blur-[120px] rounded-full -z-10" />
+
 <Container>
 
-<h2 className="text-4xl text-center mb-16 font-bold tracking-tight">
+<h2 className="text-4xl text-center mb-16 font-bold tracking-tight text-[#0b1f3a]">
 Our Services
 </h2>
 
@@ -200,9 +263,19 @@ Our Services
 
 {services.map((s,i)=>(
 
-<Link key={i} href={s.link} className="group relative block">
+<Link 
+  key={i} 
+  href={s.link} 
+  className="group relative block 
+  transition duration-500 
+  hover:-translate-y-3"
+>
 
-<div className="relative h-[200px] rounded-2xl overflow-hidden">
+{/* Card */}
+<div className="relative h-[200px] rounded-2xl overflow-hidden 
+border border-white/30 
+group-hover:border-[#c8a951]/50 
+transition duration-500">
 
 <Image 
 src={s.img} 
@@ -211,13 +284,28 @@ fill
 className="object-cover group-hover:scale-110 transition duration-700"
 />
 
-<div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition duration-500" />
+{/* Glow border */}
+  <div className="absolute inset-0 rounded-2xl 
+  border border-transparent 
+  group-hover:border-[#c8a951]/60 
+  group-hover:shadow-[0_0_25px_rgba(200,169,81,0.4)] 
+  transition duration-500" />
+
+{/* Overlay gradient */}
+<div className="absolute inset-0 bg-gradient-to-t from-[#0b1f3a]/60 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition duration-500" />
+
+{/* Top accent line */}
+<div className="absolute top-0 left-0 w-0 h-[3px] bg-gradient-to-r from-[#c8a951] to-orange-400 group-hover:w-full transition-all duration-500" />
 
 </div>
 
-<div className="absolute left-1/2 -translate-x-1/2 -bottom-6 w-[85%] bg-white/90 backdrop-blur-lg shadow-xl rounded-xl px-4 py-3 text-center group-hover:-translate-y-2 transition duration-500">
+{/* Content Card */}
+<div className="absolute left-1/2 -translate-x-1/2 -bottom-6 w-[85%] 
+bg-white/95 backdrop-blur-xl 
+shadow-xl rounded-xl px-4 py-3 text-center 
+group-hover:-translate-y-2 transition duration-500 border border-gray-100">
 
-<h3 className="text-sm font-semibold tracking-wide">
+<h3 className="text-sm font-semibold tracking-wide text-[#0b1f3a] group-hover:text-[#c8a951] transition">
 {s.title}
 </h3>
 
@@ -229,8 +317,11 @@ className="object-cover group-hover:scale-110 transition duration-700"
 
 {/* CTA */}
 <Link href="/services">
-<div className="group relative h-[200px] rounded-2xl bg-gradient-to-br from-[#c8a951] to-[#a8893d] flex items-center justify-center cursor-pointer overflow-hidden">
+<div className="group relative h-[200px] rounded-2xl 
+bg-gradient-to-br from-[#0b1f3a] via-[#1e3a5f] to-[#c8a951] 
+flex items-center justify-center cursor-pointer overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:shadow-[0_30px_80px_rgba(0,0,0,0.25)] transition">
 
+{/* Shine effect */}
 <div className="absolute w-[200%] h-[200%] bg-white/10 rotate-45 group-hover:translate-x-full transition duration-700"></div>
 
 <div className="relative text-center text-white">
@@ -250,76 +341,75 @@ All Services →
 </Container>
 </section>
 
-{/* ================= PROJECTS ================= */}
-<section className="relative pt-16 pb-16 md:pt-20 md:pb-28 overflow-hidden">
-
-{/* 🎨 ULTRA PREMIUM BACKGROUND */}
-<div className="absolute inset-0 -z-10 overflow-hidden">
-
-  {/* Animated gradient */}
-  <div className="absolute inset-0 bg-[linear-gradient(120deg,#f8f6f2,#efe9dc,#f8f6f2)] bg-[length:200%_200%] animate-[gradientMove_12s_ease_infinite]" />
-
-  {/* Moving glow */}
-  <div className="absolute w-[500px] h-[500px] bg-[#c8a951]/20 blur-[140px] rounded-full animate-[floatGlow_12s_ease-in-out_infinite]" />
-
-  {/* Top wave */}
-  <svg className="absolute top-0 left-0 w-full" viewBox="0 0 1440 320">
-    <path fill="#ffffff" d="M0,160L80,170C160,180,320,200,480,192C640,184,800,148,960,138.7C1120,128,1280,144,1360,152L1440,160L1440,0L0,0Z"/>
-  </svg>
-
-  {/* Bottom wave */}
-  <svg className="absolute bottom-0 left-0 w-full rotate-180" viewBox="0 0 1440 320">
-    <path fill="#f3efe7" d="M0,160L80,170C160,180,320,200,480,192C640,184,800,148,960,138.7C1120,128,1280,144,1360,152L1440,160L1440,0L0,0Z"/>
-  </svg>
-
-</div>
+{/* ================= PROJECTS / SERVICES ================= */}
+<section className="py-28 bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ffffff]">
 
 <Container>
 
-<h2 className="text-3xl md:text-4xl text-center mb-10 font-bold">
+<h2 className="text-4xl text-center mb-16 font-bold text-[#0b1f3a]">
 Our Projects
 </h2>
 
-{/* 🔥 PREMIUM COMPACT GRID */}
-<div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 {[
-  { img: "project1.png", title: "Corporate Office" },
-  { img: "project2.png", title: "Modern Workspace" },
-  { img: "project3.png", title: "Luxury Interior" },
-  { img: "project1.png", title: "Commercial Space" },
-].map((p, i) => (
+  {
+    title: "Corporate Office",
+    desc: "Our attendance management system tracks real-time attendance with accuracy, flexibility, and seamless payroll sync.",
+    icon: "🛡️"
+  },
+  {
+    title: "Morden Workspace",
+    desc: "We provide end-to-end hiring solutions with smart sourcing, onboarding and quality talent acquisition.",
+    icon: "💰"
+  },
+  {
+    title: "Turnkey",
+    desc: "Quick claim processing with automated tracking, transparency and timely disbursements.",
+    icon: "🏠"
+  },
+].map((item, i) => (
 
-<div key={i} className="group relative">
+<div key={i} className="group">
 
-<div className="relative h-[180px] rounded-2xl overflow-hidden shadow-lg bg-white">
+  <div className="relative bg-white rounded-2xl p-8 h-full 
+  shadow-md hover:shadow-2xl transition duration-500 overflow-hidden">
 
-<Image 
-  src={`/images/${p.img}`} 
-  alt={p.title}
-  fill
-  sizes="(max-width:768px) 100vw, 25vw"
-  loading="lazy"
-  className="object-cover group-hover:scale-110 transition duration-700"
-/>
+    {/* TOP CORNER DESIGN */}
+    <div className="absolute top-0 right-0 w-28 h-28 
+    bg-gradient-to-br from-[#0b1f3a] to-[#1e3a5f] 
+    rounded-bl-[100px] flex items-center justify-center">
 
-{/* Overlay */}
-<div className="absolute inset-0 bg-black/10 group-hover:bg-black/40 transition duration-500" />
+      <span className="text-white text-2xl">
+        {item.icon}
+      </span>
 
-{/* Content */}
-<div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition duration-500">
+    </div>
 
-<p className="text-white text-sm font-semibold">
-{p.title}
-</p>
+    {/* CONTENT */}
+    <h3 className="text-xl font-semibold text-[#0b1f3a] mt-6 group-hover:text-[#c8a951] transition">
+      {item.title}
+    </h3>
 
-<button className="mt-2 w-fit text-xs bg-white/80 backdrop-blur px-3 py-1 rounded-full hover:bg-[#c8a951] hover:text-white transition">
-View Project →
-</button>
+    <p className="text-gray-600 mt-4 leading-relaxed">
+      {item.desc}
+    </p>
 
-</div>
+    {/* BUTTON */}
+    <button className="mt-6 px-5 py-2 text-sm font-medium 
+    bg-gray-100 rounded-lg 
+    hover:bg-[#c8a951] hover:text-white transition">
+      Learn More
+    </button>
 
-</div>
+    {/* BORDER GLOW */}
+    <div className="absolute inset-0 rounded-2xl 
+    border border-transparent 
+    group-hover:border-[#c8a951]/50 
+    group-hover:shadow-[0_0_30px_rgba(200,169,81,0.2)] 
+    transition duration-500" />
+
+  </div>
 
 </div>
 
@@ -331,19 +421,20 @@ View Project →
 </section>
 
 {/* ================= LOCATIONS ================= */}
-<section className="relative py-20 → pt-10 pb-20  bg-gradient-to-br from-[#f8f6f2] via-[#f3efe7] to-[#ebe6dc] overflow-hidden">
+<section className="relative py-24 overflow-hidden bg-gradient-to-br from-[#a9f9ff] via-[#f1f5f9] to-[#ffffff]">
 
-{/* Glow */}
-<div className="absolute right-0 top-0 w-[300px] h-[300px] bg-[#c8a951]/20 blur-[120px] rounded-full -z-10" />
+{/* Background Glow */}
+<div className="absolute top-0 left-0 w-[300px] h-[300px] bg-[#0b1f3a]/10 blur-[120px] rounded-full -z-10" />
+<div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[#c8a951]/15 blur-[120px] rounded-full -z-10" />
 
 <Container>
 
-<h2 className="text-3xl md:text-4xl text-center mb-12 font-bold">
+<h2 className="text-4xl text-center mb-14 font-bold text-[#0b1f3a]">
 Our Presence Across India
 </h2>
 
-{/* 🔥 Grid */}
-<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+{/* GRID */}
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 
 {[
   { name: "Delhi", link: "/office-interior-contractor-delhi" },
@@ -354,24 +445,37 @@ Our Presence Across India
 
 <Link key={i} href={city.link}>
 
-<div className="group bg-white/80 backdrop-blur-lg border border-white/40 
-rounded-2xl p-6 text-center shadow-md 
-hover:shadow-xl hover:-translate-y-2 transition duration-300 cursor-pointer">
+<div className="group relative bg-white/90 backdrop-blur-xl 
+border border-white/40 rounded-2xl p-6 text-center 
+shadow-md hover:shadow-2xl hover:-translate-y-3 
+transition duration-500 cursor-pointer overflow-hidden">
 
-{/* Icon circle */}
-<div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full bg-[#c8a951]/20 text-[#c8a951] font-bold">
+{/* ICON */}
+<div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center 
+rounded-full bg-gradient-to-br from-[#0b1f3a] to-[#1e3a5f] 
+text-white text-lg shadow-md group-hover:scale-110 transition">
 📍
 </div>
 
-{/* City */}
-<p className="font-semibold text-black group-hover:text-[#c8a951] transition">
+{/* CITY */}
+<p className="font-semibold text-[#0b1f3a] group-hover:text-[#c8a951] transition">
 {city.name}
 </p>
 
-{/* Small text */}
-<p className="text-xs text-black/50 mt-1">
+{/* SUBTEXT */}
+<p className="text-xs text-gray-500 mt-1">
 Interior Solutions
 </p>
+
+{/* TOP BORDER ANIMATION */}
+<div className="absolute top-0 left-0 w-0 h-[2px] bg-gradient-to-r from-[#c8a951] to-orange-400 group-hover:w-full transition-all duration-500" />
+
+{/* BORDER GLOW */}
+<div className="absolute inset-0 rounded-2xl 
+border border-transparent 
+group-hover:border-[#c8a951]/40 
+group-hover:shadow-[0_0_25px_rgba(200,169,81,0.2)] 
+transition duration-500" />
 
 </div>
 
