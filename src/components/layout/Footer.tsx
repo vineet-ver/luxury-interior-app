@@ -7,16 +7,23 @@ export function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-luxury-onyx text-luxury-white/60 py-20 border-t border-luxury-gold/20 relative overflow-hidden">
-            {/* Background Decorations */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-luxury-gold/5 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-luxury-gold/5 rounded-full blur-[120px] pointer-events-none" />
+        <footer className="relative bg-gradient-to-br from-[#0b1f3a] via-[#1e3a5f] to-[#0b1f3a] text-white/70 pt-24 pb-12 border-t border-white/10 overflow-hidden">
 
-            <div className="container relative z-10 grid gap-16 md:grid-cols-4 lg:gap-20">
-                {/* Brand Column */}
-                <div className="space-y-8">
-                    <div className="relative h-20 w-64">
-                        {/* Using white logo for dark footer */}
+            {/* Glow */}
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#c8a951]/10 blur-[120px] rounded-full" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#c8a951]/10 blur-[120px] rounded-full" />
+
+            {/* Pattern */}
+            <div className="absolute inset-0 opacity-[0.03] 
+            bg-[radial-gradient(#fff_1px,transparent_1px)] 
+            [background-size:20px_20px]" />
+
+            {/* MAIN */}
+            <div className="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+
+                {/* BRAND */}
+                <div className="space-y-5 flex flex-col items-start">
+                    <div className="relative h-16 w-52">
                         <Image
                             src={siteData.general.logo}
                             alt={siteData.general.siteName}
@@ -24,34 +31,49 @@ export function Footer() {
                             className="object-contain object-left"
                         />
                     </div>
-                    <p className="text-lg font-light leading-relaxed max-w-xs text-luxury-white/70">
+
+                    <p className="text-sm leading-relaxed text-white/70 max-w-[260px] break-words">
                         {siteData.general.tagline}
                     </p>
-                    <div className="flex gap-4">
-                        <a href="https://www.instagram.com/itss_interiors?igsh=MTdjYTV0cjJ2YXR1bg==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-luxury-gold/30 flex items-center justify-center hover:bg-luxury-gold hover:text-luxury-onyx transition-all cursor-pointer group">
-                            <span className="sr-only">Instagram</span>
-                            <Instagram className="w-4 h-4 text-luxury-gold group-hover:text-luxury-onyx" />
-                        </a>
-                        <a href="https://www.facebook.com/share/1BqKz1vJ4w/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-luxury-gold/30 flex items-center justify-center hover:bg-luxury-gold hover:text-luxury-onyx transition-all cursor-pointer group">
-                            <span className="sr-only">Facebook</span>
-                            <Facebook className="w-4 h-4 text-luxury-gold group-hover:text-luxury-onyx" />
-                        </a>
-                        <a href="#" className="w-10 h-10 rounded-full border border-luxury-gold/30 flex items-center justify-center hover:bg-luxury-gold hover:text-luxury-onyx transition-all cursor-pointer group">
-                            <span className="sr-only">LinkedIn</span>
-                            <Linkedin className="w-4 h-4 text-luxury-gold group-hover:text-luxury-onyx" />
-                        </a>
+
+                    {/* SOCIAL */}
+                    <div className="flex gap-4 flex-wrap">
+                        {[{
+                            icon: Instagram,
+                            link: "https://www.instagram.com/itss_interiors?igsh=MTdjYTV0cjJ2YXR1bg=="
+                        },
+                        {
+                            icon: Facebook,
+                            link: "https://www.facebook.com/share/1BqKz1vJ4w/"
+                        },
+                        {
+                            icon: Linkedin,
+                            link: "https://www.linkedin.com/company/112454950/admin/dashboard/"
+                        }].map((item, i) => (
+                            <a key={i} href={item.link} target="_blank" rel="noopener noreferrer"
+                                className="w-10 h-10 flex items-center justify-center rounded-full 
+                                border border-white/20 
+                                hover:bg-[#c8a951] 
+                                hover:shadow-[0_0_15px_rgba(200,169,81,0.6)] 
+                                transition">
+                                <item.icon className="w-4 h-4 text-white" />
+                            </a>
+                        ))}
                     </div>
                 </div>
 
-                {/* Navigation */}
+                {/* NAVIGATION */}
                 <div>
-                    <h4 className="text-luxury-gold font-display font-medium text-xl mb-8">Navigation</h4>
-                    <ul className="space-y-4">
+                    <h4 className="text-[#c8a951] font-semibold text-lg tracking-wide mb-5">
+                        Navigation
+                    </h4>
+
+                    <ul className="space-y-2.5 text-sm">
                         {['Home', 'About Us', 'Clients', 'Portfolio', 'Gallery', 'Services', 'Contact'].map((item) => (
                             <li key={item}>
                                 <Link
                                     href={item === 'Home' ? '/' : item === 'About Us' ? '/about' : `/${item.toLowerCase()}`}
-                                    className="hover:text-luxury-gold transition-colors block py-1 border-b border-transparent hover:border-luxury-gold/30 hover:pl-2 duration-300 w-fit"
+                                    className="hover:text-[#c8a951] transition hover:pl-3 duration-300 block"
                                 >
                                     {item}
                                 </Link>
@@ -60,13 +82,19 @@ export function Footer() {
                     </ul>
                 </div>
 
-                {/* Services */}
+                {/* SERVICES */}
                 <div>
-                    <h4 className="text-luxury-gold font-display font-medium text-xl mb-8">Expertise</h4>
-                    <ul className="space-y-4">
+                    <h4 className="text-[#c8a951] font-semibold text-lg tracking-wide mb-5">
+                        Expertise
+                    </h4>
+
+                    <ul className="space-y-2.5 text-sm">
                         {['Turnkey Interiors', 'Office Automation', 'CCTV Surveillance', 'Networking', 'Access Control', 'Civil Work'].map((service) => (
                             <li key={service}>
-                                <Link href="/services" className="hover:text-luxury-gold transition-colors hover:pl-2 duration-300 block">
+                                <Link
+                                    href="/services"
+                                    className="hover:text-[#c8a951] transition hover:pl-3 duration-300 block"
+                                >
                                     {service}
                                 </Link>
                             </li>
@@ -74,37 +102,58 @@ export function Footer() {
                     </ul>
                 </div>
 
-                {/* Contact */}
+                {/* CONTACT */}
                 <div>
-                    <h4 className="text-luxury-gold font-display font-medium text-xl mb-8">Contact</h4>
-                    <ul className="space-y-6">
-                        <li className="group">
-                            <span className="text-xs uppercase tracking-widest text-luxury-gold/50 block mb-2">Headquarters</span>
-                            <span className="text-white/90 leading-relaxed font-light group-hover:text-white transition-colors block">
+                    <h4 className="text-[#c8a951] font-semibold text-lg tracking-wide mb-5">
+                        Contact
+                    </h4>
+
+                    <ul className="space-y-4 text-sm">
+                        <li>
+                            <p className="text-white/50 text-xs uppercase tracking-widest mb-1">
+                                Address
+                            </p>
+                            <p className="text-white/90 break-words leading-relaxed">
                                 {siteData.general.address}
-                            </span>
+                            </p>
                         </li>
-                        <li className="group">
-                            <span className="text-xs uppercase tracking-widest text-luxury-gold/50 block mb-2">Get in Touch</span>
-                            <a href={`tel:${siteData.general.contactPhone}`} className="block text-xl font-display text-white group-hover:text-luxury-gold transition-colors mb-1">
+
+                        <li>
+                            <p className="text-white/50 text-xs uppercase tracking-widest mb-1">
+                                Phone
+                            </p>
+                            <a href={`tel:${siteData.general.contactPhone}`} className="text-white hover:text-[#c8a951] transition">
                                 {siteData.general.contactPhone}
                             </a>
-                            <a href={`mailto:${siteData.general.contactEmail}`} className="block text-white/70 hover:text-luxury-gold transition-colors">
+                        </li>
+
+                        <li>
+                            <p className="text-white/50 text-xs uppercase tracking-widest mb-1">
+                                Email
+                            </p>
+                            <a href={`mailto:${siteData.general.contactEmail}`} className="hover:text-[#c8a951] transition break-words">
                                 {siteData.general.contactEmail}
                             </a>
                         </li>
                     </ul>
                 </div>
+
             </div>
 
-            {/* Copyright */}
-            <div className="container mt-20 pt-8 border-t border-luxury-gold/10 flex flex-col md:flex-row justify-between items-center text-sm text-luxury-white/40 gap-4">
-                <p>&copy; {currentYear} {siteData.general.siteName}. All rights reserved.</p>
-                <div className="flex gap-8">
-                    <span className="hover:text-luxury-gold cursor-pointer transition-colors">Privacy Policy</span>
-                    <span className="hover:text-luxury-gold cursor-pointer transition-colors">Terms of Service</span>
+            {/* BOTTOM */}
+            <div className="max-w-7xl mx-auto px-6 mt-12 pt-5 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50 text-center md:text-left">
+
+                <p>
+                    © {currentYear} {siteData.general.siteName}. All rights reserved.
+                </p>
+
+                <div className="flex gap-6 flex-wrap justify-center md:justify-end">
+                    <span className="hover:text-[#c8a951] cursor-pointer transition">Privacy Policy</span>
+                    <span className="hover:text-[#c8a951] cursor-pointer transition">Terms of Service</span>
                 </div>
+
             </div>
+
         </footer>
     );
 }
