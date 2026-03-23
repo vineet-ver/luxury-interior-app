@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function DelhiPage() {
   return (
@@ -10,6 +11,14 @@ export default function DelhiPage() {
       <h1 className="text-4xl font-bold mb-6">
         EPC, MEP, HVAC & Electrical Services in Delhi NCR
       </h1>
+
+      <Image
+src="/location_images/office-interior-gurgaon.jpg"
+alt="Corporate office interior design project in Gurgaon by ITSS"
+width={1200}
+height={700}
+className="rounded-xl mb-8"
+/>
 
       <p className="text-lg text-gray-600 mb-6">
         ITSS (India Technical Solution Services) provides professional 
