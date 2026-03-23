@@ -1,50 +1,48 @@
 import type { Metadata } from "next";
 import HomeClient from "@/components/home/HomeClient";
 
+/* ================= META ================= */
 export const metadata: Metadata = {
-  title: "Office Interior Contractor Delhi NCR | Commercial Interior Company India | ITSS",
+  title: "Commercial Interior Design Company in Delhi NCR | Office Interior Contractor | ITSS",
 
   description:
-    "ITSS is a leading office interior contractor in Delhi NCR offering commercial interior design, corporate workspace planning and turnkey office interior fit-out services across India.",
+    "ITSS is a leading commercial interior design company in Delhi NCR offering office interior design, turnkey fitout, EPC, MEP, HVAC and electrical services across Noida, Gurgaon and India.",
 
   keywords: [
-    "office interior contractor delhi",
-    "commercial interior contractor delhi ncr",
-    "turnkey office interior contractor india",
-    "corporate office interior design delhi",
-    "commercial interior design company india",
-    "office interior design company gurgaon",
-    "office interior contractor noida",
-    "workspace interior contractor india",
-    "office renovation contractor delhi ncr",
-    "corporate office fitout contractor india",
-    "commercial interior services india",
-    "turnkey office interior services"
+    "commercial interior design Delhi NCR",
+    "office interior designer Delhi",
+    "turnkey interior contractor India",
+    "office fitout company Delhi NCR",
+    "corporate office interior design",
+    "MEP contractor Delhi",
+    "HVAC services Delhi NCR",
+    "electrical contractor Delhi",
+    "interior design company Gurgaon Noida",
   ],
 
-  alternates: {
-    canonical: "https://www.itss.co.in/",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-  },
-
   openGraph: {
-    title: "Office Interior Contractor Delhi NCR | ITSS Interior Solutions",
+    title: "Commercial Interior Design & Fitout Solutions | ITSS",
     description:
-      "Leading commercial interior contractor providing corporate office interiors and turnkey workspace solutions across India.",
-    url: "https://www.itss.co.in/",
-    siteName: "ITSS Interior Solutions",
+      "Office interior design, turnkey fitout and EPC services across Delhi NCR and India.",
+    url: "https://www.itss.co.in",
+    siteName: "ITSS",
+    images: [
+      {
+        url: "/hero_images/interior-bg.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
     locale: "en_IN",
     type: "website",
   },
 
-  authors: [{ name: "ITSS – India Technical Solution Services" }],
-  publisher: "ITSS – India Technical Solution Services",
+  alternates: {
+    canonical: "https://www.itss.co.in",
+  },
 };
 
-export default function Home() {
+/* ================= PAGE ================= */
+export default function Page() {
   return <HomeClient />;
 }
