@@ -9,11 +9,14 @@ import { motion } from "framer-motion";
 export default function HomeClient() {
 
 const services = [
+  { title: "Office Interior Design", img: "/images/epc.png", link: "/services/commercial-interior-fitout-delhi" },
+  { title: "Turnkey Interior Projects", img: "/images/epc.png", link: "/services/commercial-interior-fitout-delhi" },
+  { title: "Workstation Installation", img: "/images/epc.png", link: "/services/carpentry-services-delhi" },
   { title: "EPC Projects", img: "/images/epc.png", link: "/services/commercial-interior-contractor" },
   { title: "MEP Projects", img: "/images/mep.png", link: "/services/turnkey-interior-contractor" },
   { title: "Electrical Services", img: "/images/electrical.png", link: "/services/office-interior-contractor" },
   { title: "HVAC Services", img: "/images/hvac.png", link: "/services/office-interior-contractor" },
-  { title: "IT & Networking", img: "/images/networking.png", link: "/services/turnkey-interior-contractor" },
+  { title: "Networking service", img: "/images/networking.png", link: "/services/turnkey-interior-contractor" },
   { title: "Fire Fighting", img: "/images/fire.png", link: "/services/commercial-interior-contractor" },
   { title: "Carpentry Services", img: "/images/carpentry.png", link: "/services/office-interior-contractor" },
 ];
@@ -21,111 +24,41 @@ const services = [
 return (
 <MainLayout>
 
-{/* ================= HERO ================= */}
-<section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-15">
-
-{/* Background Image */}
+{/* HERO */}
+<section className="relative min-h-screen flex items-center justify-center pt-24">
 <div className="absolute inset-0 -z-20">
-<Image
-  src="/hero_images/interior-bg.png"
-  alt="Modern office interior design"
-  fill
-  priority
-  sizes="100vw"
-  className="object-cover opacity-60"
-/>
+<Image src="/hero_images/interior-bg.png" alt="Commercial interior design Delhi NCR" fill className="object-cover opacity-40"/>
 </div>
+<div className="absolute inset-0 bg-white/60 -z-10"></div>
 
-{/* Glow Effect */}
-<div className="absolute -z-10 w-[500px] h-[500px] bg-[#c8a951]/20 blur-[120px] rounded-full top-[-100px] left-[-100px]" />
+<div className="w-[90%] max-w-6xl bg-white/90 rounded-[40px] p-10 shadow-xl">
 
-<motion.div
-initial={{ opacity: 0, y: 40 }}
-animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.6 }}
-className="relative z-10 w-[90%] max-w-5xl 
-bg-gradient-to-br from-[#dff4f6] via-[#eafafa] to-[#ffffff] 
-rounded-[50px] p-6 md:p-12 pb-20 
-shadow-[0_20px_80px_rgba(0,0,0,0.12)] 
-border border-white/40 backdrop-blur-xl"
->
+<div className="grid lg:grid-cols-2 gap-10 items-center">
 
-{/* Glass Overlay */}
-<div className="absolute inset-0 rounded-[50px] bg-white/30 backdrop-blur-xl pointer-events-none" />
-
-<div className="grid lg:grid-cols-2 gap-10 items-center relative z-10">
-
-{/* LEFT */}
 <div>
-<p className="text-sm text-gray-500 mb-3">
-Premium Interior Solutions
-</p>
-
-<h1 className="text-5xl font-bold text-[#0b1f3a] leading-tight">
-Commercial Interior Design
-<span className="block text-[#c8a951]">
-for Modern Workspaces
-</span>
+<h1 className="text-4xl md:text-5xl font-bold text-[#0b1f3a]">
+Office Interior Design & Fitout Solutions
+<span className="block text-[#c8a951]">Delhi NCR & Pan India</span>
 </h1>
 
-<Link href="/contact">
-<button className="mt-8 px-6 py-3 bg-[#0b1f3a] text-white rounded-md hover:bg-[#c8a951] transition">
-Get Free Consultation →
-</button>
-</Link>
-</div>
-
-{/* RIGHT IMAGE */}
-<div className="relative h-[260px] md:h-[300px] flex justify-center">
-
-<div className="w-[85%] h-full p-[6px] rounded-[30px] 
-bg-gradient-to-tr from-[#ffffff] via-[#e6f7f9] to-[#d0ecef] 
-shadow-[0_10px_40px_rgba(0,0,0,0.15)]">
-
-<div className="relative w-full h-full overflow-hidden rounded-[25px]">
-<Image
-  src="/hero_images/hero-card.png"
-  alt="Office interior workspace"
-  fill
-  sizes="(max-width:768px) 100vw, 50vw"
-  className="object-cover hover:scale-105 transition duration-700"
-/>
-</div>
-
-</div>
-
-{/* Rating */}
-<div className="absolute bottom-4 left-4 bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl text-xs shadow-lg border border-white/50">
-⭐⭐⭐⭐⭐
-<p className="text-black/60 text-[10px]">
-Trusted by clients
+<p className="mt-4 text-gray-700">
+Commercial interior design, turnkey fitout, EPC, MEP, HVAC and electrical solutions.
 </p>
+
+<div className="mt-6 flex gap-4">
+<Link href="/contact"><button className="px-6 py-3 bg-[#0b1f3a] text-white rounded">Get Free Consultation</button></Link>
+<Link href="/services"><button className="px-6 py-3 border rounded">View Services</button></Link>
+</div>
+
+</div>
+
+<div className="relative h-[300px]">
+<Image src="/hero_images/hero-card.png" alt="office interior" fill className="object-cover rounded-xl"/>
 </div>
 
 </div>
 
 </div>
-
-{/* FLOATING FEATURES */}
-<div className="absolute left-1/2 -translate-x-1/2 bottom-[-30px] 
-bg-white/80 backdrop-blur-xl 
-rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.15)] 
-px-6 py-4 flex flex-wrap gap-6 justify-center border border-white/50">
-
-{["Eco","Pro","Quality","Custom"].map((item, i) => (
-<div key={item} className="text-center">
-<p className="text-[#c8a951] font-bold text-xs">
-0{i + 1}
-</p>
-<p className="text-[10px] text-black/60">
-{item}
-</p>
-</div>
-))}
-
-</div>
-
-</motion.div>
 </section>
 
 {/* ================= ABOUT ================= */}
@@ -246,6 +179,15 @@ bg-[radial-gradient(#000_1px,transparent_1px)]
 </Container>
 </section>
 
+{/* CLIENT LOGOS */}
+<section className="py-16 bg-white text-center">
+<p className="text-gray-500 mb-6">Trusted by companies</p>
+<div className="flex justify-center gap-10">
+<Image src="/logos/logo1.png" alt="logo" width={100} height={50}/>
+<Image src="/logos/logo2.png" alt="logo" width={100} height={50}/>
+</div>
+</section>
+
 {/* ================= SERVICES ================= */}
 <section className="py-28 relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#ffffff]">
 
@@ -341,6 +283,20 @@ All Services →
 </Container>
 </section>
 
+{/* WHY US */}
+<section className="py-20 bg-white">
+<Container>
+<h2 className="text-3xl text-center font-bold mb-10">Why Choose ITSS</h2>
+
+<div className="grid md:grid-cols-4 gap-6 text-center">
+{["End-to-End Solutions","Expert Team","On-Time Delivery","Quality Assurance"].map((t,i)=>(
+<div key={i} className="p-6 bg-gray-100 rounded">{t}</div>
+))}
+</div>
+
+</Container>
+</section>
+
 {/* ================= PROJECTS / SERVICES ================= */}
 <section className="py-28 bg-gradient-to-br from-[#ffffff] via-[#ffffff] to-[#ffffff]">
 
@@ -420,6 +376,20 @@ Our Projects
 </Container>
 </section>
 
+{/* TESTIMONIAL */}
+<section className="py-20 bg-white">
+<Container>
+<h2 className="text-3xl text-center font-bold mb-10">Testimonials</h2>
+
+<div className="grid md:grid-cols-3 gap-6">
+<div className="p-6 bg-gray-100">Great service ⭐⭐⭐⭐⭐</div>
+<div className="p-6 bg-gray-100">Highly professional ⭐⭐⭐⭐⭐</div>
+<div className="p-6 bg-gray-100">Excellent work ⭐⭐⭐⭐⭐</div>
+</div>
+
+</Container>
+</section>
+
 {/* ================= LOCATIONS ================= */}
 <section className="relative py-24 overflow-hidden bg-gradient-to-br from-[#a9f9ff] via-[#f1f5f9] to-[#ffffff]">
 
@@ -488,38 +458,25 @@ transition duration-500" />
 </Container>
 </section>
 
-{/* ================= CTA ================= */}
-<section className="relative py-20 overflow-hidden">
 
-{/* Background Gradient */}
-<div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#f8f6f2] via-[#f3efe7] to-[#ebe6dc]" />
+{/* CTA */}
+<section className="py-20 text-center bg-white">
+<h2 className="text-3xl font-bold">Start Your Project</h2>
+<Link href="/contact"><button className="mt-4 px-6 py-3 bg-[#c8a951] text-white rounded">Contact Us</button></Link>
+</section>
 
-{/* Glow */}
-<div className="absolute left-1/2 -translate-x-1/2 top-0 w-[400px] h-[400px] bg-[#c8a951]/20 blur-[120px] rounded-full -z-10" />
-
+{/* FAQ */}
+<section className="py-20 bg-gray-50">
 <Container>
+<h2 className="text-3xl text-center font-bold mb-10">FAQ</h2>
 
-<div className="max-w-3xl mx-auto text-center bg-gradient-to-br from-[#eef4ff] via-[#e6efff] to-[#dce7ff] backdrop-blur-xl border bg-gradient-to-br from-[#eef4ff] via-[#e6efff] to-[#dce7ff] shadow-[0_20px_60px_rgba(0,0,0,0.1)] rounded-[30px] p-10">
-
-<h2 className="text-2xl md:text-3xl font-bold text-black">
-Let’s Build Your Next Project
-</h2>
-
-<p className="mt-3 text-black/60">
-Get in touch with our team today
-</p>
-
-<Link href="/contact">
-<button className="mt-6 px-6 py-3 bg-[#c8a951] text-white rounded-full hover:scale-105 transition">
-Get Free Consultation →
-</button>
-</Link>
-
+<div className="space-y-4 max-w-2xl mx-auto">
+<p><strong>What services?</strong> Interior + EPC + MEP</p>
+<p><strong>Location?</strong> Delhi NCR & India</p>
 </div>
 
 </Container>
 </section>
-
 
 </MainLayout>
 );
