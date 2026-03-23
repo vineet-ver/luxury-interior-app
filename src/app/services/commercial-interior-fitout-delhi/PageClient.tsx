@@ -84,6 +84,33 @@ export default function PageClient() {
         </Container>
       </section>
 
+      {/* ================= SERVICE AREAS ================= */}
+<section className="py-16 text-center">
+  <Container>
+
+    <h2 className="text-2xl font-bold mb-6">
+      Our Service Locations
+    </h2>
+
+    <div className="flex flex-wrap justify-center gap-4">
+
+      <Link href="/services-delhi" className="text-blue-600">
+        Delhi Services
+      </Link>
+
+      <Link href="/office-interior-contractor-noida" className="text-blue-600">
+        Noida Services
+      </Link>
+
+      <Link href="/office-interior-contractor-gurgaon" className="text-blue-600">
+        Gurgaon Services
+      </Link>
+
+    </div>
+
+  </Container>
+</section>
+
       {/* GEO */}
       <section className="py-20">
         <Container>
