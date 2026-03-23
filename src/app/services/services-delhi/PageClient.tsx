@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { Container } from "@/components/ui/Container";
@@ -12,11 +11,11 @@ export default function PageClient() {
       {/* ================= HERO ================= */}
       <section className="py-24 bg-gray-50 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-[#0b1f3a]">
-          Fire Fighting System Contractor in Delhi NCR
+          Interior Design Company in Delhi
         </h1>
 
         <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
-          Professional fire safety services including fire alarm systems, sprinkler systems and fire protection solutions for commercial and industrial projects across Delhi, Noida and Gurgaon.
+          ITSS provides complete commercial interior design, turnkey fitout and engineering services including EPC, MEP, HVAC, electrical and fire fighting solutions across Delhi.
         </p>
 
         <Link href="/contact">
@@ -26,64 +25,49 @@ export default function PageClient() {
         </Link>
       </section>
 
-      {/* ================= IMAGE + CONTENT ================= */}
+      {/* ================= SERVICES GRID ================= */}
       <section className="py-20">
-        <Container>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-
-            <div>
-              <Image
-                src="/services/fire-fighting.jpg"
-                alt="Fire fighting system contractor in Delhi NCR sprinkler and alarm installation"
-                width={500}
-                height={400}
-                className="rounded-xl shadow-lg"
-              />
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold">
-                Fire Safety & Protection Solutions
-              </h2>
-
-              <p className="mt-4 text-gray-600">
-                ITSS provides complete fire fighting solutions including fire alarm systems, sprinkler systems, fire extinguishers and fire safety compliance services.
-              </p>
-
-              <p className="mt-4 text-gray-600">
-                Our solutions ensure maximum safety, regulatory compliance and protection for commercial buildings and industrial facilities.
-              </p>
-
-            </div>
-
-          </div>
-        </Container>
-      </section>
-
-      {/* ================= SERVICES ================= */}
-      <section className="py-20 bg-gray-50">
         <Container>
 
           <h2 className="text-3xl font-bold text-center mb-10">
-            Our Fire Fighting Services
+            Our Services in Delhi
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6 text-center">
 
             {[
-              "Fire Alarm System Installation",
-              "Sprinkler System Installation",
-              "Fire Extinguishers Setup",
-              "Fire Hydrant Systems",
-              "Fire Safety Compliance",
-              "Fire Protection System Maintenance"
-            ].map((item, i) => (
-              <div key={i} className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition">
-                {item}
-              </div>
+              { name: "Interior Fitout", link: "/services/commercial-interior-fitout-delhi" },
+              { name: "EPC Services", link: "/services/epc-services-delhi" },
+              { name: "MEP Services", link: "/services/mep-services-india" },
+              { name: "HVAC Services", link: "/services/hvac-services-delhi" },
+              { name: "Electrical Services", link: "/services/electrical-contractor-delhi" },
+              { name: "Fire Fighting Systems", link: "/services/fire-fighting-services-delhi" },
+              { name: "Carpentry Services", link: "/services/carpentry-services-delhi" },
+              { name: "Networking Services", link: "/services/networking-services-india" }
+            ].map((service, i) => (
+              <Link key={i} href={service.link}>
+                <div className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition cursor-pointer">
+                  {service.name}
+                </div>
+              </Link>
             ))}
 
           </div>
+
+        </Container>
+      </section>
+
+      {/* ================= ABOUT ================= */}
+      <section className="py-20 bg-gray-50">
+        <Container>
+
+          <h2 className="text-3xl font-bold text-center mb-6">
+            Commercial Interior & Engineering Services in Delhi
+          </h2>
+
+          <p className="text-center text-gray-600 max-w-3xl mx-auto">
+            ITSS is a trusted interior design company in Delhi providing complete commercial interior solutions including office interior design, turnkey fitout, EPC execution and MEP services. We specialize in delivering high-quality projects for corporate offices, retail spaces and industrial facilities.
+          </p>
 
         </Container>
       </section>
@@ -93,16 +77,16 @@ export default function PageClient() {
         <Container>
 
           <h2 className="text-3xl font-bold text-center mb-10">
-            Why Choose ITSS for Fire Safety Services?
+            Why Choose ITSS in Delhi?
           </h2>
 
           <div className="grid md:grid-cols-4 gap-6 text-center">
 
             {[
-              "Certified Safety Standards",
-              "Expert Installation Team",
-              "Regulatory Compliance",
-              "Reliable Fire Protection Systems"
+              "End-to-End Project Execution",
+              "Experienced Team",
+              "High Quality Work",
+              "On-Time Delivery"
             ].map((item, i) => (
               <div key={i} className="p-6 bg-gray-100 rounded-xl">
                 {item}
@@ -114,50 +98,8 @@ export default function PageClient() {
         </Container>
       </section>
 
-      {/* ================= GEO ================= */}
-      <section className="py-20 bg-gray-50">
-        <Container>
-
-          <h2 className="text-3xl font-bold text-center">
-            Fire Fighting Services Across Delhi NCR & India
-          </h2>
-
-          <p className="text-center mt-4 text-gray-600 max-w-2xl mx-auto">
-            We provide fire safety services in Delhi, Noida, Gurgaon, Ghaziabad and across India for offices, commercial buildings and industrial projects.
-          </p>
-
-        </Container>
-      </section>
-
-      {/* ================= INTERNAL LINKS ================= */}
-      <section className="py-16 text-center">
-        <Container>
-
-          <h2 className="text-2xl font-bold mb-6">
-            Explore Related Services
-          </h2>
-
-          <div className="flex flex-wrap justify-center gap-4">
-
-            <Link href="/services/mep-services-india" className="text-[#c8a951]">
-              MEP Services
-            </Link>
-
-            <Link href="/services/electrical-contractor-delhi" className="text-[#c8a951]">
-              Electrical Services
-            </Link>
-
-            <Link href="/services/epc-services-delhi" className="text-[#c8a951]">
-              EPC Services
-            </Link>
-
-          </div>
-
-        </Container>
-      </section>
-
       {/* ================= FAQ ================= */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <Container>
 
           <h2 className="text-3xl font-bold text-center mb-10">
@@ -167,23 +109,16 @@ export default function PageClient() {
           <div className="max-w-2xl mx-auto space-y-6">
 
             <div>
-              <h3 className="font-semibold">What fire fighting services do you provide?</h3>
+              <h3 className="font-semibold">What services do you provide in Delhi?</h3>
               <p className="text-gray-600">
-                We provide fire alarm systems, sprinkler systems, hydrants and fire safety compliance solutions.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">Do you provide services in Delhi NCR?</h3>
-              <p className="text-gray-600">
-                Yes, we provide fire safety services in Delhi, Noida and Gurgaon.
+                We provide interior design, EPC, MEP, HVAC, electrical, fire fighting and carpentry services.
               </p>
             </div>
 
             <div>
               <h3 className="font-semibold">Do you handle commercial projects?</h3>
               <p className="text-gray-600">
-                Yes, we specialize in commercial and industrial fire protection systems.
+                Yes, we specialize in office, retail and industrial projects.
               </p>
             </div>
 
@@ -193,9 +128,9 @@ export default function PageClient() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="py-20 text-center bg-gray-50">
+      <section className="py-20 text-center">
         <h2 className="text-3xl font-bold">
-          Need Fire Safety System Installation?
+          Looking for Interior Design Services in Delhi?
         </h2>
 
         <Link href="/contact">
@@ -207,18 +142,21 @@ export default function PageClient() {
 
       {/* ================= SCHEMA ================= */}
       <Script
-        id="fire-schema"
+        id="delhi-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Fire Fighting Services",
-            "areaServed": "Delhi NCR",
-            "provider": {
-              "@type": "Organization",
-              "name": "ITSS"
-            }
+            "@type": "LocalBusiness",
+            "name": "ITSS",
+            "areaServed": "Delhi",
+            "service": [
+              "Interior Design",
+              "EPC Services",
+              "MEP Services",
+              "HVAC Services",
+              "Electrical Services"
+            ]
           })
         }}
       />
