@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title: "Fire Fighting System Contractor in Delhi NCR | Fire Safety Services | ITSS",
+  title: "Interior Design Company in Delhi | Commercial Interior & Turnkey Services | ITSS",
 
   description:
-    "ITSS is a leading fire fighting contractor in Delhi NCR providing fire safety systems, fire alarm installation, sprinkler systems and fire protection services for commercial and industrial projects.",
+    "ITSS is a leading interior design company in Delhi offering commercial interior design, turnkey fitout, EPC, MEP, HVAC, electrical and fire fighting services across Delhi NCR.",
 
   keywords: [
-    "fire fighting contractor Delhi NCR",
-    "fire safety system installation",
-    "fire alarm system contractor",
-    "sprinkler system installation",
-    "fire protection services India",
+    "interior design company Delhi",
+    "office interior designer Delhi",
+    "commercial interior contractor Delhi",
+    "turnkey interior fitout Delhi",
+    "EPC contractor Delhi",
+    "MEP HVAC electrical services Delhi",
   ],
 };
 
