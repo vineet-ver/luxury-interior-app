@@ -1,60 +1,111 @@
 "use client";
 
-import Image from "next/image";
-import { Container } from "@/components/ui/Container";
-import { MainLayout } from "@/components/layout/MainLayout";
+import Link from "next/link";
 
-export default function DelhiInteriorPage() {
+export default function DelhiPage() {
+  return (
+    <main className="px-6 py-20 max-w-5xl mx-auto">
 
-return (
+      {/* ================= HERO ================= */}
+      <h1 className="text-4xl font-bold mb-6">
+        EPC, MEP, HVAC & Electrical Services in Delhi NCR
+      </h1>
 
-<MainLayout>
+      <p className="text-lg text-gray-600 mb-6">
+        ITSS (India Technical Solution Services) provides professional 
+        <strong> EPC, MEP, HVAC and electrical services in Delhi NCR</strong> 
+        including Delhi, Noida, Gurgaon and Ghaziabad for commercial and industrial projects.
+      </p>
 
-<section className="py-24 bg-white">
+      {/* ================= SERVICES ================= */}
+      <h2 className="text-2xl font-semibold mt-10 mb-4">
+        Our Engineering Services in Delhi
+      </h2>
 
-<Container>
+      <ul className="list-disc pl-6 text-gray-600 space-y-2">
+        <li>EPC project execution</li>
+        <li>MEP system design & installation</li>
+        <li>HVAC installation & maintenance</li>
+        <li>Electrical contracting services</li>
+        <li>Networking & IT infrastructure</li>
+      </ul>
 
-<h1 className="text-4xl font-bold mb-6">
-Office Interior Contractor in Delhi
-</h1>
+      {/* ================= GEO KEYWORDS ================= */}
+      <h2 className="text-2xl font-semibold mt-10 mb-4">
+        Serving Across Delhi NCR
+      </h2>
 
-<Image
-src="/location_images/office-interior-delhi.jpg"
-alt="Corporate office interior design project in Delhi NCR by ITSS"
-width={1200}
-height={700}
-className="rounded-xl mb-8"
-/>
+      <p className="text-gray-600">
+        We provide services across Delhi, Noida, Gurgaon and Ghaziabad 
+        delivering high-quality engineering solutions for offices, factories 
+        and commercial buildings.
+      </p>
 
-<p className="text-black/70 leading-relaxed max-w-3xl mb-6">
+      {/* ================= INTERNAL LINKING ================= */}
+      <h2 className="text-2xl font-semibold mt-10 mb-4">
+        Explore Our Services
+      </h2>
 
-ITSS is a trusted office interior contractor in Delhi delivering
-premium commercial interior design and turnkey office interior
-solutions for corporate workplaces and commercial buildings.
+      <div className="space-y-2 text-blue-600">
 
-</p>
+        <Link href="/services/epc-services-delhi">
+          EPC Services Delhi NCR
+        </Link>
 
-<p className="text-black/70 leading-relaxed max-w-3xl mb-6">
+        <br />
 
-Our services include workspace planning, civil execution,
-electrical and HVAC integration, and complete office fit-out
-solutions tailored for modern business environments.
+        <Link href="/services/mep-services-india">
+          MEP Services India
+        </Link>
 
-</p>
+        <br />
 
-<p className="text-black/70 leading-relaxed max-w-3xl">
+        <Link href="/services/hvac-services-delhi">
+          HVAC Services Delhi
+        </Link>
 
-We provide professional office interior services across Delhi
-including Connaught Place, Saket, Nehru Place, Okhla and other
-major commercial hubs.
+        <br />
 
-</p>
+        <Link href="/services/electrical-contractor-delhi">
+          Electrical Contractor Delhi
+        </Link>
 
-</Container>
+        <br />
 
-</section>
+        <Link href="/services/networking-services-india">
+          Networking Services India
+        </Link>
 
-</MainLayout>
+      </div>
 
-);
+      {/* ================= FAQ ================= */}
+      <h2 className="text-2xl font-semibold mt-10 mb-4">
+        Frequently Asked Questions
+      </h2>
+
+      <div className="space-y-4 text-gray-600">
+
+        <div>
+          <strong>Do you provide EPC services in Delhi?</strong>
+          <p>Yes, ITSS provides EPC services across Delhi NCR.</p>
+        </div>
+
+        <div>
+          <strong>What services do you offer in Delhi?</strong>
+          <p>We offer EPC, MEP, HVAC, electrical and networking services.</p>
+        </div>
+
+      </div>
+
+      {/* ================= CTA ================= */}
+      <div className="mt-12">
+        <Link href="/contact">
+          <button className="px-6 py-3 bg-black text-white rounded-lg">
+            Get Free Consultation →
+          </button>
+        </Link>
+      </div>
+
+    </main>
+  );
 }
