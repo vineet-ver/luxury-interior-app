@@ -10,15 +10,15 @@ export default function HomeClient() {
 
 const services = [
   { title: "Office Interior Design", img: "/images/epc.png", link: "/services/commercial-interior-fitout-delhi" },
-  { title: "Turnkey Interior Projects", img: "/images/epc.png", link: "/services/commercial-interior-fitout-delhi" },
+  { title: "Turnkey Interior Projects", img: "/images/epc.png", link: "/services/services-delhi" },
   { title: "Workstation Installation", img: "/images/epc.png", link: "/services/carpentry-services-delhi" },
-  { title: "EPC Projects", img: "/images/epc.png", link: "/services/commercial-interior-contractor" },
-  { title: "MEP Projects", img: "/images/mep.png", link: "/services/turnkey-interior-contractor" },
-  { title: "Electrical Services", img: "/images/electrical.png", link: "/services/office-interior-contractor" },
-  { title: "HVAC Services", img: "/images/hvac.png", link: "/services/office-interior-contractor" },
-  { title: "Networking service", img: "/images/networking.png", link: "/services/turnkey-interior-contractor" },
-  { title: "Fire Fighting", img: "/images/fire.png", link: "/services/commercial-interior-contractor" },
-  { title: "Carpentry Services", img: "/images/carpentry.png", link: "/services/office-interior-contractor" },
+  { title: "EPC Projects", img: "/images/epc.png", link: "/services/epc-services-delhi" },
+  { title: "MEP Projects", img: "/images/mep.png", link: "/services/mep-services-india" },
+  { title: "Electrical Services", img: "/images/electrical.png", link: "/services/electrical-contractor-delhi" },
+  { title: "HVAC Services", img: "/images/hvac.png", link: "/services/hvac-services-delhi" },
+  { title: "Networking service", img: "/images/networking.png", link: "/services/networking-services-india" },
+  { title: "Fire Fighting", img: "/images/fire.png", link: "/services/fire-fighting-services-delhi" },
+  { title: "Carpentry Services", img: "/images/carpentry.png", link: "/services/carpentry-services-delhi" },
 ];
 
 return (
