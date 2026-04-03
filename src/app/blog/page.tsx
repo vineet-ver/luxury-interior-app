@@ -2,79 +2,74 @@ import Link from "next/link";
 import { blogs } from "@/data/blogs";
 import { MainLayout } from "@/components/layout/MainLayout";
 
-
-export default function BlogListPage() {
+export default function BlogPage() {
   return (
     <MainLayout>
+      <section className="py-20 bg-gradient-to-br from-slate-100 via-white to-slate-200">
 
-<section className="py-24 bg-white">
-    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-white to-slate-200 py-16 px-4">
+        <div className="max-w-6xl mx-auto px-4">
 
-      <div className="max-w-5xl mx-auto">
+          {/* Heading */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+              Interior Design Blog
+            </h1>
+            <p className="text-gray-600 mt-3">
+              Ideas, trends & cost guides
+            </p>
+          </div>
 
-        {/* SEO Heading */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900">
-            Interior Design Blog in India
-          </h1>
-          <p className="text-gray-600 mt-3 text-lg">
-            Cost guides, office design ideas & interior design career tips
-          </p>
-        </div>
+          {/* Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        {/* Blog Cards */}
-        <div className="grid md:grid-cols-2 gap-6">
+            {blogs.map((blog, index) => (
+              <div key={blog.slug || index}>
+                <Link href={`/blog/${blog.slug}`}>
 
-          {blogs.map((blog) => (
-            <Link key={blog.slug} href={`/blog/${blog.slug}`}>
+                  <div className="bg-white rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 overflow-hidden group cursor-pointer">
 
-              <div className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition duration-300 overflow-hidden">
+                    {/* Image */}
+                    <div className="h-52 overflow-hidden relative">
+                      <img
+  src="/gallery/item-1.jpg"
+  alt={blog.title}
+  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+/>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    </div>
 
-                {/* Image */}
-                <div className="h-40 overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6"
-                    alt="blog"
-                    className="w-full h-full object-cover hover:scale-105 transition duration-300"
-                  />
-                </div>
+                    {/* Content */}
+                    <div className="p-6">
 
-                {/* Content */}
-                <div className="p-5">
+                      <span className="text-xs bg-blue-500 text-white px-3 py-1 rounded-full">
+                        {blog.category}
+                      </span>
 
-                  {/* Category */}
-                  <span className="text-xs font-medium text-blue-600 uppercase tracking-wide">
-                    {blog.category.replace("-", " ")}
-                  </span>
+                      <h2 className="text-xl font-bold mt-4 group-hover:text-blue-600">
+                        {blog.title}
+                      </h2>
 
-                  {/* Title */}
-                  <h2 className="text-lg font-semibold text-gray-900 mt-2 leading-snug">
-                    {blog.title}
-                  </h2>
+                      <p className="text-gray-600 text-sm mt-2 line-clamp-2">
+                        {blog.description}
+                      </p>
 
-                  {/* Description */}
-                  <p className="text-gray-600 text-sm mt-2 line-clamp-2">
-                    {blog.description}
-                  </p>
+                      <div className="mt-4 text-blue-600 font-medium">
+                        Read More →
+                      </div>
 
-                  {/* CTA */}
-                  <div className="mt-4 text-sm font-medium text-blue-600">
-                    Read More →
+                    </div>
+
                   </div>
 
-                </div>
+                </Link>
               </div>
+            ))}
 
-            </Link>
-          ))}
+          </div>
 
         </div>
 
-      </div>
-    </div>
-
-</section>
-
-</MainLayout>
+      </section>
+    </MainLayout>
   );
 }
