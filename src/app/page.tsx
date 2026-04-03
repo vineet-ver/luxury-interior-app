@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     "HVAC services Delhi NCR",
     "electrical contractor Delhi",
     "interior design company Gurgaon Noida",
+    "office fitout company Delhi NCR",
   ],
 
   openGraph: {
