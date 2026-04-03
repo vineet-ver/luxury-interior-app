@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.itss.co.in
+
+# Sitemaps
+Sitemap: https://www.itss.co.in/sitemap.xml
