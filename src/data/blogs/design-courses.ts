@@ -6,3 +6,4 @@ export default {
   image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
   content: `<h1>Courses</h1><p>Top institutes in India.</p>`,
 };
+// test 123
