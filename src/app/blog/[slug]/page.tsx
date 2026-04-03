@@ -27,10 +27,10 @@ export default async function BlogDetail({ params }: Props) {
         {/* HERO */}
         <div className="max-w-5xl mx-auto px-4">
           <img
-            src={blog.image}
-            alt={blog.title}
-            className="w-full h-[420px] object-cover rounded-xl"
-          />
+  src="/gallery/item-1.jpg"
+  alt={blog.title}
+  className="w-full h-[420px] object-cover rounded-xl"
+/>
         </div>
 
         {/* HEADER */}

@@ -31,10 +31,10 @@ export default function BlogPage() {
                     {/* Image */}
                     <div className="h-52 overflow-hidden relative">
                       <img
-                        src={blog.image}
-                        alt={blog.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
-                      />
+  src="/gallery/item-1.jpg"
+  alt={blog.title}
+  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+/>
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                     </div>
 
