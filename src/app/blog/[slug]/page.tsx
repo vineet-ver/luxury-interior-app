@@ -6,10 +6,41 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+const baseUrl = "https://www.itss.co.in";
+
 function getReadingTime(html: string) {
   const text = html.replace(/<[^>]+>/g, "");
   const words = text.split(" ").length;
   return Math.ceil(words / 200);
+}
+
+// ✅ SEO METADATA
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+
+  const blog = blogs.find((b) => b.slug === slug);
+  if (!blog) return {};
+
+  return {
+    title: blog.title,
+    description: blog.description,
+
+    alternates: {
+      canonical: `${baseUrl}/blog/${blog.slug}`,
+    },
+
+    openGraph: {
+      title: blog.title,
+      description: blog.description,
+      url: `${baseUrl}/blog/${blog.slug}`,
+      type: "article",
+      images: [
+        {
+          url: `${baseUrl}${blog.image}`,
+        },
+      ],
+    },
+  };
 }
 
 export default async function BlogDetail({ params }: Props) {
@@ -22,15 +53,31 @@ export default async function BlogDetail({ params }: Props) {
 
   return (
     <MainLayout>
-      <article className="pt-24 bg-white pb-24"> {/* ✅ footer gap */}
 
-        {/* HERO */}
+      {/* ✅ JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: blog.title,
+            description: blog.description,
+            url: `${baseUrl}/blog/${blog.slug}`,
+            image: `${baseUrl}${blog.image}`,
+          }),
+        }}
+      />
+
+      <article className="pt-24 bg-white pb-24">
+
+        {/* ✅ HERO (FIXED) */}
         <div className="max-w-5xl mx-auto px-4">
           <img
-  src="/gallery/item-1.jpg"
-  alt={blog.title}
-  className="w-full h-[420px] object-cover rounded-xl"
-/>
+            src={blog.image}   // 🔥 FIXED HERE
+            alt={blog.title}
+            className="w-full h-[420px] object-cover rounded-xl"
+          />
         </div>
 
         {/* HEADER */}
@@ -50,7 +97,6 @@ export default async function BlogDetail({ params }: Props) {
 
         {/* CONTENT */}
         <section className="max-w-2xl mx-auto px-4 mt-12">
-
           <div
             className="
               text-gray-800 leading-8 text-[18px]
@@ -73,10 +119,9 @@ export default async function BlogDetail({ params }: Props) {
             "
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
-
         </section>
 
-        {/* 🔥 FAQ LUXURY CARD */}
+        {/* FAQ */}
         <div className="max-w-2xl mx-auto px-4 mt-16">
           <div className="bg-gray-50 border rounded-2xl p-6 shadow-sm">
 
