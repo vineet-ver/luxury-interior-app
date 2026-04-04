@@ -23,5 +23,4 @@ export const blogs = [
   homeIdeas,
   officeCabin,
   smallOffice,
-  trends,
 ];
