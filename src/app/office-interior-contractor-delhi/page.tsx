@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Office Interior Designers in Delhi | ITSS",
     description:
       "Top commercial interior designers in Delhi offering office interiors, turnkey projects and EPC services.",
-    url: "https://yourdomain.com/office-interior-contractor-delhi",
+    url: "https://itss.co.in/office-interior-contractor-delhi",
     siteName: "ITSS Interior Solutions",
     images: [
       {

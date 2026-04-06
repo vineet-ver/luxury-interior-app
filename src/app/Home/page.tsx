@@ -1,40 +1,39 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import HomeClient from "@/components/home/HomeClient";
 
+/* ================= META ================= */
 export const metadata: Metadata = {
-  title: "Office Interior Design & Commercial Interior Designers in Delhi NCR | ITSS",
+  title: "Commercial Interior Designer Company in Delhi NCR | Office Interior designer | ITSS",
+
   description:
-    "Leading office interior designers in Delhi NCR offering commercial interior design, turnkey interiors, EPC, MEP, HVAC & electrical solutions across India.",
+    "ITSS is a leading commercial interior designer company in Delhi NCR offering office interior design, turnkey fitout, EPC, MEP, HVAC and electrical services across Noida, Gurgaon, Banglore and India.",
 
   keywords: [
-    "interior design",
-    "office interior design",
-    "commercial interior design",
-    "interior decorators",
-    "office interiors",
-    "corporate interior design",
-    "turnkey interiors",
-    "commercial office interior design"
+    "interior designer",
+    "commercial interior design Delhi NCR",
+    "office interior designer Delhi",
+    "turnkey interior contractor India",
+    "office fitout company Delhi NCR",
+    "corporate office interior design",
+    "MEP contractor Delhi",
+    "HVAC services Delhi NCR",
+    "electrical contractor Delhi",
+    "interior design company Gurgaon Noida",
   ],
 
-  metadataBase: new URL("https://www.yourdomain.com"),
-
-  alternates: {
-    canonical: "/",
-  },
-
   openGraph: {
-    title: "Office Interior Design & Fitout Solutions | ITSS India",
+    title: "Commercial Interior Design & Fitout Solutions | ITSS",
     description:
-      "Top commercial interior designers in India specializing in office interiors, turnkey fitouts, EPC, MEP & HVAC services.",
-    url: "https://www.yourdomain.com",
-    siteName: "ITSS - Interior & EPC Solutions",
+      "Office interior design, turnkey fitout and EPC services across Delhi NCR and India. 250+ projects. 120+ clients including Blinkit, Zomato, Godrej, Tech Mahindra.",
+    url: "https://www.itss.co.in",
+    siteName: "ITSS Interior Solutions",
     images: [
       {
-        url: "/hero_images/interior-bg.png",
+        url: "https://www.itss.co.in/hero_images/interior-bg.png",
         width: 1200,
         height: 630,
-        alt: "Office Interior Design Delhi NCR",
+        alt: "ITSS Commercial Interior Design Delhi NCR",
       },
     ],
     locale: "en_IN",
@@ -43,18 +42,82 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Office Interior Design & Fitout Solutions | ITSS",
-    description:
-      "Commercial interior design, turnkey projects, EPC, MEP & HVAC services across India.",
-    images: ["/hero_images/interior-bg.png"],
+    title: "Commercial Interior Design Company Delhi NCR | ITSS",
+    description: "Office interior design, turnkey fitout, EPC, MEP and HVAC services across Delhi NCR and India.",
+    images: ["https://www.itss.co.in/hero_images/interior-bg.png"],
   },
 
-  robots: {
-    index: true,
-    follow: true,
+  alternates: {
+    canonical: "https://www.itss.co.in",
   },
 };
 
+/* ================= FAQ SCHEMA DATA ================= */
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Office interior fit-out mein kitna time lagta hai Delhi NCR mein?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Project size pe depend karta hai. 1,000–3,000 sq ft office: 30–45 days. 5,000–10,000 sq ft: 60–75 days. 10,000 sq ft se bada: 90+ days.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "1,000 sq ft commercial office interior ka approximate cost kya hoga?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Delhi NCR mein basic office interior ₹800–1,200 per sq ft se shuru hota hai. Premium interiors ₹1,500–2,500+ per sq ft tak. Final cost finishes, MEP scope aur furniture pe depend karta hai.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Kya ITSS turnkey projects complete karta hai — design se lekar handover tak?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Haan, ITSS complete turnkey interior execution karta hai — concept design, civil work, MEP, HVAC, networking, fire-fighting, furniture aur final handover. Single-point responsibility.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "MEP services kya hoti hain office interiors mein?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "MEP matlab Mechanical, Electrical aur Plumbing systems — HVAC ducting, electrical wiring, plumbing, data networking aur fire alarm. Hamare turnkey projects mein fully included.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Kya aap Delhi NCR ke bahar bhi services dete ho?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Haan, ITSS pan-India services deta hai — Delhi, Gurgaon, Noida, Mumbai, Bangalore, Hyderabad, Chennai, Pune aur 15+ cities mein projects complete kiye hain.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Kya aap sirf design dete ho ya execution bhi karte ho?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Dono. ITSS design-only aur full turnkey execution dono karta hai. Turnkey mein design + execution ek hi team se milta hai.",
+      },
+    },
+  ],
+};
+
+/* ================= PAGE ================= */
 export default function Page() {
-  return <HomeClient />;
+  return (
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HomeClient />
+    </>
+  );
 }
