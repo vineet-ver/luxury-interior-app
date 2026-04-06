@@ -4,14 +4,22 @@ import HomeClient from "@/components/home/HomeClient";
 
 /* ================= META ================= */
 export const metadata: Metadata = {
-  title: "Commercial Interior Designer Company in Delhi NCR | Office Interior designer | ITSS",
+  title: "Commercial Interior Design Company in Delhi NCR | Office Interior Contractor | ITSS",
 
   description:
-    "ITSS is a leading commercial interior designer company in Delhi NCR offering office interior design, turnkey fitout, EPC, MEP, HVAC and electrical services across Noida, Gurgaon, Banglore and India.",
+    "ITSS is a leading commercial interior design company in Delhi NCR offering office interior design, turnkey fitout, EPC, MEP, HVAC and electrical services across Noida, Gurgaon and India.",
 
   keywords: [
-    "interior designer",
-    "commercial interior design Delhi NCR",
+    "interior decorators",
+    "interior design",
+    "design & interiors",
+    "commercial interior design",
+    "it office interior design",
+    "office interiors & design",
+    "design for office interior",
+    "space interiors",
+    "interior design for commercial",
+    "room interior decorator",
     "office interior designer Delhi",
     "turnkey interior contractor India",
     "office fitout company Delhi NCR",
