@@ -2,229 +2,140 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import { Container } from "@/components/ui/Container";
 import { MainLayout } from "@/components/layout/MainLayout";
+import { CheckCircle, ArrowRight, Phone } from "lucide-react";
 
 export default function PageClient() {
   return (
     <MainLayout>
 
-<section className="py-24 bg-white">
-<Container>
-<div>
+      <section className="py-28 bg-gradient-to-br from-[#0b1f3a] to-[#1e3a5f] text-center">
+        <Container>
+          <p className="text-[#c8a951] text-sm font-semibold uppercase tracking-widest mb-4">Delhi NCR · Pan India · 250+ Projects</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white">Electrical Contractor Services in Delhi NCR</h1>
+          <p className="mt-6 text-white/80 max-w-2xl mx-auto text-lg">Professional commercial electrical services for offices — wiring, DB panels, UPS, lighting design and complete electrical fit-out. Licensed electrical contractors serving Delhi, Gurgaon, Noida and pan India.</p>
+          <div className="mt-8 flex flex-wrap gap-4 justify-center">
+            <Link href="/contact">
+              <button className="px-8 py-4 bg-[#c8a951] text-white rounded-full flex items-center gap-2 hover:bg-[#b8992f] transition font-medium">
+                Get Free Consultation <ArrowRight size={18} />
+              </button>
+            </Link>
+            <a href="tel:+919718371994">
+              <button className="px-8 py-4 bg-white/10 text-white rounded-full hover:bg-white/20 transition flex items-center gap-2">
+                <Phone size={16} /> Call Now
+              </button>
+            </a>
+          </div>
+        </Container>
+      </section>
 
-{/* HERO */}
-<section className="py-24 bg-gray-50 text-center">
+      <section className="py-12 bg-white border-b border-gray-100">
+        <Container>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { num: "250+", label: "Projects Delivered" },
+              { num: "10+", label: "Years Experience" },
+              { num: "120+", label: "Clients Served" },
+              { num: "15+", label: "Cities Pan India" },
+            ].map((s, i) => (
+              <div key={i} className="p-5 bg-gray-50 rounded-xl">
+                <p className="text-3xl font-bold text-[#0b1f3a]">{s.num}</p>
+                <p className="text-gray-500 text-sm mt-1">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
 
-  <h1 className="text-4xl md:text-5xl font-bold text-[#0b1f3a]">
-    Electrical Contractor in Delhi NCR
-  </h1>
+      <section className="py-20 bg-white">
+        <Container>
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <Image
+                src="/service_image/electrical-1.jpg"
+                alt="Electrical contractor Delhi NCR — commercial office electrical services by ITSS"
+                width={580}
+                height={420}
+                className="rounded-2xl shadow-xl w-full"
+                priority
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-[#0b1f3a] mb-6">Reliable Commercial Electrical Fit-Out Services</h2>
+              <p className="text-gray-600 leading-relaxed mb-4">Electrical work is one of the most safety-critical components of any commercial fit-out. Substandard wiring, under-rated panels and poor earthing cause equipment failure, fire risk and regulatory non-compliance. ITSS employs licensed electrical supervisors and follows IS standards for all commercial electrical work.</p>
+              <p className="text-gray-600 leading-relaxed mb-6">Our in-house electrical team works alongside civil and MEP teams, ensuring electrical systems are coordinated with HVAC, networking and fire-fighting from the start — eliminating last-minute changes and reworks.</p>
+              <div className="space-y-3">
+                {["Licensed electrical supervisors on every project", "IS and NBC 2016 compliant installations", "Coordination with HVAC, fire and networking teams", "Electrical inspection and CEIG approval support", "Detailed electrical drawings before execution"].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckCircle className="text-[#c8a951] mt-0.5 flex-shrink-0" size={18} />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
 
-  <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
-    We are a Delhi NCR based electrical contractor providing commercial and industrial electrical services including installation, power distribution and maintenance across India.
-  </p>
+      <section className="py-20 bg-gray-50">
+        <Container>
+          <h2 className="text-3xl font-bold text-center text-[#0b1f3a] mb-12">Our Electrical Contractor Services Services</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[{ name: "HT/LT Panels & DB Boards", desc: "Main LT panels, distribution boards, sub-DBs, MCBs, ELCBs and panel schedules for commercial buildings." }, { name: "Office Wiring & Cabling", desc: "3-phase and single-phase wiring, concealed conduit systems, cable trays and power distribution to workstations." }, { name: "Lighting Design & Installation", desc: "Ambient, task and accent lighting — LED panels, linear lights, cove lighting and emergency lighting systems." }, { name: "UPS & Power Backup", desc: "Online UPS systems, static bypass, battery banks and DG set synchronisation for critical power requirements." }, { name: "Earthing & Lightning Protection", desc: "IS 3043 compliant earthing systems, surge protection devices and lightning protection for commercial buildings." }, { name: "EV Charging Infrastructure", desc: "EV charging points for office car parks — single phase and three phase chargers with load management." }].map((s, i) => (
+              <div key={i} className="p-6 bg-white rounded-2xl border border-gray-100 hover:border-[#c8a951] hover:shadow-lg transition duration-300">
+                <h3 className="font-semibold text-[#0b1f3a] mb-2">{s.name}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
 
-  {/* INTERNAL LINKS */}
-  <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-    Explore our{" "}
-    <Link href="/services/mep-services-india" className="text-blue-600">
-      MEP services
-    </Link>,{" "}
-    <Link href="/services/hvac-services-delhi" className="text-blue-600">
-      HVAC solutions
-    </Link>{" "}
-    and{" "}
-    <Link href="/services/epc-services-delhi" className="text-blue-600">
-      EPC services
-    </Link>.
-  </p>
+      <section className="py-20 bg-white">
+        <Container>
+          <h2 className="text-3xl font-bold text-center text-[#0b1f3a] mb-10">Frequently Asked Questions</h2>
+          <div className="max-w-3xl mx-auto space-y-3">
+            {[{ q: "What electrical work is typically needed for an office fit-out?", a: "A standard office fit-out electrical scope includes: new DB panel, power points at workstations, lighting installation, UPS provision for computers, AC power circuits, data power, emergency lighting and earthing. Large offices also need HT connections or DG set integration." }, { q: "Do you handle electrical board approvals in Delhi?", a: "Yes. Our team manages Delhi Vidyut Board (BSES/TPDDL) approvals, load extension applications, inspection scheduling and CEIG clearances for commercial electrical work." }, { q: "What is the cost of electrical work for an office in Delhi NCR?", a: "Typically ₹120–250/sq ft depending on scope. A 3,000 sq ft office electrical fit-out is approximately ₹4–7.5 lakhs including panels, wiring, lighting and UPS." }, { q: "Do you use branded electrical materials?", a: "Yes. We use ISI-marked cables and approved brands — Polycab, Havells, Legrand, Schneider — for switches, panels and accessories. Material list is shared with clients before procurement." }].map((f, i) => (
+              <details key={i} className="group bg-gray-50 border border-gray-100 rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between p-5 cursor-pointer list-none font-medium text-[#0b1f3a] gap-4">
+                  <span className="text-sm">{f.q}</span>
+                  <span className="text-[#c8a951] text-xl flex-shrink-0 group-open:rotate-45 transition-transform duration-200">+</span>
+                </summary>
+                <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">{f.a}</div>
+              </details>
+            ))}
+          </div>
+        </Container>
+      </section>
 
-  <Link href="/contact">
-    <button className="mt-8 px-6 py-3 bg-[#0b1f3a] text-white rounded">
-      Get Free Consultation →
-    </button>
-  </Link>
+      <section className="py-16 bg-gray-50">
+        <Container>
+          <h2 className="text-2xl font-bold text-center text-[#0b1f3a] mb-8">Related Services</h2>
+          <div className="grid md:grid-cols-4 gap-4">
+            {[{ name: "MEP Services", link: "/services/mep-services-india" }, { name: "HVAC Services", link: "/services/hvac-services-delhi" }, { name: "Fire Fighting", link: "/services/fire-fighting-services-delhi" }, { name: "Networking", link: "/services/networking-services-india" }].map((s, i) => (
+              <Link key={i} href={s.link}>
+                <div className="p-4 bg-white rounded-xl border border-gray-100 hover:border-[#c8a951] hover:shadow-md transition text-center text-sm font-medium text-[#0b1f3a]">
+                  {s.name}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
 
-</section>
+      <section className="py-24 bg-gradient-to-br from-[#0b1f3a] to-[#1e3a5f] text-center">
+        <Container>
+          <h2 className="text-3xl font-bold text-white">Ready to Start Your Project?</h2>
+          <p className="mt-4 text-white/70 max-w-xl mx-auto">Free consultation and site assessment from our commercial experts across Delhi NCR.</p>
+          <Link href="/contact">
+            <button className="mt-8 px-10 py-4 bg-[#c8a951] text-white rounded-full hover:bg-[#b8992f] transition font-medium text-lg">
+              Get Free Quote
+            </button>
+          </Link>
+        </Container>
+      </section>
 
-{/* IMAGE + CONTENT */}
-<section className="py-20">
-  <Container>
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-
-      <div>
-        <Image
-          src="/service_image/electrical-1.jpg"
-          alt="Electrical contractor Delhi NCR commercial industrial electrical services"
-          width={500}
-          height={400}
-          className="rounded-xl shadow-lg"
-        />
-      </div>
-
-      <div>
-        <h2 className="text-2xl font-bold">
-          Complete Electrical Installation & Power Solutions
-        </h2>
-
-        <p className="mt-4 text-gray-600">
-          ITSS provides comprehensive electrical services including system design, installation, testing and maintenance for commercial and industrial projects.
-        </p>
-
-        <p className="mt-4 text-gray-600">
-          Our team ensures safe, efficient and reliable electrical infrastructure tailored to your project requirements.
-        </p>
-
-      </div>
-
-    </div>
-  </Container>
-</section>
-
-{/* SERVICES */}
-<section className="py-20 bg-gray-50">
-  <Container>
-
-    <h2 className="text-3xl font-bold text-center mb-10">
-      Our Electrical Services
-    </h2>
-
-    <div className="grid md:grid-cols-3 gap-6 text-center">
-
-      {[
-        "Electrical System Design & Planning",
-        "Power Distribution Systems",
-        "Cable Laying & Wiring",
-        "Lighting Installation & Design",
-        "Panel Installation & Testing",
-        "Industrial Electrical Works",
-        "Maintenance & Repair Services",
-        "Turnkey Electrical Solutions"
-      ].map((item, i) => (
-        <div key={i} className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition">
-          {item}
-        </div>
-      ))}
-
-    </div>
-
-  </Container>
-</section>
-
-{/* WHY CHOOSE */}
-<section className="py-20">
-  <Container>
-
-    <h2 className="text-3xl font-bold text-center mb-10">
-      Why Choose Our Electrical Services?
-    </h2>
-
-    <div className="grid md:grid-cols-4 gap-6 text-center">
-
-      {[
-        "Certified Electrical Experts",
-        "Safe & Reliable Systems",
-        "On-Time Execution",
-        "Cost-Effective Solutions"
-      ].map((item, i) => (
-        <div key={i} className="p-6 bg-gray-100 rounded-xl">
-          {item}
-        </div>
-      ))}
-
-    </div>
-
-  </Container>
-</section>
-
-{/* GEO */}
-<section className="py-20 bg-gray-50">
-  <Container>
-
-    <h2 className="text-3xl font-bold text-center">
-      Electrical Services Across India
-    </h2>
-
-    <p className="text-center mt-4 text-gray-600 max-w-2xl mx-auto">
-      Based in Delhi NCR, we provide electrical services across India including Mumbai, Bangalore, Hyderabad, Chennai, Pune and other cities.
-    </p>
-
-  </Container>
-</section>
-
-{/* INTERNAL LINKS */}
-<section className="py-16 text-center">
-  <Container>
-
-    <h2 className="text-2xl font-bold mb-6">
-      Explore Related Services
-    </h2>
-
-    <div className="flex flex-wrap justify-center gap-4">
-
-      <Link href="/services/mep-services-india" className="text-[#c8a951]">
-        MEP Services
-      </Link>
-
-      <Link href="/services/hvac-services-delhi" className="text-[#c8a951]">
-        HVAC Services
-      </Link>
-
-      <Link href="/services/fire-fighting-services-delhi" className="text-[#c8a951]">
-        Fire Fighting Services
-      </Link>
-
-    </div>
-
-  </Container>
-</section>
-
-{/* CTA */}
-<section className="py-20 text-center bg-gray-50">
-
-  <h2 className="text-3xl font-bold">
-    Need Electrical Services for Your Project?
-  </h2>
-
-  <Link href="/contact">
-    <button className="mt-6 px-6 py-3 bg-[#c8a951] text-white rounded">
-      Get Free Quote →
-    </button>
-  </Link>
-
-</section>
-
-{/* SCHEMA */}
-<Script
-  id="electrical-schema"
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Electrical Services",
-      "areaServed": {
-        "@type": "Country",
-        "name": "India"
-      },
-      "provider": {
-        "@type": "Organization",
-        "name": "ITSS",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Delhi",
-          "addressCountry": "India"
-        }
-      }
-    })
-  }}
-/>
-
-</div>
-</Container>
-</section>
-
-</MainLayout>
+    </MainLayout>
   );
 }
