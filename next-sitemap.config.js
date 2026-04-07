@@ -2,54 +2,59 @@
 module.exports = {
   siteUrl: 'https://www.itss.co.in',
   generateRobotsTxt: true,
-
-  sitemapSize: 7000,
-
   changefreq: 'weekly',
   priority: 0.7,
+  sitemapSize: 5000,
+
+  // Exclude admin, duplicate Home route, and dynamic catch-all
+  exclude: [
+    '/admin',
+    '/admin/*',
+    '/Home',
+    '/services-delhi',
+    '/commercial-interior-designer/*',
+  ],
 
   robotsTxtOptions: {
     policies: [
-      {
-        userAgent: '*',
-        allow: '/',
-      },
+      { userAgent: '*', allow: '/' },
+      { userAgent: '*', disallow: ['/admin', '/admin/', '/Home'] },
     ],
+    additionalSitemaps: [],
   },
 
-  exclude: ['/admin/*'],
-
+  // Custom priority per page type
   transform: async (config, path) => {
-    return {
-      loc: path,
-      changefreq: 'weekly',
-      priority: 0.7,
-      lastmod: new Date().toISOString(),
-    };
-  },
+    // Homepage — highest priority
+    if (path === '/') {
+      return { loc: path, changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() };
+    }
 
-  // 🔥 BLOGS ADD KARNE KA MAIN FIX
-  additionalPaths: async (config) => {
-    const blogPaths = [
-      '/blog/office-interior-design-ideas',
-      '/blog/biophilic-design',
-      '/blog/luxury-interior-design-guide',
-      '/blog/interior-design-cost-india',
-      '/blog/design-principles',
-      '/blog/interior-design-courses-india',
-      '/blog/designer-vs-decorator',
-      '/blog/choose-designer',
-      '/blog/home-interior-design-ideas',
-      '/blog/office-cabin-interior-design',
-      '/blog/small-office-interior-design-ideas',
-      '/blog/interior-design-trends-2026',
-    ];
+    // Core service pages — very high
+    if (path.startsWith('/services/')) {
+      return { loc: path, changefreq: 'weekly', priority: 0.9, lastmod: new Date().toISOString() };
+    }
 
-    return blogPaths.map((path) => ({
-      loc: path,
-      changefreq: 'weekly',
-      priority: 0.8,
-      lastmod: new Date().toISOString(),
-    }));
+    // City landing pages — high
+    if (path.startsWith('/office-interior-contractor-')) {
+      return { loc: path, changefreq: 'weekly', priority: 0.9, lastmod: new Date().toISOString() };
+    }
+
+    // Blog posts — medium-high
+    if (path.startsWith('/blog/')) {
+      return { loc: path, changefreq: 'monthly', priority: 0.8, lastmod: new Date().toISOString() };
+    }
+
+    // About, clients, portfolio — medium
+    if (['/about', '/clients', '/portfolio', '/gallery'].includes(path)) {
+      return { loc: path, changefreq: 'monthly', priority: 0.7, lastmod: new Date().toISOString() };
+    }
+
+    // Contact — medium
+    if (path === '/contact') {
+      return { loc: path, changefreq: 'monthly', priority: 0.7, lastmod: new Date().toISOString() };
+    }
+
+    return { loc: path, changefreq: 'monthly', priority: 0.6, lastmod: new Date().toISOString() };
   },
 };

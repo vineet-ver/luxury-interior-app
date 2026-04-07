@@ -1,40 +1,40 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title: "Office Interior Designers in Gurgaon | Commercial Interior Design Company",
-  
+  title: "Office Interior Designers in Gurgaon | Commercial Interior Contractor | ITSS",
+
   description:
-    "Looking for office interior designers in Gurgaon? We provide commercial interior design, turnkey interiors, EPC, MEP and HVAC solutions across Gurgaon and India.",
-  
+    "ITSS — leading office interior designers in Gurgaon. Commercial interior design, turnkey fitouts, EPC, MEP, HVAC and electrical services. 250+ projects delivered across India.",
+
   keywords: [
-    "interior designers in gurgaon",
     "office interior designers in gurgaon",
     "commercial interior design gurgaon",
-    "interior design company in gurgaon",
-    "interior decorators gurgaon",
-    "office interior design company gurgaon",
+    "office interior contractor gurgaon",
+    "interior design company gurgaon",
     "turnkey interior contractors gurgaon",
-    "best interior designers in gurgaon",
-    "corporate interior designers gurgaon"
+    "corporate interior designers gurgaon",
+    "office fitout company gurgaon",
+    "MEP contractor gurgaon",
   ],
 
   alternates: {
-    canonical: "/office-interior-contractor-gurgaon",
+    canonical: "https://www.itss.co.in/office-interior-contractor-gurgaon",
   },
 
   openGraph: {
     title: "Office Interior Designers in Gurgaon | ITSS",
     description:
-      "Top commercial interior designers in Gurgaon offering office interiors, turnkey projects and EPC services.",
-    url: "https://yourdomain.com/office-interior-contractor-gurgaon",
+      "Top commercial interior designers in Gurgaon — office interiors, turnkey, EPC, MEP & HVAC. 250+ projects, 10+ years experience.",
+    url: "https://www.itss.co.in/office-interior-contractor-gurgaon",
     siteName: "ITSS Interior Solutions",
     images: [
       {
-        url: "/hero_images/interior-bg.png",
+        url: "https://www.itss.co.in/hero_images/interior-bg.png",
         width: 1200,
         height: 630,
-        alt: "Office Interior Design Gurgaon",
+        alt: "Office Interior Design Gurgaon — ITSS",
       },
     ],
     locale: "en_IN",
@@ -43,17 +43,39 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Office Interior Designers in Gurgaon",
-    description:
-      "Professional interior designers in Gurgaon for office and commercial projects.",
-    images: ["/hero_images/interior-bg.png"],
+    title: "Office Interior Designers in Gurgaon | ITSS",
+    description: "Professional office interior contractors in Gurgaon.",
+    images: ["https://www.itss.co.in/hero_images/interior-bg.png"],
   },
 
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.itss.co.in" },
+    { "@type": "ListItem", position: 2, name: "Office Interior Designer Gurgaon", item: "https://www.itss.co.in/office-interior-contractor-gurgaon" },
+  ],
+};
+
+const localSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "ITSS Interior Solutions — Gurgaon",
+  url: "https://www.itss.co.in/office-interior-contractor-gurgaon",
+  telephone: "+919718371994",
+  areaServed: { "@type": "City", name: "Gurgaon" },
+  priceRange: "₹₹₹",
+};
+
 export default function Page() {
-  return <PageClient />;
+  return (
+    <>
+      <Script id="breadcrumb-gurgaon" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <Script id="local-gurgaon" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }} />
+      <PageClient />
+    </>
+  );
 }
