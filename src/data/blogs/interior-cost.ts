@@ -5,6 +5,7 @@ export default {
     "Detailed pricing guide for commercial office interior design in India. Per sq ft rates, what's included, cost by city and how to budget your office fitout project.",
   category: "cost-guides",
   content: `
+  image: "/blog/office-ideas/office-workspace.webp",
 <h2>Introduction</h2>
 <p>Understanding office interior design costs is the first step in planning a successful fitout. Whether you're setting up a 500 sq ft startup space or a 20,000 sq ft corporate campus in Delhi NCR, knowing realistic cost expectations helps you budget accurately and choose the right contractor.</p>
 

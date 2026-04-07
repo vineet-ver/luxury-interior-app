@@ -5,7 +5,7 @@ type Blog = {
   title: string;
   description: string;
   content: string;
-  image: string; // 🔥 IMPORTANT (error isi ki wajah se aa raha tha)
+  image?: string; // 🔥 IMPORTANT (error isi ki wajah se aa raha tha)
   category?: string;
 };
 
