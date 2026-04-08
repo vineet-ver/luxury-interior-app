@@ -3,7 +3,7 @@
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/919876543210" // 👈 apna number daal (91 + number)
+      href="https://wa.me/919718371994" // 👈 apna number daal (91 + number)
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 
