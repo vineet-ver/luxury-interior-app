@@ -2,7 +2,7 @@ export const siteData = {
     general: {
         siteName: "ITSS",
         tagline: "Total Office Automation Solutions",
-        contactEmail: "Itss.facilities@rediffmail.com",
+        contactEmail: "operation@itss.co.in",
         contactPhone: "+91 97183 71994, +91 99537 90266",
         address: "First Floor, F-16/F-2, Dilshad Colony, New Delhi, Shahdara, Delhi 110095",
         logo: "/logo_v2.png",
