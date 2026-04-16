@@ -6,6 +6,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.itss.co.in"),
+   other: {
+    'p:domain_verify': '4f7dbab8abc7e58883644e383abb1dee',
+  },
 
   title: {
     default:
