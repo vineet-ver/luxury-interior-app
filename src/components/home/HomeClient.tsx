@@ -470,7 +470,7 @@ Based on verified Google reviews from our clients across India
   {[
     { number: "4.8★", label: "Google Rating" },
     { number: "15+", label: "Cities Covered" },
-    { number: "250+", label: "Projects Delivered" },
+    { number: "200+", label: "Projects Delivered" },
     { number: "10+ in industry", label: "Years Experience" },
   ].map((item, i) => (
 
