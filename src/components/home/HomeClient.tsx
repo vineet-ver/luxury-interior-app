@@ -415,85 +415,78 @@ Our Office Interior Design Projects
 </Container>
 </section>
 
-{/* TESTIMONIAL */}
+{/* REAL GOOGLE REVIEWS */}
 <section className="py-20 bg-white">
 <Container>
-<h2 className="text-3xl text-center font-bold mb-4">What Our Clients Say</h2>
-<p className="text-center text-gray-500 mb-12">Trusted by 120+ companies across Delhi NCR and India</p>
 
-<div className="grid md:grid-cols-3 gap-6">
+<h2 className="text-3xl text-center font-bold mb-4">
+Real Client Reviews
+</h2>
 
-{[
-  {
-    name: "Priya Sharma",
-    role: "Facilities Manager",
-    company: "Blinkit",
-    city: "Gurgaon",
-    review: "ITSS delivered our 15,000 sq ft warehouse office in just 42 days. Civil, MEP, workstations — everything was handled seamlessly. Their project management was exceptional.",
-    project: "Warehouse Office Fit-Out, Gurgaon",
-    rating: 5,
-  },
-  {
-    name: "Rajesh Verma",
-    role: "Operations Head",
-    company: "Tech Mahindra",
-    city: "Noida",
-    review: "The turnkey execution was flawless. From design to handover, ITSS maintained quality at every stage. Our new office has completely transformed our team's productivity.",
-    project: "Corporate Office Interior, Noida",
-    rating: 5,
-  },
-  {
-    name: "Anita Kapoor",
-    role: "Admin Director",
-    company: "Tata 1mg",
-    city: "Delhi",
-    review: "Very professional team. HVAC, electrical and interior — all completed within the agreed timeline. We've already recommended ITSS to three of our sister companies.",
-    project: "Office Renovation, Delhi",
-    rating: 5,
-  },
-].map((t, i) => (
+<p className="text-center text-gray-500 mb-10">
+Based on verified Google reviews from our clients across India
+</p>
 
-  <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300">
+<div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
 
-    {/* Stars */}
-    <div className="flex gap-1 mb-4">
-      {Array(t.rating).fill(0).map((_, s) => (
-        <span key={s} className="text-[#c8a951] text-lg">★</span>
-      ))}
-    </div>
+  {/* LEFT SIDE CONTENT */}
+  <div>
+    <h3 className="text-2xl font-semibold text-[#0b1f3a]">
+      Trusted by Businesses Across India
+    </h3>
 
-    {/* Review */}
-    <p className="text-gray-600 leading-relaxed text-sm italic">
-      &ldquo;{t.review}&rdquo;
+    <p className="mt-4 text-gray-600 leading-relaxed">
+      Our clients trust us for delivering high-quality office interiors, 
+      turnkey execution, and reliable project management. 
+      Check out our real client feedback directly on Google.
     </p>
 
-    {/* Project tag */}
-    <div className="mt-4 mb-4">
-      <span className="text-xs bg-[#0b1f3a]/5 text-[#0b1f3a] px-3 py-1 rounded-full">
-        {t.project}
-      </span>
-    </div>
-
-    {/* Divider */}
-    <div className="border-t border-gray-100 pt-4 flex items-center gap-3">
-
-      {/* Avatar */}
-      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#0b1f3a] to-[#1e3a5f] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-        {t.name.split(' ').map(n => n[0]).join('')}
-      </div>
-
-      <div>
-        <p className="font-semibold text-[#0b1f3a] text-sm">{t.name}</p>
-        <p className="text-xs text-gray-500">{t.role}, {t.company} — {t.city}</p>
-      </div>
-
-    </div>
-
+    <a 
+      href="https://www.google.com/search?q=india+technical+solution+reviews"
+      target="_blank"
+      className="inline-block mt-6 px-6 py-3 bg-[#0b1f3a] text-white rounded hover:bg-[#c8a951] transition"
+    >
+      View All Google Reviews →
+    </a>
   </div>
 
-))}
+  {/* RIGHT SIDE GOOGLE MAP EMBED */}
+  <div className="w-full h-[350px] rounded-xl overflow-hidden shadow-lg border">
+    <iframe
+  src="https://www.google.com/maps?q=India%20Technical%20Solution&output=embed"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+></iframe>
+  </div>
 
 </div>
+
+{/* OPTIONAL TRUST STATS */}
+<div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+  {[
+    { number: "4.8★", label: "Google Rating" },
+    { number: "15+", label: "Cities Covered" },
+    { number: "250+", label: "Projects Delivered" },
+    { number: "10+ in industry", label: "Years Experience" },
+  ].map((item, i) => (
+
+    <div key={i} className="bg-gray-50 rounded-xl p-6 shadow-sm">
+      <p className="text-2xl font-bold text-[#0b1f3a]">
+        {item.number}
+      </p>
+      <p className="text-sm text-gray-500 mt-1">
+        {item.label}
+      </p>
+    </div>
+
+  ))}
+
+</div>
+
 </Container>
 </section>
 
