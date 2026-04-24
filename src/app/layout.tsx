@@ -6,8 +6,12 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.itss.co.in"),
-   other: {
+  other: {
     'p:domain_verify': '4f7dbab8abc7e58883644e383abb1dee',
+    "geo.region": "IN-DL",
+    "geo.placename": "Delhi NCR",
+    "geo.position": "28.6139;77.2090",
+    "ICBM": "28.6139, 77.2090",
   },
 
   title: {
@@ -53,13 +57,6 @@ export const metadata: Metadata = {
 
   icons: {
     icon: "/favicon.ico",
-  },
-
-  other: {
-    "geo.region": "IN-DL",
-    "geo.placename": "Delhi NCR",
-    "geo.position": "28.6139;77.2090",
-    "ICBM": "28.6139, 77.2090",
   },
 };
 

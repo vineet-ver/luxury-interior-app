@@ -2,6 +2,12 @@
 User-agent: *
 Allow: /
 
+# *
+User-agent: *
+Disallow: /admin
+Disallow: /admin/
+Disallow: /Home
+
 # Host
 Host: https://www.itss.co.in
 
