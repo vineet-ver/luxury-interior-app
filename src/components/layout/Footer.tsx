@@ -40,7 +40,7 @@ export function Footer() {
                     <div className="flex gap-4 flex-wrap">
                         {[{
                             icon: Instagram,
-                            link: "https://www.instagram.com/itss_interiors?igsh=MTdjYTV0cjJ2YXR1bg=="
+                            link: "https://www.instagram.com/itss_interior_world?igsh=YnFoN3V1b3lvbmJ3"
                         },
                         {
                             icon: Facebook,
