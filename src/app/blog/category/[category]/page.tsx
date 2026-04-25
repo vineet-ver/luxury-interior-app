@@ -2,21 +2,21 @@ import { blogs } from "@/data/blogs";
 import Link from "next/link";
 
 type Props = {
-  params: { category: string };
+  params: Promise<{ category: string }>;
 };
 
-export default function CategoryPage({ params }: Props) {
-  const category = params?.category || "";
+export default async function CategoryPage({ params }: Props) {
+  const { category } = await params;
+  const cat = category || "";
 
   const filteredBlogs = blogs.filter(
-    (blog) => blog?.category === category
+    (blog) => blog?.category === cat
   );
 
   return (
     <div className="max-w-5xl mx-auto py-10 px-4">
-
       <h1 className="text-3xl font-bold mb-6 capitalize">
-        {category?.replace("-", " ") || "Category"}
+        {cat?.replace("-", " ") || "Category"}
       </h1>
 
       <div className="grid md:grid-cols-2 gap-6">
