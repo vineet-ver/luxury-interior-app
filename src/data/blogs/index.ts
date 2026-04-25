@@ -12,7 +12,6 @@ type Blog = {
 // ✅ STEP 2: IMPORTS (AS IT IS — CHANGE NAHI KARNA)
 
 import officeIdeas from "./office-ideas";
-import biophilic from "./biophilic-design";
 import luxuryDesign from "./luxury-design";
 import interiorCost from "./interior-cost";
 import principles from "./design-principles";
@@ -24,11 +23,11 @@ import officeCabin from "./office-cabin";
 import smallOffice from "./small-office";
 import trends from "./design-trends";
 
+
 // ✅ STEP 3: TYPE APPLY KARO
 
 export const blogs: Blog[] = [
   officeIdeas,
-  biophilic,
   luxuryDesign,
   interiorCost,
   principles,
