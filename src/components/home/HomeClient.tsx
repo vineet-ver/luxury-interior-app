@@ -37,13 +37,12 @@ return (
 
 <div>
 <h1 className="text-4xl md:text-5xl font-bold text-[#0b1f3a]">
-Interior Designers
-<span className="block text-[#c8a951]">in Delhi NCR</span>
+  Office Interior Contractor
+  <span className="block text-[#c8a951]">Delhi NCR</span>
 </h1>
 
 <p className="mt-4 text-gray-700">
-We are leading office interior designers in Delhi NCR offering commercial interior design, 
-corporate office interiors, turnkey interior solutions, EPC, MEP, HVAC and electrical services across India.
+ITSS is a leading office interior contractor in Delhi NCR delivering commercial interior design, turnkey interior solutions, EPC, MEP, HVAC and electrical services across India.
 </p>
 
 <div className="mt-6 flex gap-4">

@@ -75,7 +75,7 @@ export default function GalleryClient() {
             </nav>
 
             <h1 className="text-4xl md:text-6xl font-bold text-luxury-onyx mb-4">
-              Interior Design Gallery
+              Office Interior Design Gallery — 250+ Projects | ITSS Delhi NCR
             </h1>
 
             <p className="text-sm text-luxury-onyx/60 max-w-lg mx-auto">

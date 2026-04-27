@@ -4,10 +4,10 @@ import ClientsPage from "./ClientsPage";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.itss.co.in"),
 
-  title: "Enterprise Clients of ITSS | Commercial Interior India",
+  title: "Projects — Blinkit, Zomato, Tata 1mg, Tech Mahindra | ITSS Office Interiors",
 
   description:
-    "ITSS is a trusted commercial interior contractor in India serving enterprise clients, government organizations, and corporate offices with turnkey interior and fit-out solutions.",
+    "ITSS has delivered 250+ office interior projects for India's top brands including Blinkit, Zomato, Tata 1mg, Tech Mahindra, Hitachi and 120+ clients across 15+ cities.",
 
   keywords: [
     "ITSS clients",

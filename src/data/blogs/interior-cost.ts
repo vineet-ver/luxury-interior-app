@@ -1,6 +1,6 @@
 export default {
   slug: "interior-designer-cost-india",
-  title: "Office Interior Design Cost in India 2026 — Complete Per Sq Ft Guide",
+  title: "Office Interior Design Cost India 2026 — Per Sq Ft Rates [Delhi NCR Guide]",
   description:
     "Detailed pricing guide for commercial office interior design in India. Per sq ft rates, what's included, cost by city and how to budget your office fitout project.",
   category: "cost-guides",

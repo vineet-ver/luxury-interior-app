@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import GalleryClient from "@/components/gallery/GalleryClient";
 
 export const metadata: Metadata = {
-  title: "Interior Design Portfolio | Office & Commercial Interior Projects",
+  title: "See completed office interiors for Blinkit, Zomato, Tata 1mg and 120+ clients.",
   description: "Explore ITSS commercial interior work gallery featuring office interiors, workspace design, furniture installation, and turnkey fit-out projects completed across India.",
   keywords: [
     "interior design photos",
