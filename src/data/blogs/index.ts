@@ -25,11 +25,13 @@ import trends from "./design-trends";
 import commercialContractor from "./commercial-interior-contractor";
 import commercialContractorGuide from "./commercial-interior-contractor-delhi-ncr-guide"; // ✅ NEW BLOG
 import officeInteriorCost2026 from "./Office-interior-cost-2026"; // ✅ NEW BLOG
+import corporateMNCFitout from "./corporate-office-fitout-mnc-companies-india";
 
 
 // ✅ STEP 3: TYPE APPLY KARO
 
 export const blogs: Blog[] = [
+  corporateMNCFitout,
   officeInteriorCost2026,     // ✅ NEW — Office Interior Cost 2026
   commercialContractorGuide, // ✅ NEW — Top pe rakha for priority
   commercialContractor,
