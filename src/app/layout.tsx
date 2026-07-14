@@ -101,7 +101,7 @@ export default function RootLayout({
   sameAs: [
     "https://www.linkedin.com/company/112454950/admin/dashboard/",
     "https://www.facebook.com/profile.php?id=61584705850003",
-    "https://www.instagram.com/itss_interiors?igsh=YnFoN3V1b3lvbmJ3",
+    "https://www.instagram.com/itss_interior_world?igsh=YnFoN3V1b3lvbmJ3&utm_source=qr",
               ],
             }),
           }}

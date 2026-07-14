@@ -47,7 +47,7 @@ ITSS is a leading office interior contractor in Delhi NCR delivering commercial 
 
 <div className="mt-6 flex gap-4">
 <Link href="/contact"><button className="px-6 py-3 bg-[#0b1f3a] text-white rounded">Get Free Consultation</button></Link>
-<Link href="/services"><button className="px-6 py-3 border rounded">View Commercial Interior Design Services</button></Link>
+<Link href="/services"><button className="px-6 py-3 border rounded">View Our Services</button></Link>
 </div>
 
 </div>
@@ -186,9 +186,12 @@ bg-[radial-gradient(#000_1px,transparent_1px)]
 <div className="max-w-5xl mx-auto px-4">
   <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 items-center justify-items-center">
     {[
+      { src: "/clients/zomato.png",         name: "Zomato" },
       { src: "/clients/blinkit.png",       name: "Blinkit" },
       { src: "/clients/zepto.png",          name: "Zepto" },
-      { src: "/clients/zomato.png",         name: "Zomato" },
+      { src: "/clients/concentrix1.png",     name: "concentrix" },
+      { src: "/clients/samsung_sds.png",    name: "Samsung SDS" },
+      { src: "/clients/sumsung.png",        name: "sumsung" },
       { src: "/clients/tech_mahindra.png",  name: "Tech Mahindra" },
       { src: "/clients/tata_1mg.png",       name: "Tata 1mg" },
       { src: "/clients/godrej.png",         name: "Godrej" },
@@ -196,12 +199,9 @@ bg-[radial-gradient(#000_1px,transparent_1px)]
       { src: "/clients/hitachi.png",        name: "Hitachi" },
       { src: "/clients/paytm.png",          name: "Paytm" },
       { src: "/clients/hilton.png",         name: "Hilton" },
-      { src: "/clients/samsung_sds.png",    name: "Samsung SDS" },
       { src: "/clients/nagarro.png",        name: "Nagarro" },
-      { src: "/clients/allianz.png",        name: "Allianz" },
       { src: "/clients/dtdc.png",           name: "DTDC" },
       { src: "/clients/shoppers_stop.png",  name: "Shoppers Stop" },
-      { src: "/clients/indian_express.png", name: "The Indian Express" },
     ].map((client) => (
       <div key={client.name} className="w-full flex items-center justify-center">
         <Image
