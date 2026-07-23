@@ -3,7 +3,7 @@ export const siteData = {
         siteName: "ITSS",
         tagline: "Total Office Automation Solutions",
         contactEmail: "operation@itss.co.in",
-        contactPhone: "+91 97183 71994, +91 99537 90266",
+        contactPhone: "+91 96258 07236, +91 97183 71994",
         address: "First Floor, F-16/F-2, Dilshad Colony, New Delhi, Shahdara, Delhi 110095",
         logo: "/logo_v2.png",
     },
