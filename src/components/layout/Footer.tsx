@@ -41,23 +41,28 @@ export function Footer() {
                     <div className="flex gap-4 flex-wrap">
                         {[{
                             icon: Instagram,
+                            name: "Instagram",
                             link: "https://www.instagram.com/itss_interior_world?igsh=YnFoN3V1b3lvbmJ3"
                         },
                         {
                             icon: Facebook,
+                            name: "Facebook",
                             link: "https://www.facebook.com/share/1BqKz1vJ4w/"
                         },
                         {
                             icon: Linkedin,
+                            name: "LinkedIn",
                             link: "https://www.linkedin.com/company/112454950/admin/dashboard/"
                         }].map((item, i) => (
                             <a key={i} href={item.link} target="_blank" rel="noopener noreferrer"
+                                aria-label={`Visit ITSS on ${item.name}`}
                                 className="w-10 h-10 flex items-center justify-center rounded-full 
                                 border border-white/20 
                                 hover:bg-[#c8a951] 
                                 hover:shadow-[0_0_15px_rgba(200,169,81,0.6)] 
                                 transition">
-                                <item.icon className="w-4 h-4 text-white" />
+                                <item.icon className="w-4 h-4 text-white" aria-hidden="true" />
+                                <span className="sr-only">{item.name}</span>
                             </a>
                         ))}
                     </div>
