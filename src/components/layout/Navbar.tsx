@@ -87,8 +87,11 @@ export function Navbar() {
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             className="text-luxury-onyx"
+                            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+                            aria-expanded={mobileMenuOpen}
+                            aria-controls="mobile-menu"
                         >
-                            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                            {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
                         </button>
                     </div>
                 </div>
@@ -102,6 +105,7 @@ export function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
+                        id="mobile-menu"
                         className="fixed inset-0 z-40 bg-luxury-white/95 backdrop-blur-xl pt-32 px-6 pb-10 flex flex-col md:hidden"
                     >
                         <nav className="flex flex-col gap-6 text-2xl font-display font-bold">
