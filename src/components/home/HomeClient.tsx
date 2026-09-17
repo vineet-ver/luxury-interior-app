@@ -1,4 +1,4 @@
-"use client";<h1>TEST123</h1>
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -265,11 +265,11 @@ className="object-cover group-hover:scale-110 transition duration-700"
 />
 
 {/* Glow border */}
-  <div className="absolute inset-0 rounded-2xl 
-  border border-transparent 
-  group-hover:border-[#c8a951]/60 
-  group-hover:shadow-[0_0_25px_rgba(200,169,81,0.4)] 
-  transition duration-500" />
+<div className="absolute inset-0 rounded-2xl 
+border border-transparent 
+group-hover:border-[#c8a951]/60 
+group-hover:shadow-[0_0_25px_rgba(200,169,81,0.4)] 
+transition duration-500" />
 
 {/* Overlay gradient */}
 <div className="absolute inset-0 bg-gradient-to-t from-[#0b1f3a]/60 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition duration-500" />
@@ -308,6 +308,7 @@ flex items-center justify-center cursor-pointer overflow-hidden shadow-[0_10px_3
 <p className="text-lg font-semibold tracking-wide">
 Explore Commercial Interior Services
 </p>
+
 <p className="text-sm mt-1 opacity-80">
 View All Interior Design Services →
 </p>
@@ -457,13 +458,13 @@ Based on verified Google reviews from our clients across India
   {/* RIGHT SIDE GOOGLE MAP EMBED */}
   <div className="w-full h-[350px] rounded-xl overflow-hidden shadow-lg border">
     <iframe
-  src="https://www.google.com/maps?q=India%20Technical%20Solution&output=embed"
-  width="100%"
-  height="100%"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-></iframe>
+      src="https://www.google.com/maps?q=India%20Technical%20Solution&output=embed"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+    ></iframe>
   </div>
 
 </div>
@@ -482,6 +483,7 @@ Based on verified Google reviews from our clients across India
       <p className="text-2xl font-bold text-[#0b1f3a]">
         {item.number}
       </p>
+
       <p className="text-sm text-gray-500 mt-1">
         {item.label}
       </p>
@@ -504,17 +506,24 @@ Based on verified Google reviews from our clients across India
 <Container>
 
 <h2 className="text-4xl text-center mb-14 font-bold text-[#0b1f3a]">
-Office Interior Designers Across Delhi, Gurgaon, Noida, Mumbai and Pan India
+Office Interior Designers & Turnkey Contractors Across India
 </h2>
 
 {/* GRID */}
-<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
 {[
   { name: "Delhi", link: "/office-interior-contractor-delhi" },
   { name: "Gurgaon", link: "/office-interior-contractor-gurgaon" },
   { name: "Noida", link: "/office-interior-contractor-noida" },
   { name: "Mumbai", link: "/office-interior-contractor-mumbai" },
+  { name: "Bengaluru", link: "/office-interior-contractor-bengaluru" },
+  { name: "Hyderabad", link: "/office-interior-contractor-hyderabad" },
+  { name: "Chennai", link: "/office-interior-contractor-chennai" },
+  { name: "Kolkata", link: "/office-interior-contractor-kolkata" },
+  { name: "Lucknow", link: "/office-interior-contractor-lucknow" },
+  { name: "Chandigarh", link: "/office-interior-contractor-chandigarh" },
+  { name: "Pune", link: "/office-interior-contractor-pune" },
 ].map((city, i) => (
 
 <Link key={i} href={city.link}>
@@ -561,7 +570,6 @@ transition duration-500" />
 
 </Container>
 </section>
-
 
 {/* CTA */}
 <section className="py-20 text-center bg-white">

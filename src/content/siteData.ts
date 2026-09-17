@@ -63,11 +63,13 @@ export const siteData = {
         { id: 3, name: "Blinkit", category: "Enterprise", logo: "/clients/blinkit.png" },
         { id: 101, name: "Zepto", category: "Technology", logo: "/clients/zepto.png" }, // Placeholder
         { id: 15, name: "Zomato", category: "Technology", logo: "/clients/zomato.png" },
-        { id: 17, name: "Battery Smart", category: "Technology", logo: "/clients/battery_smart.png" },
+        { id: 13, name: "TATA 1mg", category: "Healthcare", logo: "/clients/tata_1mg.png" },
         { id: 102, name: "DTDC", category: "Logistics", logo: "/clients/dtdc.png" }, // Placeholder
         { id: 11, name: "Shoppers Stop", category: "Retail", logo: "/clients/shoppers_stop.png" },
-        { id: 103, name: "Tech Mahindra", category: "Technology", logo: "/clients/tech_mahindra.png" }, // Placeholder
-        { id: 13, name: "TATA 1mg", category: "Healthcare", logo: "/clients/tata_1mg.png" },
+        { id: 103, name: "Tech Mahindra", category: "Technology", logo: "/clients/tech_mahindra.png" },
+        { id: 52, name: "Startek", category: "Technology", logo: "/clients/STARTEK LOGO.webp" },
+        { id: 53, name: "R1 RCM", category: "Healthcare", logo: "/clients/R1 LOGO.webp" }, // Placeholder
+        { id: 17, name: "Battery Smart", category: "Technology", logo: "/clients/battery_smart.png" },
 
         // Remaining Enterprise Clients
         { id: 1, name: "91 Springboard", category: "Enterprise", logo: "/clients/91springboard.png" },
