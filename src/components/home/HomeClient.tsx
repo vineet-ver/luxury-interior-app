@@ -125,10 +125,11 @@ bg-[radial-gradient(#000_1px,transparent_1px)]
 
     </div>
 
-    <a href="/about">
-      <button className="mt-8 px-6 py-3 bg-[#0b1f3a] text-white rounded-md hover:bg-[#c8a951] transition">
-        Learn More →
-      </button>
+    <a
+      href="/about"
+      className="inline-block mt-8 px-6 py-3 bg-[#0b1f3a] text-white rounded-md hover:bg-[#c8a951] transition"
+    >
+      Learn About ITSS →
     </a>
   </div>
 
@@ -393,13 +394,15 @@ Our Office Interior Design Projects
       {item.desc}
     </p>
 
-    {/* BUTTON */}
-    <Link href={item.link}>
-      <button className="mt-6 px-5 py-2 text-sm font-medium 
-      bg-gray-100 rounded-lg 
-      hover:bg-[#c8a951] hover:text-white transition">
-        Learn More
-      </button>
+    {/* DESCRIPTIVE PROJECT LINK */}
+    <Link
+      href={item.link}
+      className="inline-block mt-6 px-5 py-2 text-sm font-medium
+      bg-gray-100 rounded-lg
+      hover:bg-[#c8a951] hover:text-white transition"
+      aria-label={`Explore ${item.title}`}
+    >
+      Explore {item.title}
     </Link>
 
     {/* BORDER GLOW */}
