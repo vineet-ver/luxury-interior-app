@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title:
-    "Office Interior Designers in Delhi NCR | Pan India Services | ITSS",
+  title: "Office Interior Services Delhi NCR | Design | ITSS",
+// 51 chars ✅
 
-  description:
-    "ITSS is a Delhi NCR based office interior design company providing corporate interior, turnkey and workspace design services across India.",
+description: "ITSS offers complete office interior design and fitout services in Delhi NCR — space planning, 3D design, civil work, furniture and handover.",
+// 142 chars ✅
 
   keywords: [
     "office interior designers",

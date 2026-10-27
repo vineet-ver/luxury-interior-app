@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title:
-    "MEP Services in India | Mechanical Electrical Plumbing Contractors | ITSS",
+  title: "MEP Services India | Mechanical Electrical | ITSS",
+// 50 chars ✅
 
-  description:
-    "ITSS provides MEP services in India including mechanical, electrical and plumbing solutions for commercial, industrial and interior projects. Based in Delhi NCR serving pan India.",
+description: "ITSS delivers MEP services across India — mechanical, electrical and plumbing for offices and commercial spaces. In-house team, 250+ projects delivered.",
+// 153 chars ✅
 
   keywords: [
     "MEP services India",

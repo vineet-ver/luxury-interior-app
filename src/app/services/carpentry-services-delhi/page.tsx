@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title: "Carpentry Services in Delhi NCR | Office Furniture & Workstation Installation | ITSS",
+  title: "Carpentry Services Delhi NCR | Office Joinery | ITSS",
+// 53 chars ✅
 
-  description:
-    "ITSS provides professional carpentry services in Delhi NCR including office furniture installation, modular workstation setup, wooden partitions and commercial carpentry solutions in Noida, Gurgaon and across India.",
+description: "Custom carpentry and joinery services for offices in Delhi NCR. ITSS fabricates workstations, cabins, reception desks and false ceiling work.",
+// 142 chars ✅
 
   keywords: [
     "carpentry services Delhi NCR",

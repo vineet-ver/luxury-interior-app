@@ -6,27 +6,26 @@ type Props = {
 };
 
 export default async function CategoryPage({ params }: Props) {
-  const { category } = await params; // ✅ FIX
+  const { category } = await params;
+  const cat = category || "";
 
   const filteredBlogs = blogs.filter(
-    (b) => b.category === category
+    (blog) => blog?.category === cat
   );
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold mb-8 capitalize">
-        {category.replace("-", " ")}
+    <div className="max-w-5xl mx-auto py-10 px-4">
+      <h1 className="text-3xl font-bold mb-6 capitalize">
+        {cat?.replace("-", " ") || "Category"}
       </h1>
 
-      <div className="grid gap-6">
-        {filteredBlogs.map((blog) => (
-          <Link
-            key={blog.slug}
-            href={`/blog/${blog.slug}`}
-            className="block p-5 border rounded-xl hover:shadow-md"
-          >
-            <h2 className="text-xl font-semibold">{blog.title}</h2>
-            <p className="text-gray-600">{blog.description}</p>
+      <div className="grid md:grid-cols-2 gap-6">
+        {filteredBlogs.map((blog, index) => (
+          <Link key={blog.slug || index} href={`/blog/${blog.slug}`}>
+            <div className="border p-4 rounded-lg hover:shadow">
+              <h2 className="font-semibold">{blog.title}</h2>
+              <p className="text-sm text-gray-600">{blog.description}</p>
+            </div>
           </Link>
         ))}
       </div>

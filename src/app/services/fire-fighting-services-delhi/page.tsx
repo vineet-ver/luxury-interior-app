@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title:
-    "Fire Fighting Services in Delhi NCR | Fire Safety Systems & Contractors | ITSS",
+  title: "Fire Fighting Services Delhi | Safety Systems | ITSS",
+// 53 chars ✅
 
-  description:
-    "ITSS provides fire fighting services in Delhi NCR including fire safety systems, sprinkler systems, fire alarms and compliance solutions for commercial and industrial projects across India.",
+description: "ITSS installs fire fighting systems in Delhi NCR — sprinklers, fire alarms, emergency lighting and Fire NOC compliance for commercial offices.",
+// 143 chars ✅
 
   keywords: [
     "fire fighting services Delhi NCR",

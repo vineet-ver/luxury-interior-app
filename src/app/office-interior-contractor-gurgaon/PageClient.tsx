@@ -1,258 +1,159 @@
 "use client";
 
 import Link from "next/link";
-import Script from "next/script";
 import { Container } from "@/components/ui/Container";
 import { MainLayout } from "@/components/layout/MainLayout";
-import { CheckCircle, ArrowRight, Star } from "lucide-react";
+import { CheckCircle, ArrowRight, MapPin, Phone } from "lucide-react";
 
 export default function PageClient() {
+  const areas = ["Cyber City", "DLF Phase 1–5", "Sector 29", "MG Road", "Golf Course Road", "Sohna Road", "Udyog Vihar", "Manesar", "Sector 44", "Sector 56", "Huda City Centre", "IMT Manesar"];
+
   return (
     <MainLayout>
-
       <section className="bg-white">
 
-        {/* HERO */}
-        <section className="py-28 bg-gradient-to-br from-gray-50 to-white text-center">
+        <section className="py-28 bg-gradient-to-br from-[#0b1f3a] to-[#1e3a5f] text-center">
           <Container>
-
-            <h1 className="text-5xl font-bold text-gray-900">
-              Interior Designers in Gurgaon
-            </h1>
-
-            <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
-              We provide premium office interior design, turnkey fitouts, EPC, MEP & HVAC solutions for corporate spaces in Gurgaon.
+            <p className="text-[#c8a951] text-sm font-semibold uppercase tracking-widest mb-4">Gurgaon&apos;s Trusted Interior Partner</p>
+            <h1 className="text-5xl font-bold text-white">Office Interior Designers in Gurgaon</h1>
+            <p className="mt-6 text-white/80 max-w-2xl mx-auto text-lg">
+              Commercial interior design, turnkey fitouts, MEP, HVAC and EPC for corporate offices in Gurgaon. We&apos;ve delivered 80+ projects in Cyber City, DLF and Udyog Vihar.
             </p>
-
-            <Link href="/contact">
-              <button className="mt-8 px-8 py-4 bg-black text-white rounded-full flex items-center gap-2 mx-auto hover:scale-105 transition">
-                Get Free Consultation <ArrowRight size={18} />
-              </button>
-            </Link>
-
-            <div className="mt-12 bg-white border rounded-2xl p-6 shadow max-w-2xl mx-auto">
-              <p className="text-gray-700">
-                10+ Years Experience • 500+ Projects • Corporate Experts
-              </p>
+            <div className="mt-8 flex flex-wrap gap-4 justify-center">
+              <Link href="/contact">
+                <button className="px-8 py-4 bg-[#c8a951] text-white rounded-full flex items-center gap-2 hover:bg-[#b8992f] transition font-medium">
+                  Get Free Consultation <ArrowRight size={18} />
+                </button>
+              </Link>
+              <Link href="/portfolio">
+                <button className="px-8 py-4 bg-white/10 text-white rounded-full hover:bg-white/20 transition">View Projects</button>
+              </Link>
             </div>
-
           </Container>
         </section>
 
-        {/* STATS */}
-        <section className="py-16">
+        <section className="py-14 bg-white border-b border-gray-100">
           <Container>
-            <div className="grid md:grid-cols-4 gap-6 text-center">
-
-              {[
-                { num: "500+", label: "Projects Completed" },
-                { num: "10+", label: "Years Experience" },
-                { num: "50+", label: "Corporate Clients" },
-                { num: "100%", label: "Client Satisfaction" },
-              ].map((item, i) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              {[{ num: "250+", label: "Projects Pan-India" }, { num: "10+", label: "Years Experience" }, { num: "80+", label: "Gurgaon Projects" }, { num: "15+", label: "Cities Covered" }].map((item, i) => (
                 <div key={i} className="p-6 bg-gray-50 rounded-2xl">
-                  <h3 className="text-2xl font-bold">{item.num}</h3>
-                  <p className="text-gray-600">{item.label}</p>
+                  <p className="text-3xl font-bold text-[#0b1f3a]">{item.num}</p>
+                  <p className="text-gray-500 text-sm mt-1">{item.label}</p>
                 </div>
               ))}
-
             </div>
           </Container>
         </section>
 
-        {/* SERVICES */}
-        <section className="py-20 bg-gray-50">
-          <Container>
-            <h2 className="text-3xl text-center font-bold mb-12">
-              Our Services in Gurgaon
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-8">
-
-              {[
-                "Interior Fitout",
-                "EPC Services",
-                "MEP Solutions",
-                "HVAC Systems",
-                "Electrical Work",
-                "Fire Safety"
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  className="p-8 bg-white rounded-2xl shadow hover:shadow-xl hover:-translate-y-1 transition text-center"
-                >
-                  {s}
-                </div>
-              ))}
-
-            </div>
-          </Container>
-        </section>
-
-        {/* FEATURES */}
         <section className="py-20">
           <Container>
             <div className="grid md:grid-cols-2 gap-12 items-center">
-
               <div>
-                <h2 className="text-3xl font-bold mb-6">
-                  Complete Office Interior Solutions in Gurgaon
-                </h2>
-
-                <p className="text-gray-600 mb-6">
-                  From planning to execution, we deliver end-to-end commercial interior solutions for corporate offices, startups and enterprises across Gurgaon.
+                <h2 className="text-3xl font-bold text-[#0b1f3a] mb-6">Why Gurgaon Corporates Choose ITSS</h2>
+                <p className="text-gray-600 mb-4">
+                  Gurgaon is India&apos;s corporate hub — Cyber City, DLF phases and Udyog Vihar host thousands of MNCs and startups. ITSS has deep experience delivering office interiors in these demanding commercial zones.
                 </p>
-
-                <div className="space-y-4">
-                  {[
-                    "Space Planning & Design",
-                    "Turnkey Execution",
-                    "MEP & HVAC Integration",
-                    "Electrical & Fire Systems"
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <CheckCircle className="text-green-600" />
-                      <span>{item}</span>
+                <p className="text-gray-600 mb-6">
+                  We handle HRERA compliance, DLF building management requirements, fire NOC for commercial buildings and all Gurgaon-specific approvals as part of our turnkey scope.
+                </p>
+                <div className="space-y-3">
+                  {["Familiar with DLF, Bestech, Unitech building norms", "HRERA and fire NOC compliance assistance", "In-house MEP, HVAC and electrical teams", "Fixed-price, fixed-timeline contracts", "Dedicated site manager for Gurgaon projects"].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <CheckCircle className="text-[#c8a951] mt-0.5 flex-shrink-0" size={18} />
+                      <span className="text-gray-700 text-sm">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
-
-              <div className="bg-gray-100 rounded-2xl p-10 text-center">
-                <h3 className="text-xl font-semibold mb-2">
-                  Modern Workspace Design
-                </h3>
-                <p className="text-gray-500">
-                  Smart • Efficient • Premium
-                </p>
+              <div className="bg-[#0b1f3a] rounded-2xl p-8 text-white">
+                <h3 className="text-xl font-semibold mb-6 text-[#c8a951]">Areas We Cover in Gurgaon</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {areas.map((area, i) => (
+                    <div key={i} className="flex items-center gap-2 text-sm text-white/80">
+                      <MapPin size={12} className="text-[#c8a951] flex-shrink-0" />{area}
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 pt-6 border-t border-white/20">
+                  <p className="text-sm text-white/60 mb-1">Call us directly</p>
+                  <a href="tel:+919718371994" className="flex items-center gap-2 text-[#c8a951] font-medium">
+                    <Phone size={16} /> +91 97183 71994
+                  </a>
+                </div>
               </div>
-
             </div>
           </Container>
         </section>
 
-        {/* TESTIMONIALS */}
         <section className="py-20 bg-gray-50">
           <Container>
-
-            <h2 className="text-3xl text-center font-bold mb-12">
-              Client Reviews
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-8">
-
+            <h2 className="text-3xl text-center font-bold text-[#0b1f3a] mb-12">Our Services in Gurgaon</h2>
+            <div className="grid md:grid-cols-3 gap-6">
               {[
-                "Excellent office interior work in Gurgaon.",
-                "Professional team with great execution.",
-                "Highly recommended interior designers."
-              ].map((text, i) => (
-                <div key={i} className="p-6 bg-white rounded-2xl shadow">
-
-                  <div className="flex mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={16} className="text-yellow-500" />
-                    ))}
+                { name: "Office Interior Design", link: "/services/office-interior-services", desc: "Workspace planning, cabins, reception, conference rooms" },
+                { name: "Turnkey Fitout", link: "/services/Turnkey-interior-projects-delhi", desc: "Design to handover — single-point responsibility" },
+                { name: "MEP Solutions", link: "/services/mep-services-india", desc: "Mechanical, electrical and plumbing systems" },
+                { name: "HVAC Systems", link: "/services/hvac-services-delhi", desc: "Air conditioning, ventilation and ducting" },
+                { name: "EPC Services", link: "/services/epc-services-delhi", desc: "Engineering, procurement and construction" },
+                { name: "Fire Safety", link: "/services/fire-fighting-services-delhi", desc: "Fire alarms, sprinklers, fire NOC" },
+              ].map((s, i) => (
+                <Link key={i} href={s.link}>
+                  <div className="p-6 bg-white rounded-2xl border border-gray-100 hover:border-[#c8a951] hover:shadow-lg transition duration-300 group">
+                    <h3 className="font-semibold text-[#0b1f3a] group-hover:text-[#c8a951] transition mb-1">{s.name}</h3>
+                    <p className="text-sm text-gray-500">{s.desc}</p>
                   </div>
-
-                  <p className="text-gray-600">{text}</p>
-
-                </div>
+                </Link>
               ))}
-
             </div>
-
           </Container>
         </section>
 
-        {/* INTERNAL LINKS */}
         <section className="py-20">
           <Container>
-            <div className="flex flex-wrap justify-center gap-4">
-
+            <h2 className="text-3xl text-center font-bold text-[#0b1f3a] mb-10">FAQs — Office Interiors in Gurgaon</h2>
+            <div className="max-w-3xl mx-auto space-y-3">
               {[
-                { name: "Services", link: "/services" },
-                { name: "Portfolio", link: "/portfolio" },
-                { name: "Interior Cost Guide", link: "/blog/interior-cost-in-india" },
-              ].map((item, i) => (
-                <Link key={i} href={item.link}>
-                  <div className="px-6 py-3 border rounded-full hover:bg-black hover:text-white transition">
-                    {item.name}
-                  </div>
-                </Link>
+                { q: "How long does an office interior project take in Gurgaon?", a: "1,000–3,000 sq ft: 30–45 days. 5,000+ sq ft: 60–90 days. We provide a confirmed timeline before project start." },
+                { q: "What is the cost of office interior in Gurgaon?", a: "₹800–1,200/sq ft basic to ₹1,500–2,500+/sq ft premium. DLF building specifications may require specific materials — we factor these in upfront." },
+                { q: "Do you handle DLF and Cyber City building requirements?", a: "Yes. Our team is familiar with DLF, Bestech and Unitech building management specifications. We handle fit-out approvals within their guidelines." },
+                { q: "Can you do turnkey interior in Gurgaon?", a: "Yes — complete design, civil, MEP, HVAC, electrical, networking, furniture and handover under one contract. We have executed 80+ Gurgaon projects." },
+              ].map((f, i) => (
+                <details key={i} className="group bg-gray-50 border border-gray-100 rounded-xl overflow-hidden">
+                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none font-medium text-[#0b1f3a] gap-4">
+                    <span className="text-sm">{f.q}</span>
+                    <span className="text-[#c8a951] text-xl flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">{f.a}</div>
+                </details>
               ))}
-
             </div>
           </Container>
         </section>
 
-        {/* LOCATION CLUSTER */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-16 bg-white">
           <Container>
-            <h2 className="text-2xl text-center font-bold mb-6">
-              Nearby Locations
-            </h2>
-
+            <h2 className="text-xl text-center font-semibold text-[#0b1f3a] mb-8">Also Serving Nearby Locations</h2>
             <div className="flex justify-center flex-wrap gap-4">
-
-              {[
-                { name: "Delhi", link: "/office-interior-contractor-delhi" },
-                { name: "Noida", link: "/office-interior-contractor-noida" },
-                { name: "Mumbai", link: "/office-interior-contractor-mumbai" },
-              ].map((loc, i) => (
+              {[{ name: "Delhi", link: "/office-interior-contractor-delhi" }, { name: "Noida", link: "/office-interior-contractor-noida" }, { name: "Mumbai", link: "/office-interior-contractor-mumbai" }].map((loc, i) => (
                 <Link key={i} href={loc.link}>
-                  <div className="px-6 py-3 bg-white rounded-full border hover:bg-black hover:text-white transition">
-                    {loc.name}
-                  </div>
+                  <div className="px-6 py-3 bg-gray-50 rounded-full border border-gray-200 hover:bg-[#0b1f3a] hover:text-white hover:border-[#0b1f3a] transition text-sm font-medium text-gray-700">{loc.name}</div>
                 </Link>
               ))}
-
             </div>
           </Container>
         </section>
 
-        {/* CTA */}
-        <section className="py-24 bg-gray-100 text-center">
+        <section className="py-24 bg-gradient-to-br from-[#0b1f3a] to-[#1e3a5f] text-center">
           <Container>
-
-            <h2 className="text-3xl font-bold text-gray-900">
-              Start Your Office Interior Project in Gurgaon
-            </h2>
-
-            <p className="mt-4 text-gray-600">
-              Get expert consultation for your workspace today.
-            </p>
-
+            <h2 className="text-3xl font-bold text-white">Start Your Gurgaon Office Interior Project</h2>
+            <p className="mt-4 text-white/70 max-w-xl mx-auto">Free consultation and site assessment from our commercial interior experts.</p>
             <Link href="/contact">
-              <button className="mt-6 px-8 py-4 bg-black text-white rounded-full hover:scale-105 transition">
-                Get Free Quote
-              </button>
+              <button className="mt-8 px-10 py-4 bg-[#c8a951] text-white rounded-full hover:bg-[#b8992f] transition font-medium">Get Free Quote Today</button>
             </Link>
-
           </Container>
         </section>
-
-        {/* SCHEMA */}
-        <Script
-          id="gurgaon-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "ITSS Interior",
-              areaServed: "Gurgaon",
-              service: [
-                "Interior Design Gurgaon",
-                "Office Interior Gurgaon",
-                "MEP Services",
-                "HVAC Services"
-              ]
-            })
-          }}
-        />
 
       </section>
-
     </MainLayout>
   );
 }

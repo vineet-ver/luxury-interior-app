@@ -4,10 +4,11 @@ import ClientsPage from "./ClientsPage";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.itss.co.in"),
 
-  title: "Enterprise Clients of ITSS | Commercial Interior India",
+  title: "Our Clients | Barclays, Hilton, Godrej | ITSS",
+// 47 chars ✅
 
-  description:
-    "ITSS is a trusted commercial interior contractor in India serving enterprise clients, government organizations, and corporate offices with turnkey interior and fit-out solutions.",
+description: "ITSS has delivered 250+ interior projects for Barclays, Hilton, Adani, Godrej, Blinkit & 120+ top brands across India. View our client portfolio.",
+// 147 chars ✅
 
   keywords: [
     "ITSS clients",

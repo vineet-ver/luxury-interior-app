@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { MainLayout } from "@/components/layout/MainLayout";
-import { motion } from "framer-motion";
 
 export default function HomeClient() {
 
@@ -27,7 +26,7 @@ return (
 {/* HERO */}
 <section className="relative min-h-screen flex items-center justify-center pt-24">
 <div className="absolute inset-0 -z-20">
-<Image src="/hero_images/interior-bg.png" alt="Commercial interior design Delhi NCR" fill className="object-cover opacity-40"/>
+<Image src="/hero_images/interior-bg.png" alt="Commercial interior design Delhi NCR — office interior contractor ITSS" fill priority sizes="100vw" className="object-cover opacity-40"/>
 </div>
 <div className="absolute inset-0 bg-white/60 -z-10"></div>
 
@@ -37,24 +36,23 @@ return (
 
 <div>
 <h1 className="text-4xl md:text-5xl font-bold text-[#0b1f3a]">
-Interior Designers
-<span className="block text-[#c8a951]">in Delhi NCR</span>
+  Office Interior Contractor
+  <span className="block text-[#c8a951]">Delhi NCR</span>
 </h1>
 
 <p className="mt-4 text-gray-700">
-We are leading office interior designers in Delhi NCR offering commercial interior design, 
-corporate office interiors, turnkey interior solutions, EPC, MEP, HVAC and electrical services across India.
+ITSS is a leading office interior contractor in Delhi NCR delivering commercial interior design, turnkey interior solutions, EPC, MEP, HVAC and electrical services across India.
 </p>
 
 <div className="mt-6 flex gap-4">
 <Link href="/contact"><button className="px-6 py-3 bg-[#0b1f3a] text-white rounded">Get Free Consultation</button></Link>
-<Link href="/services"><button className="px-6 py-3 border rounded">View Commercial Interior Design Services</button></Link>
+<Link href="/services"><button className="px-6 py-3 border rounded">View Our Services</button></Link>
 </div>
 
 </div>
 
 <div className="relative h-[300px]">
-<Image src="/hero_images/hero-card.png" alt="modern office interior design in Delhi NCR" fill className="object-cover rounded-xl"/>
+<Image src="/hero_images/hero-card.png" alt="modern office interior design in Delhi NCR" fill sizes="(max-width: 768px) 100vw, 50vw" loading="eager" priority className="object-cover rounded-xl"/>
 </div>
 
 </div>
@@ -84,7 +82,7 @@ bg-[radial-gradient(#000_1px,transparent_1px)]
     <img 
       src="/images/about1.png" 
       className="w-full h-full object-cover rounded-xl shadow-lg" 
-      alt="About"
+      alt="ITSS commercial interior design team Delhi NCR — office fitout experts"
     />
 
     {/* Floating card */}
@@ -126,11 +124,12 @@ bg-[radial-gradient(#000_1px,transparent_1px)]
 
     </div>
 
-    <a href="/about">
-      <button className="mt-8 px-6 py-3 bg-[#0b1f3a] text-white rounded-md hover:bg-[#c8a951] transition">
-        Learn More →
-      </button>
-    </a>
+    <Link
+      href="/about"
+      className="inline-block mt-8 px-6 py-3 bg-[#0b1f3a] text-white rounded-md hover:bg-[#c8a951] transition"
+    >
+      Learn About ITSS →
+    </Link>
   </div>
 
 </div>
@@ -182,11 +181,48 @@ bg-[radial-gradient(#000_1px,transparent_1px)]
 
 {/* CLIENT LOGOS */}
 <section className="py-16 bg-white text-center">
-<p className="text-gray-500 mb-6">Trusted by companies</p>
-<div className="flex justify-center gap-10">
-<Image src="/hero_images/blinkit logo.webp" alt="logo" width={100} height={50}/>
-<Image src="/hero_images/zepto logo.webp" alt="logo" width={100} height={50}/>
+<p className="text-sm font-medium text-gray-400 uppercase tracking-widest mb-10">Trusted by India&apos;s leading companies</p>
+
+<div className="max-w-5xl mx-auto px-4">
+  <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 items-center justify-items-center">
+    {[
+      { src: "/clients/zomato.png",         name: "Zomato" },
+      { src: "/clients/blinkit.png",       name: "Blinkit" },
+      { src: "/clients/zepto.png",          name: "Zepto" },
+      { src: "/clients/concentrix1.png",     name: "concentrix" },
+      { src: "/clients/reliance-industries-ltd logo1.png",     name: "Reliance" },
+      { src: "/clients/Flipcart logo1.webp",     name: "Flipkart" },
+      { src: "/clients/Delhivery_logo1.webp",     name: "Delhivery" },
+      { src: "/clients/samsung_sds.png",    name: "Samsung SDS" },
+      { src: "/clients/sumsung.png",        name: "sumsung" },
+      { src: "/clients/tech_mahindra.png",  name: "Tech Mahindra" },
+      { src: "/clients/tata_1mg.png",       name: "Tata 1mg" },
+      { src: "/clients/godrej.png",         name: "Godrej" },
+      { src: "/clients/adani.png",          name: "Adani" },
+      { src: "/clients/hitachi.png",        name: "Hitachi" },
+      { src: "/clients/paytm.png",          name: "Paytm" },
+      { src: "/clients/hilton.png",         name: "Hilton" },
+      { src: "/clients/nagarro.png",        name: "Nagarro" },
+      { src: "/clients/dtdc.png",           name: "DTDC" },
+      { src: "/clients/shoppers_stop.png",  name: "Shoppers Stop" },
+    ].map((client) => (
+      <div key={client.name} className="w-full flex items-center justify-center">
+        <Image
+          src={client.src}
+          alt={`${client.name} — ITSS office interior client Delhi NCR`}
+          width={90}
+          height={45}
+          style={{ width: "auto", height: "auto" }}
+          className="object-contain grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition duration-300"
+        />
+      </div>
+    ))}
+  </div>
 </div>
+
+<p className="mt-8 text-sm text-gray-400">
+  250+ projects completed across 15+ cities in India
+</p>
 </section>
 
 {/* ================= SERVICES ================= */}
@@ -224,15 +260,16 @@ transition duration-500">
 src={s.img} 
 alt={s.title} 
 fill
+sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
 className="object-cover group-hover:scale-110 transition duration-700"
 />
 
 {/* Glow border */}
-  <div className="absolute inset-0 rounded-2xl 
-  border border-transparent 
-  group-hover:border-[#c8a951]/60 
-  group-hover:shadow-[0_0_25px_rgba(200,169,81,0.4)] 
-  transition duration-500" />
+<div className="absolute inset-0 rounded-2xl 
+border border-transparent 
+group-hover:border-[#c8a951]/60 
+group-hover:shadow-[0_0_25px_rgba(200,169,81,0.4)] 
+transition duration-500" />
 
 {/* Overlay gradient */}
 <div className="absolute inset-0 bg-gradient-to-t from-[#0b1f3a]/60 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition duration-500" />
@@ -271,6 +308,7 @@ flex items-center justify-center cursor-pointer overflow-hidden shadow-[0_10px_3
 <p className="text-lg font-semibold tracking-wide">
 Explore Commercial Interior Services
 </p>
+
 <p className="text-sm mt-1 opacity-80">
 View All Interior Design Services →
 </p>
@@ -311,19 +349,22 @@ Our Office Interior Design Projects
 
 {[
   {
-    title: "Corporate Office",
-    desc: "Our attendance management system tracks real-time attendance with accuracy, flexibility, and seamless payroll sync.",
-    icon: "🛡️"
+    title: "Corporate Office Fit-Out",
+    desc: "Complete corporate office interiors — workstations, cabins, conference rooms, reception and MEP — delivered on time and within budget across Delhi NCR.",
+    icon: "🏢",
+    link: "/services/office-interior-services"
   },
   {
-    title: "Morden Workspace",
-    desc: "We provide end-to-end hiring solutions with smart sourcing, onboarding and quality talent acquisition.",
-    icon: "💰"
+    title: "Modern Workspace Design",
+    desc: "Open-plan and hybrid workspaces designed for collaboration, productivity and brand identity. Trusted by Blinkit, Zepto, Zomato and 120+ companies.",
+    icon: "💼",
+    link: "/services/office-interior-services"
   },
   {
-    title: "Turnkey",
-    desc: "Quick claim processing with automated tracking, transparency and timely disbursements.",
-    icon: "🏠"
+    title: "Turnkey Interior Projects",
+    desc: "Single-point responsibility from design to handover — civil, MEP, HVAC, electrical, furniture and finishing. Zero client hassle, 100% delivery.",
+    icon: "🔑",
+    link: "/services/Turnkey-interior-projects-delhi"
   },
 ].map((item, i) => (
 
@@ -352,12 +393,16 @@ Our Office Interior Design Projects
       {item.desc}
     </p>
 
-    {/* BUTTON */}
-    <button className="mt-6 px-5 py-2 text-sm font-medium 
-    bg-gray-100 rounded-lg 
-    hover:bg-[#c8a951] hover:text-white transition">
-      Learn More
-    </button>
+    {/* DESCRIPTIVE PROJECT LINK */}
+    <Link
+      href={item.link}
+      className="inline-block mt-6 px-5 py-2 text-sm font-medium
+      bg-gray-100 rounded-lg
+      hover:bg-[#c8a951] hover:text-white transition"
+      aria-label={`Explore ${item.title}`}
+    >
+      Explore {item.title}
+    </Link>
 
     {/* BORDER GLOW */}
     <div className="absolute inset-0 rounded-2xl 
@@ -377,15 +422,77 @@ Our Office Interior Design Projects
 </Container>
 </section>
 
-{/* TESTIMONIAL */}
+{/* REAL GOOGLE REVIEWS */}
 <section className="py-20 bg-white">
 <Container>
-<h2 className="text-3xl text-center font-bold mb-10">Testimonials</h2>
 
-<div className="grid md:grid-cols-3 gap-6">
-<div className="p-6 bg-gray-100">Great service ⭐⭐⭐⭐⭐</div>
-<div className="p-6 bg-gray-100">Highly professional ⭐⭐⭐⭐⭐</div>
-<div className="p-6 bg-gray-100">Excellent work ⭐⭐⭐⭐⭐</div>
+<h2 className="text-3xl text-center font-bold mb-4">
+Real Client Reviews
+</h2>
+
+<p className="text-center text-gray-500 mb-10">
+Based on verified Google reviews from our clients across India
+</p>
+
+<div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+
+  {/* LEFT SIDE CONTENT */}
+  <div>
+    <h3 className="text-2xl font-semibold text-[#0b1f3a]">
+      Trusted by Businesses Across India
+    </h3>
+
+    <p className="mt-4 text-gray-600 leading-relaxed">
+      Our clients trust us for delivering high-quality office interiors, 
+      turnkey execution, and reliable project management. 
+      Check out our real client feedback directly on Google.
+    </p>
+
+    <a 
+      href="https://www.google.com/search?q=india+technical+solution+reviews"
+      target="_blank"
+      className="inline-block mt-6 px-6 py-3 bg-[#0b1f3a] text-white rounded hover:bg-[#c8a951] transition"
+    >
+      View All Google Reviews →
+    </a>
+  </div>
+
+  {/* RIGHT SIDE GOOGLE MAP EMBED */}
+  <div className="w-full h-[350px] rounded-xl overflow-hidden shadow-lg border">
+    <iframe
+      src="https://www.google.com/maps?q=India%20Technical%20Solution&output=embed"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+    ></iframe>
+  </div>
+
+</div>
+
+{/* OPTIONAL TRUST STATS */}
+<div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+  {[
+    { number: "4.8★", label: "Google Rating" },
+    { number: "15+", label: "Cities Covered" },
+    { number: "200+", label: "Projects Delivered" },
+    { number: "10+ in industry", label: "Years Experience" },
+  ].map((item, i) => (
+
+    <div key={i} className="bg-gray-50 rounded-xl p-6 shadow-sm">
+      <p className="text-2xl font-bold text-[#0b1f3a]">
+        {item.number}
+      </p>
+
+      <p className="text-sm text-gray-500 mt-1">
+        {item.label}
+      </p>
+    </div>
+
+  ))}
+
 </div>
 
 </Container>
@@ -401,17 +508,24 @@ Our Office Interior Design Projects
 <Container>
 
 <h2 className="text-4xl text-center mb-14 font-bold text-[#0b1f3a]">
-Office Interior Designers Across Delhi, Gurgaon, Noida, Mumbai and Pan India
+Office Interior Designers & Turnkey Contractors Across India
 </h2>
 
 {/* GRID */}
-<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
 {[
   { name: "Delhi", link: "/office-interior-contractor-delhi" },
   { name: "Gurgaon", link: "/office-interior-contractor-gurgaon" },
   { name: "Noida", link: "/office-interior-contractor-noida" },
   { name: "Mumbai", link: "/office-interior-contractor-mumbai" },
+  { name: "Bengaluru", link: "/office-interior-contractor-bengaluru" },
+  { name: "Hyderabad", link: "/office-interior-contractor-hyderabad" },
+  { name: "Chennai", link: "/office-interior-contractor-chennai" },
+  { name: "Kolkata", link: "/office-interior-contractor-kolkata" },
+  { name: "Lucknow", link: "/office-interior-contractor-lucknow" },
+  { name: "Chandigarh", link: "/office-interior-contractor-chandigarh" },
+  { name: "Pune", link: "/office-interior-contractor-pune" },
 ].map((city, i) => (
 
 <Link key={i} href={city.link}>
@@ -459,7 +573,6 @@ transition duration-500" />
 </Container>
 </section>
 
-
 {/* CTA */}
 <section className="py-20 text-center bg-white">
 <h2 className="text-3xl font-bold">Start Your Project</h2>
@@ -469,13 +582,48 @@ transition duration-500" />
 {/* FAQ */}
 <section className="py-20 bg-gray-50">
 <Container>
-<h2 className="text-3xl text-center font-bold mb-10">FAQ</h2>
+<h2 className="text-3xl text-center font-bold mb-4">Frequently Asked Questions</h2>
+<p className="text-center text-gray-500 mb-12">
+  Common questions about our commercial interior services in Delhi NCR
+</p>
 
-<div className="space-y-4 max-w-2xl mx-auto">
-<p><strong>What services do you offer?</strong>
-We provide office interior design, commercial interior design, turnkey interiors, EPC, MEP and HVAC solutions.</p>
-<p><strong>Do you provide services in Delhi NCR?</strong> 
-Yes, we are leading office interior designers in Delhi, Gurgaon, Noida and across India.</p>
+<div className="max-w-3xl mx-auto space-y-4">
+{[
+  {
+    q: "How long does a commercial office interior fitout take in Delhi NCR?",
+    a: "It depends on project size. A 1,000–3,000 sq ft office typically takes 30–45 days. 5,000–10,000 sq ft takes 60–75 days, and projects above 10,000 sq ft take 90+ days. We provide a clear, committed timeline before work begins."
+  },
+  {
+    q: "What is the approximate cost for a 1,000 sq ft commercial office interior?",
+    a: "In Delhi NCR, basic office interiors start from ₹800–₹1,200 per sq ft. Premium or brand-specific interiors range from ₹1,500–₹2,500+ per sq ft. Final cost depends on finishes, MEP scope and furniture requirements. Contact us for a free quote."
+  },
+  {
+    q: "Do you handle turnkey projects — from design to handover?",
+    a: "Yes. ITSS delivers complete turnkey interior execution — concept design, civil work, MEP (Mechanical, Electrical, Plumbing), HVAC, networking, fire-fighting, furniture and final handover. You deal with one team from start to finish."
+  },
+  {
+    q: "What are MEP services and are they included in the interior project?",
+    a: "MEP stands for Mechanical, Electrical and Plumbing — essential systems for any commercial office. This includes HVAC ducting, electrical wiring, plumbing, data networking and fire alarms. MEP is fully included in our turnkey projects."
+  },
+  {
+    q: "Do you provide services outside Delhi NCR?",
+    a: "Yes, ITSS operates pan-India — we have completed projects in Delhi, Gurgaon, Noida, Mumbai, Bangalore, Hyderabad, Chennai, Pune and 15+ other cities. Our team travels for site surveys and project execution."
+  },
+  {
+    q: "Can we see your past portfolio and completed projects?",
+    a: "Absolutely. Our portfolio includes projects for brands like Godrej, Barclays, Hilton and Battery Smart. You can view our portfolio page or contact us to arrange a site visit to a completed project relevant to your requirement."
+  },
+].map((faq, i) => (
+  <details key={i} className="group bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+    <summary className="flex items-center justify-between p-5 cursor-pointer list-none font-medium text-[#0b1f3a] gap-4">
+      <span>{faq.q}</span>
+      <span className="text-[#c8a951] text-xl flex-shrink-0 group-open:rotate-45 transition-transform duration-200">+</span>
+    </summary>
+    <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-50 pt-3">
+      {faq.a}
+    </div>
+  </details>
+))}
 </div>
 
 </Container>

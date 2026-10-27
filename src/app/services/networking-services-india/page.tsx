@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title: "IT Networking Services Company in India | Structured Cabling & IT Infrastructure | ITSS",
+  title: "IT Networking Services India | Structured Cabling | ITSS",
+// 57 chars ✅
 
-  description:
-    "ITSS provides professional IT networking services including structured cabling, server setup, data networking and IT infrastructure solutions for offices and commercial spaces across India.",
+description: "ITSS provides structured cabling, LAN/WAN setup and IT networking services across India for offices and commercial spaces. Certified team.",
+// 139 chars ✅
 
   keywords: [
     "IT networking services India",

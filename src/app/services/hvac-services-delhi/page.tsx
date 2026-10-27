@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title:
-    "HVAC Services in Delhi NCR | Heating Ventilation Air Conditioning Solutions | ITSS",
+  title: "HVAC Services Delhi NCR | Office AC Systems | ITSS",
+// 51 chars ✅
 
-  description:
-    "ITSS provides HVAC services in Delhi NCR including heating, ventilation and air conditioning solutions for commercial, industrial and warehouse projects across India.",
+description: "Expert HVAC installation and maintenance for offices in Delhi NCR. ITSS designs and installs air conditioning systems for commercial spaces. Free quote.",
+// 152 chars ✅
 
   keywords: [
     "HVAC services Delhi NCR",

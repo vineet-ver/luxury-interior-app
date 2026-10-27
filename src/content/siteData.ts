@@ -2,8 +2,8 @@ export const siteData = {
     general: {
         siteName: "ITSS",
         tagline: "Total Office Automation Solutions",
-        contactEmail: "Itss.facilities@rediffmail.com",
-        contactPhone: "+91 97183 71994, +91 99537 90266",
+        contactEmail: "operation@itss.co.in",
+        contactPhone: "+91 96258 07236, +91 97183 71994",
         address: "First Floor, F-16/F-2, Dilshad Colony, New Delhi, Shahdara, Delhi 110095",
         logo: "/logo_v2.png",
     },
@@ -57,14 +57,19 @@ export const siteData = {
     },
     clients: [
         // Priority Clients (Requested Order)
+        { id: 49, name: "Delhivery", category: "Logistics", logo: "/clients/Delhivery_logo1.webp" },
+        { id: 50, name: "Reliance", category: "Enterprise", logo: "/clients/reliance-industries-ltd logo1.png" },
+        { id: 51, name: "Flipkart", category: "Retail", logo: "/clients/Flipcart logo1.webp" },
         { id: 3, name: "Blinkit", category: "Enterprise", logo: "/clients/blinkit.png" },
         { id: 101, name: "Zepto", category: "Technology", logo: "/clients/zepto.png" }, // Placeholder
         { id: 15, name: "Zomato", category: "Technology", logo: "/clients/zomato.png" },
-        { id: 17, name: "Battery Smart", category: "Technology", logo: "/clients/battery_smart.png" },
+        { id: 13, name: "TATA 1mg", category: "Healthcare", logo: "/clients/tata_1mg.png" },
         { id: 102, name: "DTDC", category: "Logistics", logo: "/clients/dtdc.png" }, // Placeholder
         { id: 11, name: "Shoppers Stop", category: "Retail", logo: "/clients/shoppers_stop.png" },
-        { id: 103, name: "Tech Mahindra", category: "Technology", logo: "/clients/tech_mahindra.png" }, // Placeholder
-        { id: 13, name: "TATA 1mg", category: "Healthcare", logo: "/clients/tata_1mg.png" },
+        { id: 103, name: "Tech Mahindra", category: "Technology", logo: "/clients/tech_mahindra.png" },
+        { id: 52, name: "Startek", category: "Technology", logo: "/clients/STARTEK LOGO.webp" },
+        { id: 53, name: "R1 RCM", category: "Healthcare", logo: "/clients/R1 LOGO.webp" }, // Placeholder
+        { id: 17, name: "Battery Smart", category: "Technology", logo: "/clients/battery_smart.png" },
 
         // Remaining Enterprise Clients
         { id: 1, name: "91 Springboard", category: "Enterprise", logo: "/clients/91springboard.png" },
@@ -72,7 +77,6 @@ export const siteData = {
         { id: 5, name: "Hitachi", category: "Enterprise", logo: "/clients/hitachi.png" },
         { id: 4, name: "Gati", category: "Logistics", logo: "/clients/gati.png" },
         { id: 6, name: "Hilton", category: "Hospitality", logo: "/clients/hilton.png" },
-        { id: 7, name: "Leader", category: "Manufacturing", logo: "/clients/leader.png" },
         { id: 8, name: "Paytm", category: "Fintech", logo: "/clients/paytm.png" },
         { id: 9, name: "Punjab Grill", category: "Hospitality", logo: "/clients/punjab_grill.png" },
         { id: 10, name: "Samsung SDS", category: "Technology", logo: "/clients/samsung_sds.png" },
@@ -90,20 +94,15 @@ export const siteData = {
         { id: 26, name: "Sharekhan", category: "Finance", logo: "/clients/sharekhan.png" },
         { id: 27, name: "Hughes Systique", category: "Technology", logo: "/clients/hughes_systique.png" },
         { id: 28, name: "The Indian Express", category: "Media", logo: "/clients/indian_express.png" },
-        { id: 29, name: "Infogain", category: "Technology", logo: "/clients/infogain.png" },
         { id: 30, name: "MPS Limited", category: "Publishing", logo: "/clients/mps_limited.png" },
-        { id: 31, name: "V5 Global", category: "Services", logo: "/clients/v5_global.png" },
         { id: 32, name: "Adani", category: "Enterprise", logo: "/clients/adani.png" },
         { id: 33, name: "Avitech", category: "Technology", logo: "/clients/avitech.png" },
-        { id: 34, name: "Bollhoff", category: "Manufacturing", logo: "/clients/bollhoff.png" },
         { id: 35, name: "Domino's Pizza", category: "Food & Beverage", logo: "/clients/dominos.png" },
-        { id: 36, name: "Sodexo", category: "Services", logo: "/clients/sodexo.png" },
         { id: 37, name: "The Lodhi", category: "Hospitality", logo: "/clients/the_lodhi.png" },
         { id: 38, name: "Sarvodaya Healthcare", category: "Healthcare", logo: "/clients/sarvodaya_healthcare.png" },
         { id: 39, name: "Exicom", category: "Technology", logo: "/clients/exicom.png" },
         { id: 40, name: "Hines", category: "Real Estate", logo: "/clients/hines.png" },
         { id: 41, name: "EXL", category: "Technology", logo: "/clients/exl.png" },
-        { id: 42, name: "MCM", category: "Services", logo: "/clients/mcm.png" },
         { id: 43, name: "CSC", category: "Services", logo: "/clients/csc.png" },
         { id: 44, name: "Denave", category: "Services", logo: "/clients/denave.png" },
         { id: 45, name: "SMC Insurance", category: "Finance", logo: "/clients/smc_insurance.png" },
@@ -189,3 +188,4 @@ export const siteData = {
         }
     ]
 };
+

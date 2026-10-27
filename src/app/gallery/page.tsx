@@ -3,8 +3,11 @@ import type { Metadata } from "next";
 import GalleryClient from "@/components/gallery/GalleryClient";
 
 export const metadata: Metadata = {
-  title: "Interior Design Portfolio | Office & Commercial Interior Projects",
-  description: "Explore ITSS commercial interior work gallery featuring office interiors, workspace design, furniture installation, and turnkey fit-out projects completed across India.",
+  title: "Project Gallery | Office Interiors India | ITSS",
+// 48 chars ✅
+
+description: "Explore completed office interior photos by ITSS — turnkey fitouts, workstation setups, MEP and HVAC installations across Delhi NCR and pan-India.",
+// 148 chars ✅
   keywords: [
     "interior design photos",
     "office interior design photos",

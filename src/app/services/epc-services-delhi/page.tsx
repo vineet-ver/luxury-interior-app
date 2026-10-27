@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title:
-    "EPC Services in Delhi NCR | Engineering Procurement Construction Company | ITSS",
+  title: "EPC Services Delhi | Engineering Procurement | ITSS",
+// 52 chars ✅
 
-  description:
-    "ITSS provides EPC services in Delhi NCR including engineering, procurement and construction solutions for commercial, industrial and interior projects across India.",
+description: "ITSS provides EPC contracting in Delhi NCR — engineering, procurement and construction for large commercial interior projects. Pan-India execution.",
+// 148 chars ✅
 
   keywords: [
     "EPC services",

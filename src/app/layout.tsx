@@ -6,15 +6,19 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.itss.co.in"),
-
-  title: {
-    default:
-      "ITSS Interior Solutions | Office Interior Contractor Delhi NCR",
-    template: "%s | ITSS Interior Solutions",
+  other: {
+    'p:domain_verify': '4f7dbab8abc7e58883644e383abb1dee',
+    "geo.region": "IN-DL",
+    "geo.placename": "Delhi NCR",
+    "geo.position": "28.6139;77.2090",
+    "ICBM": "28.6139, 77.2090",
   },
 
-  description:
-    "ITSS is a leading office interior contractor in Delhi NCR delivering commercial interior design, corporate workspace planning and turnkey interior fit-out services across India.",
+  title: {
+  default: "Commercial Interior Contractor Delhi NCR | ITSS",
+  template: "%s | ITSS",
+},
+description: "Trusted commercial interior contractor in Delhi NCR. Office fitouts, turnkey projects & MEP services. 10+ years, 250+ projects. Free quote today.",
 
   keywords: [
     "office interior contractor Delhi",
@@ -51,13 +55,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-
-  other: {
-    "geo.region": "IN-DL",
-    "geo.placename": "Delhi NCR",
-    "geo.position": "28.6139;77.2090",
-    "ICBM": "28.6139, 77.2090",
-  },
 };
 
 export default function RootLayout({
@@ -66,8 +63,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
+  <html lang="en" suppressHydrationWarning>
+    <body suppressHydrationWarning>
 
         {/* ✅ LocalBusiness Schema for SEO */}
         <Script
@@ -76,31 +73,35 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "ITSS Interior Solutions",
-              image: "https://www.itss.co.in/logo.png",
-              url: "https://www.itss.co.in",
-              telephone: "+919718371994",
-              description:
-                "Leading office interior contractor in Delhi NCR providing commercial interior design and turnkey fit-out services.",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Delhi",
-                addressCountry: "India",
-              },
-              areaServed: [
-                "Delhi",
-                "Gurgaon",
-                "Noida",
-                "Haryana",
-                "Punjab",
-                "Mumbai",
-                "Uttar Pradesh",
-              ],
-              sameAs: [
-                "https://www.linkedin.com/company/112454950/admin/dashboard/",
-                "https://www.facebook.com/profile.php?id=61584705850003",
-                "https://www.instagram.com/itss_interiors?igsh=YnFoN3V1b3lvbmJ3"
+  "@type": "LocalBusiness",
+  name: "ITSS Interior World",
+  alternateName: "India Technical Solution Services",
+  image: "https://www.itss.co.in/logo.png",
+  url: "https://www.itss.co.in",
+  telephone: "+919718371994",
+  priceRange: "₹₹₹",
+  description:
+    "Leading office interior contractor in Delhi NCR providing commercial interior design and turnkey fit-out services.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "First Floor, F-16/F-2, Dilshad Colony",
+    addressLocality: "Delhi",
+    postalCode: "110095",
+    addressCountry: "IN",
+  },
+  areaServed: [
+    "Delhi",
+    "Gurgaon",
+    "Noida",
+    "Haryana",
+    "Punjab",
+    "Mumbai",
+    "Uttar Pradesh",
+  ],
+  sameAs: [
+    "https://www.linkedin.com/company/112454950/admin/dashboard/",
+    "https://www.facebook.com/profile.php?id=61584705850003",
+    "https://www.instagram.com/itss_interior_world?igsh=YnFoN3V1b3lvbmJ3&utm_source=qr",
               ],
             }),
           }}
@@ -112,7 +113,7 @@ export default function RootLayout({
         <WhatsAppButton />
 
         {/* ✅ Google Analytics */}
-        <GoogleAnalytics gaId="G-AB12CD34EF" />
+        <GoogleAnalytics gaId="G-WBSCF7C86T" />
 
       </body>
     </html>

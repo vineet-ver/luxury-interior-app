@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import ServicesClient from "@/components/services/ServicesClient";
 
 export const metadata: Metadata = {
-  title: "Interior Design Services in Delhi NCR | Office & Commercial Interior Designers",
-  description:
-    "Professional interior design services in Delhi NCR. Hire expert office interior designers for commercial spaces, turnkey interiors, and consultation.",
+  title: "Workstation Installation Delhi NCR | Modular | ITSS",
+// 52 chars ✅
+
+description: "Modular workstation installation and office furniture setup in Delhi NCR. ITSS supplies and installs workstations for corporate offices pan-India.",
+// 147 chars ✅
   keywords: [
     "interior designers",
     "interior design services",
