@@ -109,7 +109,7 @@ export default function ClientsPage() {
 
             {[
               { icon: Building2, value: "50+", label: "Enterprise Clients" },
-              { icon: Handshake, value: "12+", label: "Years of Trust" },
+              { icon: Handshake, value: "10+", label: "Years of Trust" },
               { icon: Award, value: "100%", label: "Project Success Rate" },
             ].map((stat, i) => (
               <div
