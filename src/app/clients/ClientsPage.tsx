@@ -1,3 +1,4 @@
+
 "use client";
 
 import { MainLayout } from "@/components/layout/MainLayout";
@@ -10,25 +11,29 @@ import Image from "next/image";
 
 /* ================= CLIENT LOGO COMPONENT ================= */
 
-const ClientLogo = ({ name, logo }: { name: string; logo?: string }) => (
-  <div className="w-full h-40 flex items-center justify-center p-6 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
-
+const ClientLogo = ({
+  name,
+  logo,
+}: {
+  name: string;
+  logo?: string;
+}) => (
+  <div className="relative flex h-40 w-full items-center justify-center overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
     {logo ? (
-      <div className="relative w-full h-full">
+      <div className="relative h-full w-full">
         <Image
           src={logo}
           alt={`${name} Logo`}
           fill
-          sizes="(max-width:768px) 50vw, 25vw"
+          sizes="(max-width: 768px) 50vw, 25vw"
           className="object-contain transition-transform duration-300 hover:scale-105"
         />
       </div>
     ) : (
-      <h3 className="text-lg font-semibold text-gray-600 text-center">
+      <h3 className="text-center text-lg font-semibold text-gray-600">
         {name}
       </h3>
     )}
-
   </div>
 );
 
@@ -37,24 +42,21 @@ const ClientLogo = ({ name, logo }: { name: string; logo?: string }) => (
 export default function ClientsPage() {
   return (
     <MainLayout>
-      <div className="relative min-h-screen pt-28 pb-24 bg-[#f9f7f3] overflow-hidden">
-
+      <div className="relative min-h-screen overflow-hidden bg-[#f9f7f3] pb-24 pt-28">
         {/* TOP SOFT GLOW */}
-        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-yellow-200/30 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="pointer-events-none absolute left-1/2 top-[-200px] h-[900px] w-[900px] -translate-x-1/2 rounded-full bg-yellow-200/30 blur-[120px]" />
 
         {/* BOTTOM SOFT GLOW */}
-        <div className="absolute bottom-[-250px] right-[-200px] w-[800px] h-[800px] bg-yellow-100/40 rounded-full blur-[150px] pointer-events-none"></div>
+        <div className="pointer-events-none absolute bottom-[-250px] right-[-200px] h-[800px] w-[800px] rounded-full bg-yellow-100/40 blur-[150px]" />
 
         <Container>
-
           {/* ================= HERO ================= */}
 
-          <div className="text-center max-w-5xl mx-auto mb-24 relative z-10">
-
+          <div className="relative z-10 mx-auto mb-24 max-w-5xl text-center">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-block px-5 py-2 mb-6 text-sm font-semibold tracking-wide text-yellow-700 bg-yellow-100 rounded-full shadow-sm"
+              className="mb-6 inline-block rounded-full bg-yellow-100 px-5 py-2 text-sm font-semibold tracking-wide text-yellow-700 shadow-sm"
             >
               Trusted by 50+ Enterprise Brands Across India
             </motion.span>
@@ -63,10 +65,10 @@ export default function ClientsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight"
+              className="text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-5xl md:text-6xl"
             >
               Enterprise Clients Who Trust ITSS for
-              <span className="block bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-400 bg-clip-text text-transparent mt-3">
+              <span className="mt-3 block bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-400 bg-clip-text text-transparent">
                 Commercial Interior & Infrastructure Excellence
               </span>
             </motion.h1>
@@ -75,73 +77,63 @@ export default function ClientsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mt-6"
+              className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-gray-600 sm:text-xl"
             >
-              From Fortune 500 enterprises to government infrastructure projects,
-              ITSS delivers turnkey commercial interiors, corporate fit-outs
-              and enterprise execution solutions across India.
+              From Fortune 500 enterprises to government infrastructure
+              projects, ITSS delivers turnkey commercial interiors, corporate
+              fit-outs and enterprise execution solutions across India.
             </motion.p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-5 justify-center items-center">
-
+            <div className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row">
               <Link
                 href="/portfolio"
-                className="px-8 py-4 bg-black text-white rounded-full font-semibold hover:bg-yellow-500 hover:text-black transition-all duration-300"
+                className="rounded-full bg-black px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-yellow-500 hover:text-black"
               >
                 View Case Studies
               </Link>
 
               <Link
                 href="/contact"
-                className="px-8 py-4 border border-black rounded-full font-semibold hover:bg-black hover:text-white transition-all duration-300"
+                className="rounded-full border border-black px-8 py-4 font-semibold transition-all duration-300 hover:bg-black hover:text-white"
               >
                 Get Enterprise Consultation
               </Link>
-
             </div>
-
           </div>
-
 
           {/* ================= STATS ================= */}
 
-          <div className="grid md:grid-cols-3 gap-10 mb-28 relative z-10">
-
+          <div className="relative z-10 mb-28 grid gap-10 md:grid-cols-3">
             {[
               { icon: Building2, value: "50+", label: "Enterprise Clients" },
               { icon: Handshake, value: "10+", label: "Years of Trust" },
               { icon: Award, value: "100%", label: "Project Success Rate" },
-            ].map((stat, i) => (
+            ].map((stat) => (
               <div
-                key={i}
-                className="bg-white p-12 rounded-3xl border border-gray-200 shadow-sm text-center hover:shadow-lg transition-all duration-300"
+                key={stat.label}
+                className="rounded-3xl border border-gray-200 bg-white p-12 text-center shadow-sm transition-all duration-300 hover:shadow-lg"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-2xl mb-6 text-yellow-600">
-                  <stat.icon className="w-8 h-8" />
+                <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-yellow-100 text-yellow-600">
+                  <stat.icon className="h-8 w-8" />
                 </div>
 
-                <h3 className="text-5xl font-bold text-gray-900 mb-2">
+                <h3 className="mb-2 text-5xl font-bold text-gray-900">
                   {stat.value}
                 </h3>
 
-                <p className="text-gray-500 text-lg">
-                  {stat.label}
-                </p>
+                <p className="text-lg text-gray-500">{stat.label}</p>
               </div>
             ))}
-
           </div>
-
 
           {/* ================= CLIENTS GRID ================= */}
 
-          <div className="mb-28 relative z-10">
-
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-14">
+          <section className="relative z-10 mb-28">
+            <h2 className="mb-14 text-center text-3xl font-bold md:text-4xl">
               Our Esteemed Clients
             </h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+            <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4">
               {siteData.clients.map((client) => (
                 <ClientLogo
                   key={client.id}
@@ -150,20 +142,16 @@ export default function ClientsPage() {
                 />
               ))}
             </div>
-
-          </div>
-
+          </section>
 
           {/* ================= INDUSTRIES ================= */}
 
-          <div className="mb-28 relative z-10">
-
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-14">
+          <section className="relative z-10 mb-28">
+            <h2 className="mb-14 text-center text-3xl font-bold md:text-4xl">
               Industries We Serve
             </h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-
+            <div className="grid grid-cols-2 gap-6 text-center md:grid-cols-4">
               {[
                 "Corporate Offices",
                 "Retail & E-Commerce",
@@ -173,71 +161,68 @@ export default function ClientsPage() {
                 "Technology Companies",
                 "Financial Institutions",
                 "Government Projects",
-              ].map((industry, i) => (
+              ].map((industry) => (
                 <div
-                  key={i}
-                  className="p-6 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
+                  key={industry}
+                  className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md"
                 >
-                  <p className="font-medium text-gray-800">
-                    {industry}
-                  </p>
+                  <p className="font-medium text-gray-800">{industry}</p>
                 </div>
               ))}
-
             </div>
+          </section>
 
-          </div>
           {/* ================= SEO CONTENT ================= */}
 
-<section className="max-w-5xl mx-auto mb-28 text-gray-700 leading-relaxed text-lg relative z-10">
-  <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-    Commercial Interior Contractor in India
-  </h2>
+          <section className="relative z-10 mx-auto mb-28 max-w-5xl text-lg leading-relaxed text-gray-700">
+            <h2 className="mb-6 text-center text-3xl font-bold text-gray-900">
+              Commercial Interior Contractor in India
+            </h2>
 
-  <p className="mb-6">
-    ITSS is a trusted commercial interior contractor in India delivering
-    turnkey interior solutions for corporate offices, enterprise spaces,
-    and government organizations. Our expertise includes complete office
-    fit-outs, infrastructure execution, civil works, and industrial interior projects.
-  </p>
+            <p className="mb-6">
+              ITSS is a trusted commercial interior contractor in India
+              delivering turnkey interior solutions for corporate offices,
+              enterprise spaces, and government organizations. Our expertise
+              includes complete office fit-outs, infrastructure execution,
+              civil works, and industrial interior projects.
+            </p>
 
-  <p className="mb-6">
-    With over a decade of experience, we specialize in corporate office
-    fit-outs, large-scale commercial developments, and turnkey interior
-    execution across India. Our structured approach ensures design precision,
-    compliance standards, and on-time project delivery.
-  </p>
+            <p className="mb-6">
+              With over a decade of experience, we specialize in corporate
+              office fit-outs, large-scale commercial developments, and turnkey
+              interior execution across India. Our structured approach ensures
+              design precision, compliance standards, and on-time project
+              delivery.
+            </p>
 
-  <p>
-    From enterprise headquarters to industrial facilities and retail
-    environments, ITSS provides scalable and performance-driven interior
-    solutions tailored to business growth and operational efficiency.
-  </p>
-</section>
+            <p>
+              From enterprise headquarters to industrial facilities and retail
+              environments, ITSS provides scalable and performance-driven
+              interior solutions tailored to business growth and operational
+              efficiency.
+            </p>
+          </section>
 
           {/* ================= CTA ================= */}
 
-          <div className="relative z-10 rounded-[50px] p-16 text-center bg-white shadow-lg border border-gray-200">
-
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">
+          <section className="relative z-10 rounded-[50px] border border-gray-200 bg-white p-16 text-center shadow-lg">
+            <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-5xl">
               Ready to Join the Elite?
             </h2>
 
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-10">
+            <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-600">
               Experience the difference of working with a partner who values
               your infrastructure and commercial spaces as much as you do.
             </p>
 
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-yellow-600 text-white rounded-full font-bold hover:bg-yellow-700 transition-all duration-300 shadow-md"
+              className="inline-flex items-center gap-2 rounded-full bg-yellow-600 px-10 py-4 font-bold text-white shadow-md transition-all duration-300 hover:bg-yellow-700"
             >
               Partner With Us
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="h-5 w-5" />
             </Link>
-
-          </div>
-
+          </section>
         </Container>
       </div>
     </MainLayout>
