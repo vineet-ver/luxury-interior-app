@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { MainLayout } from "@/components/layout/MainLayout";
-import { motion } from "framer-motion";
 
 export default function HomeClient() {
 
@@ -125,11 +124,13 @@ bg-[radial-gradient(#000_1px,transparent_1px)]
 
     </div>
 
-    <a href="/about">
-      <button className="mt-8 px-6 py-3 bg-[#0b1f3a] text-white rounded-md hover:bg-[#c8a951] transition">
-        Learn More →
-      </button>
-    </a>
+    <Link
+      href="/about"
+      className="inline-block mt-8 px-6 py-3 bg-[#0b1f3a] text-white rounded-md hover:bg-[#c8a951] transition"
+      aria-label="Learn about ITSS office interior and turnkey services"
+    >
+      Learn About ITSS →
+    </Link>
   </div>
 
 </div>
