@@ -127,6 +127,7 @@ bg-[radial-gradient(#000_1px,transparent_1px)]
     <Link
       href="/about"
       className="inline-block mt-8 px-6 py-3 bg-[#0b1f3a] text-white rounded-md hover:bg-[#c8a951] transition"
+      aria-label="Learn about ITSS office interior and turnkey services"
     >
       Learn About ITSS →
     </Link>
@@ -393,13 +394,11 @@ Our Office Interior Design Projects
       {item.desc}
     </p>
 
-    {/* DESCRIPTIVE PROJECT LINK */}
+    {/* DESCRIPTIVE INTERNAL LINK: helps users and SEO tools understand the destination */}
     <Link
       href={item.link}
-      className="inline-block mt-6 px-5 py-2 text-sm font-medium
-      bg-gray-100 rounded-lg
-      hover:bg-[#c8a951] hover:text-white transition"
-      aria-label={`Explore ${item.title}`}
+      aria-label={`Explore ${item.title} services`}
+      className="inline-block mt-6 px-5 py-2 text-sm font-medium bg-gray-100 rounded-lg hover:bg-[#c8a951] hover:text-white transition"
     >
       Explore {item.title}
     </Link>

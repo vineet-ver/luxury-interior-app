@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 
 @variant dark (&:where(.dark, .dark *));
@@ -16,22 +17,32 @@
 
 /* Base Theme Variables */
 :root {
+  color-scheme: light;
+
   --background: #FAFAFA;
   --foreground: #111111;
+
   --card: #FFFFFF;
   --card-foreground: #111111;
+
   --popover: #FFFFFF;
   --popover-foreground: #111111;
+
   --primary: #D4AF37;
   --primary-foreground: #FAFAFA;
+
   --secondary: #E5E4E2;
   --secondary-foreground: #111111;
+
   --muted: #E5E4E2;
   --muted-foreground: #666666;
+
   --accent: #D4AF37;
   --accent-foreground: #111111;
+
   --destructive: #7f1d1d;
   --destructive-foreground: #FAFAFA;
+
   --border: #E5E4E2;
   --input: #FFFFFF;
   --ring: #D4AF37;
@@ -39,22 +50,32 @@
 
 /* Keep the design light, even when .dark is applied */
 .dark {
+  color-scheme: light;
+
   --background: #FAFAFA;
   --foreground: #111111;
+
   --card: #FFFFFF;
   --card-foreground: #111111;
+
   --popover: #FFFFFF;
   --popover-foreground: #111111;
+
   --primary: #D4AF37;
   --primary-foreground: #FAFAFA;
+
   --secondary: #E5E4E2;
   --secondary-foreground: #111111;
+
   --muted: #E5E4E2;
   --muted-foreground: #666666;
+
   --accent: #D4AF37;
   --accent-foreground: #111111;
+
   --destructive: #7f1d1d;
   --destructive-foreground: #FAFAFA;
+
   --border: #E5E4E2;
   --input: #FFFFFF;
   --ring: #D4AF37;
